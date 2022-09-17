@@ -4679,7 +4679,7 @@ body._popup-active {
   }
 
   .intro__block {
-    flex: 1 1 auto;
+    flex: 1 0 auto;
   }
 
   .intro__btn {
