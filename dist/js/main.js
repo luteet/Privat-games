@@ -202,7 +202,7 @@ body.addEventListener('click', function (event) {
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let resizeCheck = {}, windowSize;
+/* let resizeCheck = {}, windowSize;
 
 function resizeCheckFunc(size, minWidth, maxWidth) {
   if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
@@ -214,13 +214,13 @@ function resizeCheckFunc(size, minWidth, maxWidth) {
     resizeCheck[String(size)] = true;
     minWidth(); // > size
   }
-}
+} */
 
 function resize() {
 
   html.style.setProperty('--height-screen', body.offsetHeight + 'px');
   
-  windowSize = window.innerWidth
+  /* windowSize = window.innerWidth
 
   resizeCheckFunc(992,
     function () {  // screen > 992px
@@ -232,7 +232,7 @@ function resize() {
 
 
 
-  });
+  }); */
 
 }
 
@@ -294,6 +294,7 @@ let slider = new Swiper('.intro__slider', {
       el: '.swiper-pagination',
       clickable: true,
     },
+    
     /* navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -319,8 +320,9 @@ let slider = new Swiper('.intro__slider', {
 
 AOS.init({
   // Global settings:
-  disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
   duration: 700,
+  disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+  
 
 });
 
