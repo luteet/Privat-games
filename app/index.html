@@ -1,0 +1,419 @@
+@@include("html/_header.html")
+
+    <main class="main">
+        <div class="main__bg">
+            <!-- <picture>
+                <source srcset="img/body-bg.webp" type="image/webp">
+                <img src="img/body-bg.jpg" alt="" loading="lazu" width="0" height="0" class="main__bg--img">
+            </picture> -->
+        </div>
+        <section class="intro">
+            <div class="intro__bg">
+                <div class="intro__bg--text">
+                    Board <br> Games
+                </div>
+                <div class="intro__bg--element">
+                    <picture>
+                        <source srcset="img/main-page/intro/bg.webp" type="image/webp">
+                        <img src="img/main-page/intro/bg.png" alt="" loading="lazy" width="0" height="0" class="intro__bg--img">
+                    </picture>
+                </div>
+            </div>
+            <div class="intro__container container">
+                <div class="intro__slider swiper">
+                    <ul class="intro__slider--list swiper-wrapper">
+                        @@loop("html/main-page/intro/_slide.html", [
+                            {},
+                            {},
+                            {},
+                            {},
+                        ])
+                    </ul>
+                    <div class="intro__slider--pagination swiper-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <section class="games section-padding">
+            <div class="games__container container">
+                <div class="games__header section-header" data-aos="fade-in">
+                    <h2 class="games__title section-title">
+                        Онлайн  игры
+                    </h2>
+                    <a href="#" class="games__more-link more-link hide-on-table">
+                        Все онлайн игры
+                    </a>
+                </div>
+                <div class="games__filter hide-on-table" data-aos="fade-in" data-aos-delay="300">
+                    <ul class="games__filter--list">
+                        <li class="games__filter--item">
+                            <button class="games__filter--btn _active" data-filter="" type="button">
+                                <img src="img/icons/hot.svg" width="13" height="13" alt="" class="games__filter--icon">
+                                Популярное
+                            </button>
+                        </li>
+                        <li class="games__filter--item">
+                            <button class="games__filter--btn" data-filter=".group-1" type="button">
+                                <img src="img/icons/chess.svg" width="18" height="18" alt="" class="games__filter--icon">
+                                Шахматы
+                            </button>
+                        </li>
+                        <li class="games__filter--item">
+                            <button class="games__filter--btn" data-filter=".group-2" type="button">
+                                <img src="img/icons/chips.svg" width="18" height="18" alt="" class="games__filter--icon">
+                                Фишки
+                            </button>
+                        </li>
+                        <li class="games__filter--item">
+                            <button class="games__filter--btn" data-filter=".group-3" type="button">
+                                <img src="img/icons/domino.svg" width="18" height="18" alt="" class="games__filter--icon">
+                                Домино
+                            </button>
+                        </li>
+                        <li class="games__filter--item">
+                            <button class="games__filter--btn" data-filter=".group-4" type="button">
+                                <img src="img/icons/cards.svg" width="18" height="18" alt="" class="games__filter--icon">
+                                Карточные
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="games__wrapper">
+                    <ul class="games__list">
+                        @@loop("html/main-page/games/_item.html", [
+                                {"img": '1'},
+                                {"img": '2'},
+                                {"img": '3'},
+                                {"img": '4'},
+                                {"img": '5'},
+                                {"img": '6'},
+                                {"img": '7'},
+                                {"img": '8'},
+                                {"img": '9'},
+                                {"img": '10'},
+                            ])
+                    </ul>
+                </div>
+                <a href="#" class="games__more-btn alt-btn visible-on-table">
+                    Все онлайн игры
+                </a>
+            </div>
+        </section>
+        <section class="rooms section-padding">
+            <div class="rooms__bg">
+                <picture>
+                    <source srcset="img/main-page/rooms/bg.webp" type="image/webp">
+                    <img src="img/main-page/rooms/bg.png" loading="lazy" alt="" width="0" height="0" class="rooms__bg--img">
+                </picture>
+            </div>
+            <div class="rooms__container container">
+                <div class="rooms__header section-header" data-aos="fade-in">
+                    <h2 class="rooms__title section-title">
+                        Комнаты
+                    </h2>
+                    <a href="#" class="rooms__more-link more-link hide-on-table">
+                        Все комнаты
+                    </a>
+                </div>
+                <ul class="rooms__list">
+                    @@loop("html/main-page/rooms/_item.html", [
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                        {},
+                    ])
+                </ul>
+                <a href="#" class="rooms__more-btn alt-btn _transparent visible-on-table">
+                    Все команты
+                </a>
+            </div>
+        </section>
+        <section class="advantages section-padding">
+            <div class="advantages__bg">
+                <picture>
+                    <source srcset="img/main-page/advantages/bg.webp" type="image/webp">
+                    <img src="img/main-page/advantages/bg.png" loading="lazy" alt="" width="0" height="0" class="advantages__bg--img">
+                </picture>
+            </div>
+            <div class="advantages__container container">
+                <div class="advantages__header">
+                    <div class="advantages__header--decor">
+                        <div class="advantages__header--decor-body" data-aos="fade-up-left">
+                            <picture class="hide-on-table">
+                                <source srcset="img/main-page/advantages/image-1.webp" type="image/webp">
+                                <img src="img/main-page/advantages/image-1.png" alt="" loading="lazy" width="200" class="advantages__header--decor-img">
+                            </picture>
+                            <picture class="visible-on-table">
+                                <source srcset="img/main-page/advantages/image-1-mob.webp" type="image/webp">
+                                <img src="img/main-page/advantages/image-1-mob.png" alt="" loading="lazy" width="200" class="advantages__header--decor-img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="advantages__header--block" data-aos="fade-in" data-aos-delay="400">
+                        <img src="img/main-page/advantages/logo.svg" alt="" class="advantages__logo">
+                        <h2 class="advantages__title section-title _center">
+                            Наши Преимущества
+                        </h2>
+                        <div class="advantages__subtext">
+                            Стараемся ради твоей победы
+                        </div>
+                    </div>
+                    <div class="advantages__header--decor" >
+                        <div class="advantages__header--decor-body" data-aos="fade-up-right" data-aos-delay="200">
+                            <picture class="hide-on-table">
+                                <source srcset="img/main-page/advantages/image-2.webp" type="image/webp">
+                                <img src="img/main-page/advantages/image-2.png" alt="" loading="lazy" width="200" class="advantages__header--decor-img">
+                            </picture>
+                            <picture class="visible-on-table">
+                                <source srcset="img/main-page/advantages/image-2-mob.webp" type="image/webp">
+                                <img src="img/main-page/advantages/image-2-mob.png" alt="" loading="lazy" width="200" class="advantages__header--decor-img">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+                <ul class="advantages__list">
+                    <li class="advantages__item" data-aos="fade-up" data-aos-delay="400">
+                        <div class="advantages__item--body">
+                            <div class="advantages__item--icon">
+                                <img src="img/main-page/advantages/icon-1.svg" alt="" class="advantages__item--icon-img">
+                            </div>
+                            <h3 class="advantages__item--title section-title _center">
+                                Надежность
+                            </h3>
+                            <div class="advantages__item--text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="advantages__item" data-aos="fade-up" data-aos-delay="500">
+                        <div class="advantages__item--body">
+                            <div class="advantages__item--icon">
+                                <img src="img/main-page/advantages/icon-2.svg" alt="" class="advantages__item--icon-img">
+                            </div>
+                            <h3 class="advantages__item--title section-title _center">
+                                Безопасность
+                            </h3>
+                            <div class="advantages__item--text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="advantages__item" data-aos="fade-up" data-aos-delay="600">
+                        <div class="advantages__item--body">
+                            <div class="advantages__item--icon">
+                                <img src="img/main-page/advantages/icon-3.svg" alt="" class="advantages__item--icon-img">
+                            </div>
+                            <h3 class="advantages__item--title section-title _center">
+                                Скорость
+                            </h3>
+                            <div class="advantages__item--text">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing. 
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="advantages__game large-game" data-aos="fade-in">
+                    <div class="large-game__preview">
+                        <picture>
+                            <source srcset="img/main-page/advantages/super-game.webp" type="image/webp">
+                            <img src="img/main-page/advantages/super-game.jpg" loading="lazy" alt="" width="300" class="large-game__preview--img">
+                        </picture>
+                    </div>
+                    <img src="img/icons/play.svg" width="42" height="42" alt="" class="large-game__play-icon">
+                    <h3 class="large-game__title">
+                        Супер игра
+                    </h3>
+                </a>
+            </div>
+        </section>
+        <section class="video section-padding" data-aos="fade-in">
+            <div class="video__wrapper">
+                <button type="button" class="video__preview" title="Запустить видео">
+                    <div class="video__preview--image">
+                        <picture>
+                            <source srcset="img/main-page/advantages/video-preview.webp" type="image/webp">
+                            <img src="img/main-page/advantages/video-preview.jpg" alt="" width="300" class="video__preview--img">
+                        </picture>
+                    </div>
+                    <div class="video__preview--block">
+                        <img src="img/icons/play.svg" width="94" height="94" alt="" class="video__preview--play">
+                        <h2 class="video__preview--text">
+                            О том почему вы с нами!
+                        </h2>
+                    </div>
+                </button>
+                <video width="1280" height="720" controls="controls" class="video__block">
+                    <source src="video/video.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+        <section class="news section-padding">
+            <div class="news__container container">
+                <div class="news__row">
+                    <div class="news__header section-header" data-aos="fade-in">
+                        <h2 class="news__title section-title">
+                            Новости комании
+                        </h2>
+                        <a href="#" class="news__more-link more-link hide-on-table">
+                            Все новости
+                        </a>
+                    </div>
+                    <div class="news__list">
+                        <article class="news__large-article" data-aos="fade-in" data-aos-delay="400">
+                            <a href="#" class="news__large-article--body" title="Название новости или статьи">
+                                <div class="news__large-article--image">
+                                    <picture>
+                                        <source srcset="img/main-page/news/image-large.webp" type="image/webp">
+                                        <img src="img/main-page/news/image-large.jpg" alt="" width="400" loading="lazy" class="news__large-article--img">
+                                    </picture>
+                                </div>
+                                <h3 class="news__large-article--title">
+                                    Название новости или статьи
+                                </h3>
+                                <time class="news__large-article--time" datetime="2022-12-12">
+                                    12  / 12  /  2022
+                                </time>
+                                <div class="news__large-article--text">
+                                    Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non eleifend 
+                                </div>
+                            </a>
+                        </article>
+                        <div class="news__article--list">
+                            <article class="news__article" data-aos="fade-up" data-aos-delay="600" data-aos-anchor=".news__article--list">
+                                <a href="#" class="news__article--body">
+                                    <div class="news__article--info">
+                                        <h3 class="news__article--title">
+                                            Название новости или статьи
+                                        </h3>
+                                        <time class="news__article--time" datetime="2022-12-12">
+                                            12  / 12  /  2022
+                                        </time>
+                                        <div class="news__article--text">
+                                            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non eleifend 
+                                        </div>
+                                    </div>
+                                    <div class="news__article--image">
+                                        <picture>
+                                            <source srcset="img/main-page/news/image-1.webp" type="image/webp">
+                                            <img src="img/main-page/news/image-1.jpg" loading="lazy" alt="" width="250" class="news__article--img">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="news__article" data-aos="fade-up" data-aos-delay="700" data-aos-anchor=".news__article--list">
+                                <a href="#" class="news__article--body">
+                                    <div class="news__article--info">
+                                        <h3 class="news__article--title">
+                                            Название новости или статьи
+                                        </h3>
+                                        <time class="news__article--time" datetime="2022-12-12">
+                                            12  / 12  /  2022
+                                        </time>
+                                        <div class="news__article--text">
+                                            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non eleifend 
+                                        </div>
+                                    </div>
+                                    <div class="news__article--image">
+                                        <picture>
+                                            <source srcset="img/main-page/news/image-2.webp" type="image/webp">
+                                            <img src="img/main-page/news/image-2.jpg" loading="lazy" alt="" width="250" class="news__article--img">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </article>
+                            <article class="news__article" data-aos="fade-up" data-aos-delay="800" data-aos-anchor=".news__article--list">
+                                <a href="#" class="news__article--body">
+                                    <div class="news__article--info">
+                                        <h3 class="news__article--title">
+                                            Название новости или статьи
+                                        </h3>
+                                        <time class="news__article--time" datetime="2022-12-12">
+                                            12  / 12  /  2022
+                                        </time>
+                                        <div class="news__article--text">
+                                            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non eleifend 
+                                        </div>
+                                    </div>
+                                    <div class="news__article--image">
+                                        <picture>
+                                            <source srcset="img/main-page/news/image-3.webp" type="image/webp">
+                                            <img src="img/main-page/news/image-3.jpg" loading="lazy" alt="" width="250" class="news__article--img">
+                                        </picture>
+                                    </div>
+                                </a>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="news__game large-game" data-aos="fade-in" data-aos-delay="600">
+                    <div class="large-game__preview">
+                        <picture>
+                            <source srcset="img/main-page/news/game.webp" type="image/webp">
+                            <img src="img/main-page/news/game.jpg" loading="lazy" alt="" width="300" class="large-game__preview--img">
+                        </picture>
+                    </div>
+                    <img src="img/icons/play.svg" width="42" height="42" alt="" class="large-game__play-icon">
+                    <h3 class="large-game__title">
+                        Шахматные игры
+                    </h3>
+                </a>
+            </div>
+        </section>
+        <section class="feedback section-padding">
+            <div class="feedback__bg">
+                <picture>
+                    <source srcset="img/main-page/feedback/bg.webp" type="image/webp">
+                    <img src="img/main-page/feedback/bg.png" loading="lazy" alt="" width="0" height="0" class="feedback__bg--img">
+                </picture>
+            </div>
+            <div class="feedback__container container">
+                <div class="feedback__decor hide-on-table">
+                    <div class="feedback__decor--body" data-aos="fade-up" data-aos-delay="200">
+                        <picture>
+                            <source srcset="img/main-page/feedback/image-1.webp" type="image/webp">
+                            <img src="img/main-page/feedback/image-1.png" loading="lazy" alt="" width="200" height="335" class="feedback__decor--img">
+                        </picture>
+                    </div>
+                </div>
+                <form action="#" class="feedback__form" data-aos="fade-in" data-aos-delay="700">
+                    <h2 class="feedback__title section-title _vertical">
+                        Обратная связь
+                    </h2>
+                    <label class="feedback__label">
+                        <span class="feedback__input-name">Email*</span>
+                        <input type="email" name="email" class="feedback__input" placeholder="Email@gmail" required>
+                    </label>
+                    <label class="feedback__label">
+                        <input type="text" name="name" class="feedback__input" placeholder="Имя пользователя">
+                    </label>
+                    <label class="feedback__label">
+                        <textarea name="message" placeholder="Ваше сообщение" rows="3" class="feedback__textarea"></textarea>
+                    </label>
+                    <button class="feedback__submit btn _large _red" type="submit">Отправить</button>
+                </form>
+                <div class="feedback__decor">
+                    <div class="feedback__decor--body" data-aos="fade-down" data-aos-delay="400">
+                        <picture class="hide-on-table">
+                            <source srcset="img/main-page/feedback/image-2.webp" type="image/webp">
+                            <img src="img/main-page/feedback/image-2.png" loading="lazy" alt="" width="205" height="257" class="feedback__decor--img">
+                        </picture>
+                        <picture class="visible-on-table">
+                            <source srcset="img/main-page/feedback/image-mob.webp" type="image/webp">
+                            <img src="img/main-page/feedback/image-mob.png" loading="lazy" alt="" width="176" height="196" class="feedback__decor--img">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+@@include("html/_footer.html")

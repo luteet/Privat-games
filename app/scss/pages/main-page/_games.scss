@@ -1,0 +1,133 @@
+.games {
+    
+    // .games__container
+
+    &__container {
+        padding-bottom: 30px;
+    }
+
+    // .games__header
+
+    &__header {
+    }
+
+    // .games__title
+
+    &__title {
+    }
+
+    // .games__link
+
+    &__link {
+
+        position: relative;
+        display: inline-block;
+        width: 100%; padding-top: 100%;
+
+        // .games__link--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+    }
+
+    // .games__filter
+
+    &__filter {
+        padding-top: 30px;
+        border-bottom: 1px solid var(--light);
+        display: flex;
+
+        // .games__filter--list
+
+        &--list {
+            display: flex;
+            overflow-y: auto;
+        }
+
+        // .games__filter--item
+
+        &--item {
+            display: flex;
+            padding-right: 45px;
+        }
+
+        // .games__filter--btn
+
+        &--btn {
+            background: transparent;
+            color: var(--light);
+            padding: 12px 0;
+            font-size: 0.875rem;
+
+            display: flex;
+            align-items: center;
+
+            border-bottom: 2px solid transparent;
+
+            transition: border .2s ease-in-out;
+
+            &._active {
+                font-weight: 700;
+                border-color: var(--light);
+            }
+        }
+
+        // .games__filter--icon
+
+        &--icon {
+            margin-right: 5px;
+            flex: 0 0 10px;
+        }
+    }
+
+    // .games__wrapper
+
+    &__wrapper {
+        padding-top: 30px;
+
+        overflow-y: auto;
+        margin: -6px;
+        
+        @include _768 {
+            margin: -8px;
+        }
+    }
+
+    // .games__list
+
+    &__list {
+        
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 1fr 1fr;
+        
+
+        min-width: 800px;
+        
+    }
+
+    // .games__item
+
+    &__item {
+        display: flex;
+        padding: 6px;
+        @include _768 {
+            padding: 8px;
+        }
+    }
+
+    // .games__more-btn
+
+    &__more-btn {
+        margin-top: 25px;
+
+        width: 100%;
+        margin-inline: auto;
+    }
+}

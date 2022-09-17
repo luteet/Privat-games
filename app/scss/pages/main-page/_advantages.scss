@@ -1,0 +1,303 @@
+.advantages {
+
+    position: relative;
+
+    // .advantages__bg
+
+    &__bg {
+
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        text-align: right;
+
+        // .advantages__bg--img
+
+        &--img {
+            position: absolute;
+            right: 0; top: 0;
+            height: 976px; width: auto;
+            object-fit: cover;
+            user-select: none;
+        }
+    }
+
+    // .advantages__container
+
+    &__container {
+    }
+
+    // .advantages__header
+
+    &__header {
+
+        padding-top: 44px;
+        @include _768 {
+            padding-top: 129px;
+        }
+
+        display: flex;
+        justify-content: center;
+
+        // .advantages__header--decor
+
+        &--decor {
+            z-index: -1;
+
+            margin-top: -35px;
+            @media(min-width: 500px) {
+                margin-top: -85px;
+            }
+
+            &:first-child {
+                //margin-right: -70px;
+                transform: translate(0px, 10px);
+                margin-right: -30px;
+                @include _768 {
+                    margin-right: -70px;
+                    transform: translate(0px, 0px);
+                }
+            }
+
+            &:last-child {
+                margin-left: -30px;
+                transform: translate(0px, 0px);
+                @include _768 {
+                    margin-left: -70px;
+                    transform: translate(30px, 0);
+                }
+            }
+        }
+
+        // .advantages__header--decor-img
+
+        &--decor-img {
+            max-width: min(150px, 100%);
+
+            @include _768 {
+                max-width: 100%;
+            }
+        }
+
+        // .advantages__header--block
+
+        &--block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+        }
+    }
+
+    // .advantages__logo
+
+    &__logo {
+    }
+
+    // .advantages__title
+
+    &__title {
+        padding-top: 30px;
+    }
+
+    // .advantages__subtext
+
+    &__subtext {
+        padding-top: 10px;
+
+        font-weight: 300;
+        font-size: 0.875rem;
+        line-height: 150%;
+    }
+
+    // .advantages__list
+
+    &__list {
+        padding-top: 32px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        margin: -20px -10px;
+    }
+
+    // .advantages__item
+
+    &__item {
+
+        flex: 1 1 100%;
+        padding: 20px 10px;
+
+        @media(min-width: 500px) {
+            flex: 0 1 33.333%;
+
+            &:nth-child(3n + 3) {
+                align-items: flex-end;
+            }
+    
+            &:nth-child(3n + 1) {
+                align-items: flex-start;
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+        // .advantages__item--body
+
+        &--body {
+            max-width: 250px;
+
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            text-align: center;
+        }
+
+        // .advantages__item--icon
+
+        &--icon {
+            width: 132px; height: 132px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+
+            padding: 15px;
+            
+
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+
+                border: 1px solid transparent;
+                border-radius: 50%;
+                //background: linear-gradient(45deg,#1C4EFF,#1C92FF) border-box;
+                background: linear-gradient(180deg, #61C8AF 0%, rgba(97, 200, 175, 0) 100%) border-box;
+
+                -webkit-mask:
+                    linear-gradient(#fff 0 0) padding-box, 
+                    linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                mask-composite: exclude;
+
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%; top: 50%;
+                transform: translate(-50%,-50%);
+                width: calc(100% - 28px); height: calc(100% - 28px);
+                border-radius: 50%;
+                background: linear-gradient(180deg, rgba(45, 107, 103, 1) 0%, rgba(45, 107, 103, 0) 100%);
+                backdrop-filter: blur(18px);
+                z-index: -1;
+            }
+        }
+
+        // .advantages__item--icon-img
+
+        &--icon-img {
+            max-width: 100%;
+        }
+
+        // .advantages__item--title
+
+        &--title {
+            padding-top: 43px;
+        }
+
+        // .advantages__item--text
+
+        &--text {
+            padding-top: 12px;
+
+            max-width: 200px;
+
+            font-weight: 300;
+            font-size: 0.875rem;
+            color: var(--light);
+        }
+    }
+
+    // .advantages__game
+
+    &__game {
+        margin-top: 52px;
+        @include _768 {
+            margin-top: 165px;
+        }
+        
+    }
+}
+
+.large-game {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    position: relative;
+
+    padding: 20px;
+    min-height: 170px;
+
+    &:hover &__preview--img {
+        transform: scale(1.05);
+    }
+
+    // .large-game__preview
+
+    &__preview {
+        
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+
+        border-radius: 10px;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(0deg, rgba(23, 23, 23, 0.76) 0%, rgba(0, 0, 0, 0) 54.71%);
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        // .large-game__preview--img
+
+        &--img {
+            border-radius: 10px;
+            width: 100%; height: 100%;
+            object-fit: cover;
+
+            transition: transform .3s ease-in-out;
+        }
+    }
+
+    // .large-game__play-icon
+
+    &__play-icon {
+    }
+
+    // .large-game__title
+
+    &__title {
+        padding-top: 14px;
+        color: var(--light);
+    }
+}

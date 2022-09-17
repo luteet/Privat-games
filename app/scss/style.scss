@@ -1,0 +1,20 @@
+@import 'mixin';
+@import 'null';
+@import 'libs';
+@import 'vars';
+@import 'global';
+@import 'font';
+
+@import 'main-sections/header';
+
+
+@import 'pages/main-page/intro';
+@import 'pages/main-page/games';
+@import 'pages/main-page/rooms';
+@import 'pages/main-page/advantages';
+@import 'pages/main-page/video';
+@import 'pages/main-page/news';
+@import 'pages/main-page/feedback';
+
+
+@import 'main-sections/footer';

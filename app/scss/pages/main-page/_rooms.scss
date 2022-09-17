@@ -1,0 +1,88 @@
+.rooms {
+
+    position: relative;
+    
+
+    // .rooms__bg
+
+    &__bg {
+
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        z-index: -1;
+        background: var(--dark-red-gradient);
+
+        // .rooms__bg--img
+
+        &--img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            user-select: none;
+        }
+    }
+
+    // .rooms__container
+
+    &__container {
+    }
+
+    // .rooms__header
+
+    &__header {
+        padding-top: 2px;
+    }
+
+    // .rooms__title
+
+    &__title {
+    }
+
+    // .rooms__more-link
+
+    &__more-link {
+    }
+
+    // .rooms__list
+
+    &__list {
+        padding-top: 28px;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -4.5px;
+        @include _768 {
+            margin: -8px;
+        }
+    }
+
+    // .rooms__item
+
+    &__item {
+        padding: 4.5px;
+
+        flex: 1 1 100%;
+        max-width: 100%;
+
+        @include _768 {
+            padding: 8px;
+
+            flex: 0 1 50%;
+            max-width: 50%;
+        }
+
+        &:nth-child(n + 4) {
+            display: none;
+            @include _768 {
+                display: flex;
+            }
+        }
+    }
+
+    // .rooms__more-btn
+
+    &__more-btn {
+        margin: 35px auto 0 auto;
+    }
+}

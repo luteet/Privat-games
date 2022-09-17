@@ -1,0 +1,86 @@
+
+
+$containerPadding: 15;
+
+$container: 1032 + ($containerPadding * 2);
+$containerMin: 1280 + ($containerPadding * 2);
+$containerLarge: 1405 + ($containerPadding * 2);
+
+:root {
+    --title-font: 'TurismoCF';
+    --main-font: 'Roboto';
+    
+    --accent: #337E7A;
+
+    --light: #F9F1DF;
+    --dark: #141414;
+    --dark-2: #474747;
+    --dark-3: #3C3C3C;
+    --dark-5: #353535;
+    --dark-4: #272727;
+    --dark-6: #21201E;
+    --dark-7: #2D2B29;
+
+    --gray: #65615B;
+    
+    --white: #FFF;
+    --black: #000;
+    --teal-light: #61C8AF;
+    --teal-light-2: #4bb399;
+    --teal: #337E7A;
+    --red: #F4515A;
+    --red-2: #d82d36;
+    --dark-red: #BF2525;
+    --dark-red-2: #ad1818;
+    --dark-red-gradient: linear-gradient(92.51deg, #52181B 1.56%, #390C0C 91.07%);
+
+    --container-padding: 15px;
+}
+
+@font-face {
+    @include font-include('Roboto', 300, swap, normal, 'Roboto-Light');
+}
+
+@font-face {
+    @include font-include('Roboto', 400, swap, normal, 'Roboto-Regular');
+}
+
+@font-face {
+    @include font-include('Roboto', 500, swap, normal, 'Roboto-Medium');
+}
+
+@font-face {
+    @include font-include('Roboto', 700, swap, normal, 'Roboto-Bold');
+}
+
+@font-face {
+    @include font-include('TurismoCF', 500, swap, normal, 'TurismoCF-Medium');
+}
+
+@font-face {
+    @include font-include('TurismoCF', 600, swap, normal, 'TurismoCF-DemiBold');
+}
+
+@font-face {
+    @include font-include('TurismoCF', 700, swap, normal, 'TurismoCF-Bold');
+}
+
+@font-face {
+    @include font-include('Inter', 300, swap, normal, 'Inter-Light');
+}
+
+@font-face {
+    @include font-include('Inter', 400, swap, normal, 'Inter-Regular');
+}
+
+@font-face {
+    @include font-include('Inter', 500, swap, normal, 'Inter-Medium');
+}
+
+@font-face {
+    @include font-include('Inter', 700, swap, normal, 'Inter-Bold');
+}
+
+@font-face {
+    @include font-include('Montserrat', 700, swap, normal, 'Montserrat-Bold');
+}
