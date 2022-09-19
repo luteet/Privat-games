@@ -1,0 +1,113 @@
+.account-history-element {
+
+    // .account-history-element__body
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        font-size: 0.875rem;
+
+        padding: 10px 12px;
+        @include _426 {
+            padding: 10px 18px;
+        }
+        background: #161514;
+        border: 1px solid #252522;
+        border-radius: 6px;
+        
+    }
+
+    // .account-history-element__col
+
+    &__col {
+        flex: 1 1 auto;
+        &:first-child {
+            padding-right: 14px;
+            flex: 0 0 50px;
+            @include _426 {
+                padding-right: 20px;
+                flex: 0 0 56px;
+            }
+            
+        }
+    }
+
+    // .account-history-element__icon
+
+    &__icon {
+
+        width: 36px; height: 36px;
+        border-radius: 50%;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #555450;
+
+        &._accent {
+            background: var(--teal-light);
+        }
+
+        // .account-history-element__icon--img
+
+        &--img {
+        }
+    }
+
+    // .account-history-element__row
+
+    &__row {
+
+        color: #89857C;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // .account-history-element__row--col
+
+        &--col {
+            display: flex;
+            flex-direction: column;
+
+            line-height: 133%;
+        }
+    }
+
+    // .account-history-element__value
+
+    &__value {
+        color: var(--light);
+    }
+
+    // .account-history-element__name
+
+    &__name {
+        padding-top: 5px;
+    }
+
+    // .account-history-element__time
+
+    &__time {
+        display: flex;
+        flex-direction: column;
+        
+        text-align: right;
+
+        & span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            padding: 3px 0;
+
+            & svg {
+                margin-right: 5px;
+                width: 15px;
+            }
+        }
+    }
+}

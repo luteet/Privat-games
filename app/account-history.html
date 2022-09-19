@@ -1,0 +1,167 @@
+@@include("html/_header.html")
+
+        <main class="main">
+            <section class="account">
+                <div class="account__container container _large">
+                    @@include("html/account/_aside-2.html", {
+                        "settings": '',
+                        "history": '_active',
+                        "referal": '',
+                        "withdrawals": '',
+                    })
+                    <div class="account__main" data-aos="fade-in" data-aos-delay="400">
+                        <div class="account__main--header page-header">
+                            <a href="#" class="account__forward-btn page-header__forward-btn" title="Назад">
+                                <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.25 3.49991C0.25 3.35065 0.304932 3.20132 0.414795 3.08757L3.2273 0.170898C3.44702 -0.0569662 3.80298 -0.0569662 4.02271 0.170898C4.24243 0.398763 4.24243 0.767904 4.02271 0.995768L1.60703 3.49991L4.02227 6.0046C4.24199 6.23246 4.24199 6.6016 4.02227 6.82947C3.80254 7.05733 3.44658 7.05733 3.22686 6.82947L0.414356 3.9128C0.304493 3.79887 0.25 3.64939 0.25 3.49991Z" fill="#F9F1DF"/>
+                                </svg>
+                            </a>
+                            <h2 class="account__title section-title page-header__title _decor-none">
+                                История пополнений
+                            </h2>
+                            <div class="account__bread-crumbs page-header__bread-crumbs">
+                                <ul class="page-header__bread-crumbs--list">
+                                    <li class="page-header__bread-crumbs--item">
+                                        <a href="index.html" class="page-header__bread-crumbs--link">
+                                            Главная
+                                        </a>
+                                    </li>
+                                    <li class="page-header__bread-crumbs--item">
+                                        <a href="account.html" class="page-header__bread-crumbs--link">
+                                            Личный кабинет
+                                        </a>
+                                    </li>
+                                    <li class="page-header__bread-crumbs--item">
+                                        <a class="page-header__bread-crumbs--link">
+                                            История пополнений
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="account__main--wrapper">
+                            <div class="account__row">
+                                <div class="account__col _full _border-top" data-aos="fade-in" data-aos-delay="600" data-aos-anchor=".account__main">
+                                    <div class="account-history">
+                                        <h3 class="account-history__title account-min-title">
+                                            Пополнение баланса
+                                        </h3>
+                                        <ul class="account-history__list">
+                                            @@loop("html/account/_history-element.html", [
+                                                {
+                                                    "icon": '1',
+                                                    "icon_type": '',
+                                                    "value": '20.00 USD',
+                                                    "name": 'Пополнение баланса',
+                                                },
+                                                {
+                                                    "icon": '1',
+                                                    "icon_type": '',
+                                                    "value": '20.00 USD',
+                                                    "name": 'Пополнение баланса',
+                                                },
+                                                {
+                                                    "icon": '2',
+                                                    "icon_type": '_accent',
+                                                    "value": '20 фишек',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                                {
+                                                    "icon": '1',
+                                                    "icon_type": '_accent',
+                                                    "value": '20.00 USD',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                                {
+                                                    "icon": '3',
+                                                    "icon_type": '_accent',
+                                                    "value": '20 фишек',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                                {
+                                                    "icon": '2',
+                                                    "icon_type": '',
+                                                    "value": '20 фишек',
+                                                    "name": 'Пополнение баланса',
+                                                },
+                                                {
+                                                    "icon": '1',
+                                                    "icon_type": '',
+                                                    "value": '20.00 USD',
+                                                    "name": 'Пополнение баланса',
+                                                },
+                                                {
+                                                    "icon": '2',
+                                                    "icon_type": '_accent',
+                                                    "value": '20 фишек',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                                {
+                                                    "icon": '1',
+                                                    "icon_type": '_accent',
+                                                    "value": '20.00 USD',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                                {
+                                                    "icon": '3',
+                                                    "icon_type": '_accent',
+                                                    "value": '20 фишек',
+                                                    "name": 'Победа в игре “Дурак”',
+                                                },
+                                            ])
+                                        </ul>
+                                        <div class="account-history__pagination">
+                                            <div class="page-pagination">
+                                                <div class="page-pagination__wrapper">
+                                                    <a href="#" class="page-pagination__btn _prev _disabled">
+                                                        <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.16016 1.41L3.58016 6L8.16016 10.59L6.75016 12L0.750156 6L6.75016 0L8.16016 1.41Z" fill="#474747"/>
+                                                        </svg>
+                                                    </a>
+                                                    <ul class="page-pagination__list">
+                                                        <li class="page-pagination__item">
+                                                            <a href="#" class="page-pagination__link _current">
+                                                                1
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-pagination__item">
+                                                            <a href="#" class="page-pagination__link">
+                                                                2
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-pagination__item">
+                                                            <a href="#" class="page-pagination__link">
+                                                                ...
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-pagination__item">
+                                                            <a href="#" class="page-pagination__link">
+                                                                9
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-pagination__item">
+                                                            <a href="#" class="page-pagination__link">
+                                                                10
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <a href="#" class="page-pagination__btn _next">
+                                                        <svg width="9" height="12" viewBox="0 0 9 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M0.839844 1.41L5.41984 6L0.839844 10.59L2.24984 12L8.24984 6L2.24984 0L0.839844 1.41Z" fill="white"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+@@include("html/_footer.html", {
+    "bg": ''
+})

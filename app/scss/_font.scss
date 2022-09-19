@@ -61,6 +61,12 @@
         background: linear-gradient(90deg, #F9F1DF 0%, rgba(249, 241, 223, 0) 50%);
     }
 
+    &._decor-none {
+        &::before, &::after {
+            display: none;
+        }
+    }
+
     &._center {
         &::before, &::after {
             display: none;
@@ -83,3 +89,7 @@
 .txt-center {
     text-align: center;
 }
+
+/* .min-title {
+
+} */

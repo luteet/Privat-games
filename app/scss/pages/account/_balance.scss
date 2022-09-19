@@ -1,0 +1,274 @@
+.account-balance {
+
+    // .account-balance__title
+
+    &__title {
+    }
+
+    // .account-balance__main
+
+    &__main {
+        display: grid;
+    }
+
+    // .account-balance__block
+
+    &__block {
+
+        grid-area: 1/1;
+
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+        opacity: 0; visibility: hidden;
+        &._visible {
+            opacity: 1; visibility: visible;
+        }
+
+        // .account-balance__block--body
+
+        &--body {
+            background: #21201E;
+            border: 1px solid #393834;
+            border-radius: 6px;
+        }
+
+        // .account-balance__block--header
+
+        &--header {
+            position: relative;
+        }
+    }
+
+    // .account-balance__target
+
+    &__target {
+        display: flex;
+        align-items: center;
+
+        position: relative;
+
+        padding: 20px 50px 20px 20px;
+        width: 100%;
+
+        border-radius: 6px 6px 0 0;
+
+        background: #21201E;
+        color: var(--teal-light);
+        font-size: 0.875rem;
+        line-height: 100%;
+        
+        & svg {
+            height: 16px; width: 16px;
+            margin-right: 7px;
+            & path {
+                fill: var(--teal-light);
+            }
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            right: 20px; top: 50%;
+            transform: translate(0,-50%);
+            width: 11px; height: 11px;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.99987 5.64258C4.78664 5.64258 4.57331 5.5641 4.41081 5.40716L0.244141 1.3893C-0.0813802 1.0754 -0.0813802 0.566894 0.244141 0.252999C0.569661 -0.0608956 1.09701 -0.0608956 1.42253 0.252999L4.99987 3.70396L8.578 0.253627C8.90352 -0.060268 9.43086 -0.060268 9.75638 0.253627C10.0819 0.567522 10.0819 1.07603 9.75638 1.38993L5.58971 5.40778C5.42695 5.56473 5.21341 5.64258 4.99987 5.64258Z' fill='%2361C8AF'/%3E%3C/svg%3E%0A")
+            center / contain no-repeat;
+        }
+    }
+
+    &__target._active + &__list {
+        opacity: 1; visibility: visible;
+    }
+
+    // .account-balance__list
+
+    &__list {
+        position: absolute;
+        left: -1px; top: 100%;
+
+        width: calc(100% + 2px);
+
+        z-index: 2;
+
+        padding: 8px;
+        border-radius: 0 0 6px 6px;
+
+        background: #21201E;
+        border: 1px solid #393834;
+
+        transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+        opacity: 0; visibility: hidden;
+
+        // .account-balance__list--btn
+
+        &--btn {
+            display: flex;
+            align-items: center;
+
+            width: 100%;
+            padding: 11px;
+
+            font-size: 0.875rem;
+            line-height: 100%;
+
+            border-radius: 6px;
+
+            color: var(--teal-light);
+            background: transparent;
+
+            & svg {
+                height: 16px; width: 16px;
+                margin-right: 7px;
+                & path {
+                    fill: var(--teal-light);
+                }
+            }
+
+            transition: background .2s ease-in-out;
+
+            &:hover {
+                background: var(--dark-2);
+            }
+
+            &:active {
+                background: var(--dark-3);
+            }
+        }
+    }
+
+    // .account-balance__label
+
+    &__label {
+        
+    }
+
+    &__label:hover &__input--tooltip {
+        @media(any-hover) {
+            opacity: 1; visibility: visible;
+        }
+        
+    }
+
+    // .account-balance__input
+
+    &__input {
+
+        border: 0; border-radius: 0;
+        border-top: 1px solid #393834;
+
+        &:focus + * + &--tooltip {
+            opacity: 1; visibility: visible;
+        }
+
+        // .account-balance__input--tooltip
+
+        &--tooltip {
+            position: absolute;
+            right: 50%; top: 0%;
+            transform: translate(50%,-100%);
+            @media(min-width: 1200px) {
+                right: 10px; top: 50%;
+                transform: translate(100%,-50%);
+
+                text-align: left;
+            }
+
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            font-size: 0.75rem;
+            line-height: 133%;
+
+            padding: 5px;
+
+            background: #33322F;
+            border-radius: 6px;
+
+            pointer-events: none;
+
+            transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+            opacity: 0; visibility: hidden;
+
+            &::before {
+                content: '';
+                width: 11px; height: 11px;
+                position: absolute;
+                left: 50%; top: 100%;
+                transform: translate(-50%,-50%) rotate(45deg);
+                z-index: -1;
+                background: #33322F;
+
+                @media(min-width: 1200px) {
+                    left: 0; top: 50%;
+                    transform: translate(-50%,-50%) rotate(45deg);
+                }
+
+                
+            }
+
+        }
+    }
+
+    // .account-balance__input-placeholder
+
+    &__input-placeholder {
+    }
+
+    // .account-balance__btn-list
+
+    &__btn-list {
+        display: flex;
+        justify-content: center;
+    }
+
+    // .account-balance__min-btn
+
+    &__min-btn {
+        margin: 12px 5.5px;
+        width: 66px; height: 35px;
+        border-radius: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        color: var(--teal-light);
+        background: #13201F;
+        border: 1px solid #214E4B;
+        
+        transition: background .2s ease-in-out;
+
+        &:hover {
+            background: #162F2D;
+        }
+
+        &:active {
+            background: rgb(10, 43, 40);
+        }
+    }
+
+    // .account-balance__promo
+
+    &__promo {
+
+        // .account-balance__promo--label
+
+        &--label {
+        }
+
+        // .account-balance__promo--input
+
+        &--input {
+        }
+
+        // .account-balance__promo--submit
+
+        &--submit {
+            margin-top: 23px;
+            
+            width: 100%;
+            font-size: 0.875rem;
+        }
+    }
+}

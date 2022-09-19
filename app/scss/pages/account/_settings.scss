@@ -1,0 +1,135 @@
+
+.account-settings-element {
+
+    // .account-settings-element__title
+
+    &__title {
+        padding-bottom: 16px;
+    }
+
+    // .account-settings-element__avatar
+
+    &__avatar {
+
+        @include _768 {
+            padding-bottom: 50px;
+        }
+        position: relative;
+
+        display: flex;
+        align-items: center;
+
+        &--body {
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+            flex: 0 0 139px;
+            padding-right: 18px;
+
+            @include _768 {
+                flex: 0 0 116px;
+                padding-right: 0;
+            }
+        }
+
+        // .account-settings-element__avatar--label
+
+        &--label {
+            display: inline-block;
+            position: relative;
+            width: 100%; padding-top: 100%;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                border: 0.8px solid #393834;
+                border-radius: 4.8px;
+            }
+        }
+
+        // .account-settings-element__avatar--img
+
+        &--img {
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            object-fit: cover;
+            //border: 0.8px solid #393834;
+            border-radius: 4.8px;
+
+            cursor: pointer;
+        }
+
+        // .account-settings-element__avatar--input
+
+        &--input {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            width: 1px; height: 1px;
+            opacity: 0; visibility: hidden;
+        }
+
+        // .account-settings-element__avatar--add
+
+        &--add {
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.875rem;
+        }
+
+        &--text {
+            position: static;
+            left: 0; bottom: 0;
+
+            font-size: 14px;
+            line-height: 130%;
+            color: #89857D;
+
+            
+
+            @include _768 {
+                position: absolute;
+                width: 200px;
+            }
+        }
+    }
+
+    // .account-settings-element__form
+
+    &__form {
+
+        // .account-settings-element__form--list
+
+        &--list {
+        }
+    }
+
+    // .account-settings-element__label
+
+    &__label {
+    }
+
+    // .account-settings-element__input
+
+    &__input {
+    }
+
+    // .account-settings-element__input-placeholder
+
+    &__input-placeholder {
+    }
+
+    // .account-settings-element__submit
+
+    &__submit {
+        margin-top: 15px;
+        font-size: 0.875rem;
+        width: 100%;
+    }
+}

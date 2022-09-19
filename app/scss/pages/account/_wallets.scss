@@ -1,0 +1,27 @@
+.account-wallets {
+
+    
+
+    // .account-wallets__add
+
+    &__add {
+
+        padding-top: 16px;
+
+        // .account-wallets__add--btn
+
+        &--btn {
+
+            display: inline-flex;
+            align-items: center;
+
+            font-size: 0.875rem;
+
+            & svg {
+                margin-left: 5px;
+                flex: 0 0 20px;
+                width: 20px;
+            }
+        }
+    }
+}

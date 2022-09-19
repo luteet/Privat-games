@@ -1,0 +1,100 @@
+.account-base-info {
+
+    // .account-base-info__item
+
+    &__item {
+        padding: 22px 12px 31px 12px;
+        border-bottom: 1px solid #292826;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    // .account-base-info__name
+
+    &__name {
+        font-size: 1.125rem;
+        line-height: 100%;
+        color: var(--light);
+
+        padding-bottom: 5px;
+    }
+
+    // .account-base-info__span
+
+    &__span {
+        color: #89857C;
+    }
+
+    // .account-base-info__list
+
+    &__list {
+        display: grid;
+        grid-template-columns: auto max-content;
+
+        margin: -13.5px 0 -22px 0;
+        padding-right: 10px;
+
+        & dt {
+            display: flex;
+            align-items: center;
+
+            font-size: 0.875rem;
+
+            & img {
+                margin-right: 18px;
+            }
+        }
+
+        & > * {
+            padding: 13px 0;
+        }
+    }
+}
+
+.account-remove-btn {
+    
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include _768 {
+        width: auto;
+        display: inline-flex;
+        justify-content: stretch;
+
+        margin-top: 20px;
+    }
+
+    color: var(--red-3);
+
+    transition: color .2s ease-in-out;
+
+    & svg {
+        margin-right: 20px;
+
+        & path {
+            transition: fill .2s ease-in-out;
+        }
+    }
+
+    &:hover {
+        color: var(--red);
+
+        & svg path {
+            fill: var(--red);
+        }
+    }
+
+    &:active {
+        color: var(--dark-red);
+
+        & svg path {
+            fill: var(--dark-red);
+        }
+    }
+}

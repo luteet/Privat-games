@@ -1,0 +1,121 @@
+.account-withdrawals {
+
+    // .account-withdrawals__block
+
+    &__block {
+        padding: 0;
+        &:not(:first-child) {
+            padding-top: 27px;
+        }
+    }
+
+    // .account-withdrawals__title
+
+    &__title {
+    }
+
+    // .account-withdrawals__row
+
+    &__row {
+
+        display: flex;
+        flex-wrap: wrap;
+
+        // .account-withdrawals__row--block
+
+        &--block {
+            
+            &:first-child {
+                flex: 0 1 55%;
+                padding-right: 6px;
+                
+            }
+            &:last-child {
+                flex: 0 1 45%;
+                padding-left: 6px;
+            }
+        }
+    }
+
+    // .account-withdrawals__select
+
+    &__select {
+    }
+
+    // .account-withdrawals__label
+
+    &__label {
+    }
+
+    // .account-withdrawals__input
+
+    &__input {
+    }
+
+    // .account-withdrawals__input-placeholder
+
+    &__input-placeholder {
+    }
+
+    // .account-withdrawals__type
+
+    &__type {
+
+        // .account-withdrawals__type--select
+
+        &--select {
+        }
+    }
+
+    // .account-withdrawals__result
+
+    &__result {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        background: #161514;
+        border: 1px solid #252522;
+        border-radius: 6px;
+
+        line-height: 100%;
+
+        padding: 20px;
+
+        // .account-withdrawals__result--name
+
+        &--name {
+        }
+
+        // .account-withdrawals__result--value
+
+        &--value {
+        }
+    }
+
+    // .account-withdrawals__submit
+
+    &__submit {
+        margin-top: 27px;
+        
+    }
+}
+
+.account-withdrawals-history {
+
+    // .account-withdrawals-history__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        margin: -6.5px 0;
+    }
+
+    // .account-withdrawals-history__item
+
+    &__item {
+        padding: 6.5px 0;
+    }
+}

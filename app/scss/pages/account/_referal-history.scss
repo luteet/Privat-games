@@ -1,0 +1,93 @@
+.account-referal-history {
+
+    //max-width: 370px;
+
+    // .account-referal-history__title
+
+    &__title {
+    }
+
+    // .account-referal-history__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+
+        margin: -7.5px 0;
+    }
+
+    // .account-referal-history__item
+
+    &__item {
+
+        padding: 7.5px 0;
+        width: 100%;
+
+        // .account-referal-history__item--body
+
+        &--body {
+            background: #161514;
+            border: 1px solid #252522;
+            border-radius: 6px;
+
+            padding: 19px 24px;
+
+            display: flex;
+            flex-direction: column;
+
+            position: relative;
+        }
+
+        // .account-referal-history__item--header
+
+        &--header {
+            display: flex;
+            justify-content: space-between;
+
+            padding-bottom: 25px;
+            position: relative;
+        }
+
+        // .account-referal-history__item--username
+
+        &--username {
+            color: var(--teal-light);
+        }
+
+        // .account-referal-history__item--time
+
+        &--time {
+            font-size: 0.875rem;
+            color: #89857C;
+        }
+
+        // .account-referal-history__item--link
+
+        &--link {
+            //display: block;
+            color: #89857D;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            
+            font-size: 0.875rem;
+
+            //display: block;
+            max-width: 100%;
+            position: absolute;
+            left: 0; bottom: 0;
+        }
+
+        // .account-referal-history__item--price
+
+        &--price {
+            margin-top: 13px;
+
+            display: flex;
+            align-items: center;
+            & svg {
+                margin-left: 5px;
+            }
+        }
+    }
+}

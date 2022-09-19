@@ -2,13 +2,15 @@
 
     //background: var(--dark);
     transition: background .2s ease-in-out;
-    padding-top: 5px;
+    //padding-top: 5px;
 
-    width: 100%;
+    width: calc(100% - var(--popup-padding, 0px));
 
     position: fixed;
     left: 0; top: 0;
-    z-index: 2;
+    z-index: 100;
+
+    //padding-right: var(--popup-padding);
 
     &._on-top {
         &::before {
@@ -24,6 +26,19 @@
         background: var(--dark);
         opacity: 1;
         transition: opacity .2s ease-in-out;
+
+        //z-index: -2;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%; height: 100%;
+        background: var(--dark);
+        opacity: 0;
+        transition: opacity .2s ease-in-out;
+        //z-index: -1;
     }
     // .header__container
 
@@ -40,13 +55,20 @@
 
     &__logo {
         padding-right: 5px;
+
+        position: relative;
+        z-index: 3;
+        
         @include _426 {
             padding-right: 10px;
         }
         // .header__logo--img
 
         &--img {
-            max-width: 80px;
+            max-width: 60px;
+            @media(min-width: 360px) {
+                max-width: 80px;
+            }
             @include _426 {
                 max-width: 100px;
             }
@@ -57,6 +79,9 @@
 
     &__nav {
         flex: 1 1 auto;
+
+        position: relative;
+        z-index: 3;
 
         // .header__nav--body
 
@@ -187,8 +212,13 @@
         // .header__user-info--icon
 
         &--icon {
-            margin-right: 7px;
-            flex: 0 0 20px;
+            margin-right: 3px;
+            flex: 0 0 15px;
+
+            @media(min-width: 360px) {
+                margin-right: 7px;
+                flex: 0 0 20px;
+            }
         }
 
         // .header__user-info--notifications
@@ -208,6 +238,7 @@
         @include _992 {
             position: relative;
         }
+
         min-height: 100%;
 
         display: flex;
@@ -317,6 +348,7 @@
         align-items: center;
 
         position: relative;
+        z-index: 3;
         &::before {
             content: '';
             position: absolute;
@@ -437,13 +469,15 @@
     &__nav-mob {
 
         position: absolute;
-        left: 0; top: 100%;
-        width: 100%; height: calc(var(--height-screen) - 100%);
+        left: 0; top: 0%;
+        padding-block: var(--height-header);
+        width: 100%; height: 100vh;// max-height: 100vh; min-height: 100vh;
         z-index: 2;
 
         background: var(--black);
 
         opacity: 0; visibility: hidden;
+        will-change: opacity;
         transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
 
         @include _992 {
@@ -456,10 +490,13 @@
 
         &--bg {
             position: absolute;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
+            left: 0; bottom: 0;
+            width: 100%; height: 100vh;
             z-index: -1;
             text-align: right;
+
+            display: flex;
+            align-items: flex-end;
 
             &-img {
                 width: 100%; height: auto;
@@ -471,6 +508,7 @@
         &--body {
             padding: 20px 25px;
             overflow-y: auto;
+            overflow-anchor: none;
             max-height: 100%;
         }
 
@@ -626,11 +664,20 @@
         position: relative;
     
         width: 21px; height: 17px;
+        margin-bottom: 5px;
     
         background: transparent;
-        overflow: hidden;
+        //overflow: hidden;
     
         z-index: 10;
+        &::before {
+            content: '';
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+            width: 30px; height: 30px;
+            
+        }
     
         cursor: pointer;
     
@@ -648,8 +695,8 @@
             transition: transform .2s ease-in-out, top .2s ease-in-out;
     
             &:nth-child(1) {
-                top: 15%;
-                transform: translate(0,30%);
+                top: 0%;
+                transform: translate(0,0%);
             }
 
             &:nth-child(2) {
@@ -659,7 +706,7 @@
             }
 
             &:nth-child(3) {
-                top: 85%;
+                top: 100%;
                 transform: translate(0, -100%);
             }
         }
@@ -682,5 +729,3 @@
         }
     }
 }
-
-

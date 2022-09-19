@@ -61,6 +61,213 @@ let slideDown = (target, duration=500) => {
   }, duration);
 }
 
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <popup> -=-=-=-=-=-=-=-=-=-=-=-=
+
+(function () {
+  var FX = {
+      easing: {
+          linear: function (progress) {
+              return progress;
+          },
+          quadratic: function (progress) {
+              return Math.pow(progress, 2);
+          },
+          swing: function (progress) {
+              return 0.5 - Math.cos(progress * Math.PI) / 2;
+          },
+          circ: function (progress) {
+              return 1 - Math.sin(Math.acos(progress));
+          },
+          back: function (progress, x) {
+              return Math.pow(progress, 2) * ((x + 1) * progress - x);
+          },
+          bounce: function (progress) {
+              for (var a = 0, b = 1, result; 1; a += b, b /= 2) {
+                  if (progress >= (7 - 4 * a) / 11) {
+                      return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2);
+                  }
+              }
+          },
+          elastic: function (progress, x) {
+              return Math.pow(2, 10 * (progress - 1)) * Math.cos(20 * Math.PI * x / 3 * progress);
+          }
+      },
+      animate: function (options) {
+          var start = new Date;
+          var id = setInterval(function () {
+              var timePassed = new Date - start;
+              var progress = timePassed / options.duration;
+              if (progress > 1) {
+                  progress = 1;
+              }
+              options.progress = progress;
+              var delta = options.delta(progress);
+              options.step(delta);
+              if (progress == 1) {
+                  clearInterval(id);
+  
+                  options.complete();
+              }
+          }, options.delay || 10);
+      },
+      fadeOut: function (element, options) {
+          var to = 1;
+          this.animate({
+              duration: options.duration,
+              delta: function (progress) {
+                  progress = this.progress;
+                  return FX.easing.swing(progress);
+              },
+              complete: options.complete,
+              step: function (delta) {
+                  element.style.opacity = to - delta;
+              }
+          });
+      },
+      fadeIn: function (element, options) {
+          var to = 0;
+          element.style.display = 'block';
+          this.animate({
+              duration: options.duration,
+              delta: function (progress) {
+                  progress = this.progress;
+                  return FX.easing.swing(progress);
+              },
+              complete: options.complete,
+              step: function (delta) {
+                  element.style.opacity = to + delta;
+              }
+          });
+      }
+  };
+  window.FX = FX;
+})()
+  
+let popupCheck = true, popupCheckClose = true;
+function popup(arg) {
+
+  const body = document.querySelector('body'),
+        html = document.querySelector('html');
+  
+  let duration = 200, idOnURL = false, url;
+  
+  if(arg) {
+
+      if(typeof arg.duration == 'number') {
+          duration = arg.duration;
+      }
+
+      if(arg.idOnURL === true) {
+      idOnURL = true;
+
+      url = new URL(window.location);
+      }
+
+  }
+  
+  function popupOpen(idPopup) {
+      if (popupCheck) {
+          popupCheck = false;
+
+          let popup,
+              id = idPopup;
+
+          popup = document.querySelector(id);
+
+          if(popup) {
+
+              body.classList.remove('_popup-active');
+              html.style.setProperty('--popup-padding', window.innerWidth - body.offsetWidth + 'px');
+              body.classList.add('_popup-active');
+
+              popup.classList.add('_active');
+              
+              if(idOnURL) history.pushState('', "", id);
+
+              FX.fadeIn(popup, {
+                  duration: duration,
+                  complete: function () {
+                      popupCheck = true;
+                  }
+              });
+
+          }
+
+      }
+  }
+
+  if(idOnURL) {
+      if(url.hash) {
+        let timeoutDuration = duration;
+        duration = 0;
+        popupOpen(url.hash);
+        setTimeout(() => {
+          duration = timeoutDuration;
+        }, timeoutDuration)
+      }
+    }
+
+  function remHash() {
+      let uri = window.location.toString();
+      if (uri.indexOf("#") > 0) {
+          let clean_uri = uri.substring(0, uri.indexOf("#"));
+          window.history.replaceState({}, document.title, clean_uri);
+      }
+  }
+
+  let thisTarget
+  body.addEventListener('click', function(event) {
+
+      thisTarget = event.target;
+
+      let popupClose = thisTarget.closest('.popup-close');
+      if(popupClose) {
+          //event.preventDefault();
+          
+          if (popupCheckClose) {
+              popupCheckClose = false;
+
+              const popup = popupClose.closest('.popup');
+
+              FX.fadeOut(popup, {
+                  duration: duration,
+                  complete: function () {
+                      popup.style.display = 'none';
+
+                      if(idOnURL) remHash();
+
+                      body.classList.remove('_popup-active');
+                      html.style.setProperty('--popup-padding', '0px');
+                      popup.classList.remove('_active');
+
+                      popupCheckClose = true;
+                  }
+              });
+              
+          }
+      }
+
+      let btnPopup = thisTarget.closest('.open-popup');
+      if(btnPopup) {
+          event.preventDefault();
+          popupOpen(btnPopup.getAttribute('href'));
+      }
+
+  });
+
+}
+
+popup({
+  //duration: 200,
+  //idOnURL: false,
+});
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </popup> -=-=-=-=-=-=-=-=-=-=-=-=
+
+new ClipboardJS('.copy-btn');
+
 const body = document.querySelector('body'),
     html = document.querySelector('html'),
     menu = document.querySelectorAll('.header__burger, .header__nav-mob, body'),
@@ -185,7 +392,8 @@ body.addEventListener('click', function (event) {
   // =-=-=-=-=-=-=-=-=-=- </custom-select> -=-=-=-=-=-=-=-=-=-=-
 
 
-  // =-=-=-=-=-=-=-=-=-=- <video click on preview> -=-=-=-=-=-=-=-=-=-=-
+  // =-=-=-=-=-=-=-=-=-=- <превью для видео> -=-=-=-=-=-=-=-=-=-=-
+
   let videoPreview = $('.video__preview');
   if(videoPreview) {
     const parent = videoPreview.closest('.video__wrapper');
@@ -195,52 +403,195 @@ body.addEventListener('click', function (event) {
     video.play();
   }
 
-  // =-=-=-=-=-=-=-=-=-=- </video click on preview> -=-=-=-=-=-=-=-=-=-=-
+  // =-=-=-=-=-=-=-=-=-=- </превью для видео> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <кнопки для пополнения баланса> -=-=-=-=-=-=-=-=-=-=-
+
+  let accountBalanceMinBtn = $('.account-balance__min-btn');
+  if(accountBalanceMinBtn) {
+    
+    const parent = accountBalanceMinBtn.closest('.account-balance__block'),
+          input = parent.querySelector('.account-balance__input'),
+          value = accountBalanceMinBtn.dataset.value;
+
+    input.value = value;
+
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </кнопки для пополнения баланса> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <кнопка выбора типа пополнения баланса> -=-=-=-=-=-=-=-=-=-=-
+
+  let accountBalanceTarget = $('.account-balance__target');
+  if(accountBalanceTarget) {
+    
+    accountBalanceTarget.classList.toggle('_active');
+
+  } else if(!$('.account-balance__target') && !$('.account-balance__list')) {
+    document.querySelectorAll('.account-balance__target').forEach(accountBalanceTarget => {
+      accountBalanceTarget.classList.remove('_active')
+    })
+  }
+
+  let accountBalanceListBtn = $('.account-balance__list--btn');
+  if(accountBalanceListBtn) {
+    
+    const block = document.querySelector(`#${accountBalanceListBtn.dataset.id}`),
+          blocks = document.querySelectorAll('.account-balance__block');
+
+    blocks.forEach(block => {
+      block.classList.remove('_visible')
+    })
+
+    setTimeout(() => {
+      block.classList.add('_visible');
+    }, 200)
+
+    document.querySelectorAll('.account-balance__target').forEach(accountBalanceTarget => {
+      accountBalanceTarget.classList.remove('_active')
+    })
+
+  } else if(!$('.account-balance__target') && !$('.account-balance__list')) {
+    document.querySelectorAll('.account-balance__target').forEach(accountBalanceTarget => {
+      accountBalanceTarget.classList.remove('_active')
+    })
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </кнопка выбора типа пополнения баланса> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <табы> -=-=-=-=-=-=-=-=-=-=-
+
+  let tabBtn = $('.tab-btn');
+  if(tabBtn) {
+    if(!tabBtn.classList.contains('_active')) {
+
+      event.preventDefault()
+      
+      const wrapper = tabBtn.closest('.tab-wrapper'),
+            block = wrapper.querySelector(tabBtn.getAttribute('href')),
+            activeBlock = wrapper.querySelector('.tab-block._active');
+        
+      wrapper.style.minHeight = wrapper.offsetHeight + 'px';
+      
+      
+      activeBlock.classList.remove('_visible');
+
+      setTimeout(() => {
+        activeBlock.classList.remove('_active');
+
+        block.classList.add('_active');
+
+        wrapper.querySelector('.tab-btn._active').classList.remove('_active')
+        tabBtn.classList.add('_active');
+
+        setTimeout(() => {
+
+          block.classList.add('_visible');
+          
+        },200)
+      },200)
+
+      
+          
+      
+
+      wrapper.style.minHeight = 0 + 'px';
+
+    }
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </табы> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <показывать блоки при нажатии на "показать ещё"> -=-=-=-=-=-=-=-=-=-=-
+
+  let hiddenBlockBtn = $('.hide-blocks-btn');
+  if(hiddenBlockBtn) {
+    event.preventDefault()
+
+    const wrapper = hiddenBlockBtn.closest('.hide-blocks-wrapper'),
+          list = wrapper.querySelector('.hide-blocks-list');
+
+    list.classList.add('_visible');
+    hiddenBlockBtn.classList.add('_hidden');
+  }
+  
+  // =-=-=-=-=-=-=-=-=-=- </показывать блоки при нажатии на "показать ещё"> -=-=-=-=-=-=-=-=-=-=-
+
+  
 
 })
 
+/* document.querySelectorAll(".custom-select").forEach(customSelect => {
+  NiceSelect.bind(customSelect, {searchable: false});
+}) */
+new lc_select('.custom-select', {
 
-// =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
+  // (bool) whether to enable fields search
+  enable_search : false,
+  addit_classes : ['lcslt-dark'],
 
-/* let resizeCheck = {}, windowSize;
+});
 
-function resizeCheckFunc(size, minWidth, maxWidth) {
-  if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
-    resizeCheck[String(size)] = false;
-    maxWidth(); // < size
+
+
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <email validator> -=-=-=-=-=-=-=-=-=-=-=-=
+
+function validate(email, event) {
+  let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+  let address = email.value;
+  if(reg.test(address) == false) {
+      event.preventDefault();
+      email.classList.add('_error');
+      email.onblur = function () {
+        email.classList.remove('_error');
+      }
+      return false;
   }
-
-  if (windowSize >= size && (resizeCheck[String(size)] == false || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != true) {
-    resizeCheck[String(size)] = true;
-    minWidth(); // > size
-  }
-} */
-
-function resize() {
-
-  html.style.setProperty('--height-screen', body.offsetHeight + 'px');
-  
-  /* windowSize = window.innerWidth
-
-  resizeCheckFunc(992,
-    function () {  // screen > 992px
-
-      
-
-  },
-  function () {  // screen < 992px
-
-
-
-  }); */
-
 }
 
-resize();
+const emailInputs = document.querySelectorAll('.email-valid-input');
+emailInputs.forEach(emailInput => {
+  const form = emailInput.closest('form'),
+        submit = form.querySelector('button[type="submit"]');
 
-window.onresize = resize;
+  form.addEventListener('submit', function (event) {
 
-// =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
+    validate(emailInput, event);
+
+  })
+
+  if(submit.classList.contains('_disabled')) {
+    let reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+    emailInput.addEventListener('input', function(event) {
+      let address = event.target.value;
+      if(reg.test(address) == true) {
+        submit.classList.remove('_disabled')
+      } else {
+        submit.classList.add('_disabled')
+      }
+    })
+    
+  }
+
+  
+
+})
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </email validator> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+
+
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <scroll> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -264,6 +615,9 @@ function getCoords(elem) {
 
 function scroll() {
   offsetTop = getCoords(topElement).top;
+
+  html.style.setProperty('--height-screen', window.innerHeight + 'px');
+  html.style.setProperty('--height-header', header.offsetHeight + 'px');
   
   if(offsetTop <= 0) {
     
@@ -283,7 +637,7 @@ window.onscroll = scroll;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let slider = new Swiper('.intro__slider', {
+let introSlider = new Swiper('.intro__slider', {
   
     spaceBetween: 30,
     slidesPerView: 1,
@@ -293,6 +647,11 @@ let slider = new Swiper('.intro__slider', {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
+    },
+
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
     },
     
     /* navigation: {
@@ -312,6 +671,8 @@ let slider = new Swiper('.intro__slider', {
     } */
 }); 
 
+let onlineGamesSlider;
+
 // =-=-=-=-=-=-=-=-=-=-=-=- </slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
@@ -329,3 +690,70 @@ AOS.init({
 // =-=-=-=-=-=-=-=-=-=-=-=- </Анимации> -=-=-=-=-=-=-=-=-=-=-=-=
 
 
+
+// =-=-=-=-=-=-=-=-=-=-=-=- <resize> -=-=-=-=-=-=-=-=-=-=-=-=
+
+let resizeCheck = {}, windowSize;
+
+function resizeCheckFunc(size, minWidth, maxWidth) {
+  if (windowSize <= size && (resizeCheck[String(size)] == true || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != false) {
+    resizeCheck[String(size)] = false;
+    maxWidth(); // < size
+  }
+
+  if (windowSize >= size && (resizeCheck[String(size)] == false || resizeCheck[String(size)] == undefined) && resizeCheck[String(size)] != true) {
+    resizeCheck[String(size)] = true;
+    minWidth(); // > size
+  }
+}
+
+function resize() {
+
+  html.style.setProperty('--height-screen', body.offsetHeight + 'px');
+  html.style.setProperty('--height-header', header.offsetHeight + 'px');
+  
+  windowSize = window.innerWidth
+
+  resizeCheckFunc(768,
+    function () {  // screen > 768px
+
+      onlineGamesSlider = new Swiper('.online-games__slider', {
+  
+        spaceBetween: 16,
+        slidesPerView: 3,
+        centeredSlides: false,
+      
+        //loop: true,
+        
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          800: {
+            slidesPerView: 4,
+          },
+          /* 600: {
+            slidesPerView: 2,
+            centeredSlides: false,
+          }, */
+        }
+      }); 
+
+  },
+  function () {  // screen < 768px
+
+    if(onlineGamesSlider) {
+      onlineGamesSlider.destroy(true, true);
+    }
+    
+
+  });
+
+}
+
+resize();
+
+window.onresize = resize;
+
+// =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=

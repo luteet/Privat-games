@@ -4,6 +4,8 @@
 @import 'vars';
 @import 'global';
 @import 'font';
+@import 'popup';
+@import 'form';
 
 @import 'main-sections/header';
 
@@ -15,6 +17,10 @@
 @import 'pages/main-page/video';
 @import 'pages/main-page/news';
 @import 'pages/main-page/feedback';
+
+@import 'pages/account/main';
+
+@import 'pages/online-games/main';
 
 
 @import 'main-sections/footer';

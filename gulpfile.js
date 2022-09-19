@@ -36,6 +36,8 @@ function scriptsLib() {
     return src([
         'node_modules/swiper/swiper-bundle.min.js', // Слайдер
         'node_modules/aos/dist/aos.js', // Анимация
+        'node_modules/clipboard/dist/clipboard.min.js',
+        'node_modules/lc-select/lc_select.min.js',
         //'node_modules/shufflejs/dist/shuffle.min.js', // Tab Filter
         //'node_modules/sticky-js/dist/sticky.min.js' // Sticky
         //'node_modules/jquery/dist/jquery.js', // jQuery
@@ -123,6 +125,7 @@ function CSSlibBuild() {
     return src([
         'node_modules/normalize.css/normalize.css',
         'node_modules/swiper/swiper-bundle.min.css', // Слайдер
+        'node_modules/lc-select/themes/dark_prefixed.css',
         //'node_modules/slick-carousel/slick/slick.css', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/magnific-popup.css' // Попап (jQuery)
         'node_modules/aos/dist/aos.css', // Анимация

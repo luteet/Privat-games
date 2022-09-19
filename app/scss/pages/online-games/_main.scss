@@ -1,0 +1,415 @@
+.online-games {
+
+    // .online-games__bg
+
+    position: relative;
+
+    &__bg {
+
+        display: none;
+
+        @include _992 {
+            display: block;
+
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            // .online-games__bg--element
+
+            &--element {
+                opacity: .8;
+            }
+
+            // .online-games__bg--img
+
+            &--img {
+                height: 100%; width: auto;
+                object-fit: contain;
+                max-width: 100%; max-height: 900px;
+                
+            }
+        }
+    }
+
+    // .online-games__container
+
+    &__container {
+        
+    }
+
+    &__footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    // .online-games__header
+
+    &__header {
+    }
+
+    // .online-games__forward-btn
+
+    &__forward-btn {
+    }
+
+    // .online-games__section-title
+
+    &__section-title {
+    }
+
+    // .online-games__bread-crumbs
+
+    &__bread-crumbs {
+    }
+
+    // .online-games__search
+
+    &__search {
+    }
+
+    // .online-games__main
+
+    &__main {
+
+        padding-top: 33px;
+
+        &._pt {
+            padding-top: 33px;
+
+            @include _768 {
+                padding-top: 55px;
+            }
+        }
+
+        // .online-games__main--wrapper
+
+        &--wrapper {
+            padding-top: 30px;
+        }
+
+        // .online-games__main--block
+
+        &--block {
+            
+        }
+    }
+
+    // .online-games__filter
+
+    &__filter {
+
+        overflow-x: auto;
+        
+        @include _768 {
+            border-bottom: 1px solid var(--light);
+        }
+
+        // .online-games__filter--list
+
+        &--list {
+            display: flex;
+            
+        }
+
+        // .online-games__filter--item
+
+        &--item {
+            &:not(:last-child) {
+                margin-right: 10px;
+                @include _768 {
+                    margin-right: 41.5px;
+                }
+            }
+        }
+
+        // .online-games__filter--btn
+
+        &--btn {
+            display: flex;
+            align-items: center;
+            
+            padding: 13px 12.5px;
+            border-radius: 6px;
+
+            color: var(--light);
+            line-height: 100%;
+            font-weight: 700;
+            
+            transition: background .2s ease-in-out;
+            
+            background: #21201E;
+
+            @include _768 {
+                font-weight: 400;
+                padding: 15px 12.5px;
+                background: transparent;
+                border-bottom: 1px solid transparent;
+                transition: border .2s ease-in-out;
+                border-radius: 0px;
+
+                &:hover {
+                    border-bottom: 1px solid var(--light);
+                }
+            }
+
+            &._active {
+                font-weight: 700;
+                background: #393834;
+
+                @include _768 {
+                    border-color: var(--light);
+                    background: transparent;
+                }
+            }
+        }
+
+        // .online-games__filter--icon
+
+        &--icon {
+            width: 15px; height: 15px;
+            flex: 0 0 20px;
+            margin-right: 5px;
+            @include _768 {
+                display: none;
+            }
+        }
+    }
+
+    // .online-games__list
+
+    &__list {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include _426 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        margin: -6px;
+        @include _768 {
+            grid-template-columns: repeat(5, 1fr);
+            margin: -7.5px;
+        }
+    }
+
+    // .online-games__item
+
+    &__item {
+        padding: 6px;
+        @include _768 {
+            padding: 7.5px;
+        }
+
+        display: flex;
+    }
+
+    // .online-games__link
+
+    &__link {
+
+        display: inline-block;
+        position: relative;
+        width: 100%; padding-top: 100%;
+
+        // .online-games__link--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+    }
+
+    // .online-games__more-btn 
+
+    &__more-btn {
+        margin-top: 39px;
+        margin-inline: auto;
+
+        max-width: 267px;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    // .online-games__search-result
+
+    &__search-result {
+        display: flex;
+        align-items: center;
+
+        &--title {
+            padding-right: 13px;
+        }
+
+        &--value {
+            font-weight: 300;
+            font-size: 0.875rem;
+            line-height: 130%;
+        }
+    }
+
+    // .online-games__rooms
+
+    &__rooms {
+
+        padding-top: 43px;
+
+        @include _768 {
+            padding-top: 87px;
+        }
+
+        // .online-games__rooms--container
+
+        &--container {
+        }
+
+        // .online-games__rooms--header
+
+        &--header {
+            display: flex;
+            align-items: center;
+        }
+
+        // .online-games__rooms--title
+
+        &--title {
+            padding-right: 12px;
+        }
+
+        // .online-games__rooms--value
+
+        &--value {
+            font-weight: 300;
+            font-size: 0.875rem;
+            line-height: 120%;
+        }
+
+        // .online-games__rooms--list
+
+        &--list {
+            padding-top: 21px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            margin: -4.5px;
+
+            @include _768 {
+                margin: -9.5px;
+            }
+
+        }
+
+        // .online-games__rooms--item
+
+        &--item {
+            flex: 1 1 100%;
+            padding: 4.5px;
+
+            @include _768 {
+                flex: 0 1 50%;
+                padding: 9.5px;
+            }
+            
+        }
+
+        // .online-games__rooms--more-btn
+
+        &--more-btn {
+            margin-top: 35px;
+        }
+    }
+
+    // .online-games__slider
+
+    &__slider {
+        
+        margin: -6.5px;
+        
+        @include _768 {
+            padding: 0 68px;
+            margin: 0;
+        }
+        
+
+        &--list {
+
+            display: grid;
+            grid-template-columns: auto auto;
+
+            @include _426 {
+                grid-template-columns: auto auto auto;
+            }
+            
+            @include _768 {
+                display: flex;
+            }
+        }
+
+        &--slide {
+            padding: 6.5px;
+
+            display: flex;
+
+            @include _768 {
+                padding: 0;
+            }
+        }
+
+        &--arrow {
+            display: none;
+            @include _768 {
+                display: inline-flex;
+            }
+        }
+    }
+
+    // .online-games__not-found
+
+    &__not-found {
+
+        padding: 6.3% 0 4%;
+
+        // .online-games__not-found--body
+
+        &--body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        // .online-games__not-found--icon
+
+        &--icon {
+        }
+
+        // .online-games__not-found--title
+
+        &--title {
+            padding-top: 32px;
+
+        }
+
+        // .online-games__not-found--text
+
+        &--text {
+            padding-top: 8px;
+
+            font-weight: 300;
+            font-size: 0.875rem;
+        }
+    }
+}
+
