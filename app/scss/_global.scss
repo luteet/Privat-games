@@ -729,8 +729,9 @@ body {
         // .page-header__search--submit
 
         &--submit {
-            width: 25px; height: 35px;
+            width: 35px; height: 35px;
             background: transparent;
+            z-index: 2;
         }
     }
 }

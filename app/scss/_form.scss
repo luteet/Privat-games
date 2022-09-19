@@ -90,12 +90,12 @@
 
 #lc-select-dd {
     transform: translateY(9px);
-    opacity: 0;
+    //opacity: 0;
     
-    transition: opacity .2s ease-in-out;
+    /* transition: opacity .2s ease-in-out;
     &.lcslt-shown {
         opacity: 1;
-    }
+    } */
 }
 
 .lcslt-dark#lc-select-dd {

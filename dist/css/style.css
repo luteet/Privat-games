@@ -3424,9 +3424,10 @@ body._popup-active {
 }
 
 .page-header__search--submit {
-  width: 25px;
+  width: 35px;
   height: 35px;
   background: transparent;
+  z-index: 2;
 }
 
 .page-pagination {
@@ -4172,12 +4173,10 @@ body._popup-active {
 #lc-select-dd {
   -webkit-transform: translateY(9px);
           transform: translateY(9px);
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-#lc-select-dd.lcslt-shown {
-  opacity: 1;
+  /* transition: opacity .2s ease-in-out;
+  &.lcslt-shown {
+      opacity: 1;
+  } */
 }
 
 .lcslt-dark#lc-select-dd {
@@ -6442,7 +6441,7 @@ body._popup-active {
 .online-games__filter--btn {
   display: flex;
   align-items: center;
-  padding: 13px 12.5px;
+  padding: 13px 20px 13px 12.5px;
   border-radius: 6px;
   color: var(--light);
   line-height: 100%;
