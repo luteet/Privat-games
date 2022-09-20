@@ -1,0 +1,239 @@
+.page-rooms {
+
+    //padding-bottom: 15px;
+
+    // .page-rooms__container
+
+    &__container {
+    }
+
+    // .page-rooms__header
+
+    &__header {
+    }
+
+    // .page-rooms__forward-btn
+
+    &__forward-btn {
+    }
+
+    // .page-rooms__section-title
+
+    &__section-title {
+    }
+
+    // .page-rooms__bread-crumbs
+
+    &__bread-crumbs {
+    }
+
+    // .page-rooms__main
+
+    &__main {
+
+        padding-top: 21px;
+
+        @include _768 {
+            padding-top: 41px;
+        }
+
+        // .page-rooms__main--header
+
+        &--header {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+
+            @include _768 {
+                flex-direction: row;
+                align-items: flex-start;
+            }
+        }
+
+        // .page-rooms__main--title
+
+        &--title {
+            line-height: 120%;
+            font-weight: 700;
+        }
+
+        // .page-rooms__main--create-btn
+
+        &--create-btn {
+
+            display: inline-flex;
+            align-items: center;
+
+            font-weight: 700;
+
+            & svg {
+                width: 17px; flex: 0 0 17px;
+                margin-left: 8px; margin-top: 1px;
+            }
+        }
+    }
+
+    // .page-rooms__list
+
+    &__list {
+        padding-top: 15px;
+
+        display: grid;
+        grid-template-columns: 100%;
+
+        margin: -6px;
+        @include _768 {
+            grid-template-columns: 1fr 1fr;
+            margin: -9.5px;
+        }
+    }
+
+    // .page-rooms__item
+
+    &__item {
+        padding: 6px;
+        @include _768 {
+            padding: 9.5px;
+        }
+    }
+
+    // .page-rooms__more-btn
+
+    &__more-btn {
+        margin-top: 41px;
+        margin-inline: auto;
+    }
+
+    // .page-rooms__pagination
+
+    &__pagination {
+    }
+
+    // .page-rooms__create-min-btn
+
+    &__create-min-btn {
+        position: fixed;
+        right: 21px; bottom: 21px;
+        z-index: 1000;
+
+        width: 50px; height: 50px;
+        border-radius: 50%;
+
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        background: var(--teal);
+
+        transition: background .2s ease-in-out;
+        &:hover {
+            background: var(--teal-2);
+        }
+
+        &:active {
+            background: var(--teal-3);
+        }
+    }
+
+    // .page-rooms__create
+
+    &__create {
+
+        // .page-rooms__create--fieldset
+
+        &--fieldset {
+            padding: 0;
+            &:not(:first-child) {
+                margin-top: 30px;
+                @include _768 {
+                    margin-top: 38px;
+                }
+            }
+        }
+
+        // .page-rooms__create--legend
+
+        &--legend {
+            padding-bottom: 19px;
+        }
+
+        // .page-rooms__create--row
+
+        &--row {
+
+            margin: -8px;
+
+            display: grid;
+            grid-template-columns: 100%;
+            @include _768 {
+                grid-template-columns: 20% 125px auto auto auto;
+            }
+
+            @include _992 {
+                grid-template-columns: 26.4% auto 19.2% 19.2% 19.2%;
+            }
+        }
+
+        // .page-rooms__create--col
+
+        &--col {
+            //flex: 0 1 var(--width, auto);
+            padding: 8px;
+            display: flex;
+        }
+
+        // .page-rooms__create--text
+
+        &--text {
+            padding-top: 13px;
+            @include _768 {
+                padding-top: 15px;
+            }
+            line-height: 130%;
+            
+            color: #7C7B78;
+        }
+
+        // .page-rooms__create--submit
+
+        &--submit {
+            margin-top: 19px;
+            width: 100%;
+            padding: 15px;
+            @include _768 {
+                margin-top: 38px;
+                width: auto;
+            }
+
+            font-weight: 700;
+        }
+    }
+
+    // .page-rooms__select
+
+    &__select {
+        
+        &-wrapper {
+            min-height: 57px;
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    // .page-rooms__label
+
+    &__label {
+        width: 100%;
+    }
+
+    // .page-rooms__input
+
+    &__input {
+    }
+
+    // .page-rooms__input-placeholder
+
+    &__input-placeholder {
+    }
+}

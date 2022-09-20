@@ -525,6 +525,35 @@ body.addEventListener('click', function (event) {
   
   // =-=-=-=-=-=-=-=-=-=- </показывать блоки при нажатии на "показать ещё"> -=-=-=-=-=-=-=-=-=-=-
 
+
+
+  // =-=-=-=-=-=-=-=-=-=- <показывать весь текст при нажатии на "больше"> -=-=-=-=-=-=-=-=-=-=-
+
+  let textMoreBtn = $('.page-game__descr--text-more-btn');
+  if(textMoreBtn) {
+    event.preventDefault()
+
+    const text = textMoreBtn.parentElement.querySelector('.page-game__descr--text');
+
+    if(!textMoreBtn.classList.contains('_active')) {
+
+      text.classList.add('_visible');
+      textMoreBtn.classList.add('_active');
+      textMoreBtn.textContent = textMoreBtn.dataset.visibleText;
+
+    } else {
+
+      text.classList.remove('_visible');
+      textMoreBtn.classList.remove('_active');
+      textMoreBtn.textContent = textMoreBtn.dataset.hideText;
+
+    }
+
+    
+  }
+  
+  // =-=-=-=-=-=-=-=-=-=- </показывать весь текст при нажатии на "больше"> -=-=-=-=-=-=-=-=-=-=-
+
   
 
 })
@@ -537,8 +566,32 @@ new lc_select('.custom-select', {
   // (bool) whether to enable fields search
   enable_search : false,
   addit_classes : ['lcslt-dark'],
-
+  labels : [ 
+    'Поиск вариантов',
+    'Добавить вариант',
+    'Выберите вариант ..',
+    '.. нет подходящих вариантов ..',
+],
 });
+
+document.querySelectorAll('.custom-multiple-select').forEach(customMultipleSelect => {
+  new lc_select(customMultipleSelect, {
+
+    // (bool) whether to enable fields search
+    enable_search : false,
+    addit_classes : ['lcslt-dark'],
+    labels : [ 
+      'Поиск вариантов',
+      'Добавить вариант',
+      (customMultipleSelect.dataset.placeholder) ? customMultipleSelect.dataset.placeholder : 'Выберите вариант ..',
+      '.. нет подходящих вариантов ..',
+  ],
+  });
+})
+
+
+
+
 
 
 

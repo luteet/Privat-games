@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="SHORTCUT ICON" href="img/logo.svg" type="image/svg"> -->
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="wrapper-bg" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.jpg)"></div>
+        <header class="header" data-aos="fade-in" data-aos-delay="100">
+            <div class="header__container container _large">
+                <a href="index.html" class="header__logo">
+                    <img src="img/logo.svg" alt="" width="150" class="header__logo--img">
+                </a>
+                <nav class="header__nav">
+                    <div class="header__nav--body">
+                        <ul class="header__nav--list">
+                            <li class="header__nav--item">
+                                <a class="header__nav--link _current">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="online-games.html" class="header__nav--link">
+                                    Игры
+                                </a>
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link">
+                                    Комнаты
+                                </a>
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="header__nav--item">
+                                <a href="#" class="header__nav--link">
+                                    Преимущества
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="header__nav--user-info header__user-info">
+                            <ul class="header__user-info--list">
+                                <li class="header__user-info--item">
+                                    <img src="img/header/chip-length.svg" width="20" height="20" alt="Poker chip" class="header__user-info--icon">
+                                    <span>
+                                        00.00
+                                    </span>
+                                </li>
+                                <li class="header__user-info--item">
+                                    <img src="img/header/dollar.svg" width="20" height="20" alt="Dollar" class="header__user-info--icon">
+                                    <span>
+                                        00.00
+                                    </span>
+                                </li>
+                            </ul>
+                            <div class="header__user-info--notifications header__notifications">
+                                <button class="header__notifications--toggle-btn" type="button" title="Уведомления">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.57166 1.125V1.8C11.0159 2.32137 12.8574 4.59141 12.8574 7.3125V7.97344C12.8574 9.6293 13.4366 11.2219 14.4813 12.4594L14.729 12.7512C15.0103 13.0852 15.0806 13.5563 14.9065 13.9605C14.7324 14.3648 14.3507 14.625 13.9288 14.625H1.07166C0.64979 14.625 0.267122 14.3648 0.0942875 13.9605C-0.0785474 13.5563 -0.00941679 13.0852 0.270906 12.7512L0.519209 12.4594C1.56519 11.2219 2.14309 9.6293 2.14309 7.97344V7.3125C2.14309 4.59141 3.95448 2.32137 6.42881 1.8V1.125C6.42881 0.503789 6.9076 0 7.50024 0C8.09287 0 8.57166 0.503789 8.57166 1.125ZM7.50024 18C6.93104 18 6.38528 17.7645 5.98349 17.3426C5.58171 16.9207 5.35738 16.316 5.35738 15.75H9.64309C9.64309 16.316 9.41876 16.9207 9.01698 17.3426C8.61519 17.7645 8.0393 18 7.50024 18Z" fill="#F9F1DF"/>
+                                    </svg>
+                                </button>
+                                <div class="header__notifications--block">
+                                    <div class="header__notifications--body custom-scrollbar">
+                                        <ul class="header__notifications--list">
+                                            <li class="header__notifications--item notification-item">
+                                                <div class="notification-item__body">
+                                                    <div class="notification-item__header">
+                                                        <img src="img/icons/info.svg" width="20" height="20" alt="" class="notification-item__icon">
+                                                        <h3 class="notification-item__title" title="Идет игра!">
+                                                            Идет игра!
+                                                        </h3>
+                                                        <span class="notification-item__time">
+                                                            
+                                                        </span>
+                                                    </div>
+                                                    <div class="notification-item__content">
+                                                        <p>
+                                                            У вас незавершенная игра, вернитесь чтобы закончить
+                                                        </p>
+                                                        <a href="#" class="notification-item__link">
+                                                            Вернуться
+                                                            <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4.75 3.50009C4.75 3.64935 4.69507 3.79868 4.5852 3.91243L1.7727 6.8291C1.55298 7.05697 1.19702 7.05697 0.977295 6.8291C0.757568 6.60124 0.757568 6.2321 0.977295 6.00423L3.39297 3.50009L0.977734 0.995403C0.758007 0.767539 0.758007 0.398398 0.977734 0.170534C1.19746 -0.057331 1.55342 -0.057331 1.77314 0.170534L4.58564 3.0872C4.69551 3.20113 4.75 3.35061 4.75 3.50009Z" fill="#61C8AF"/>
+                                                            </svg>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__notifications--item notification-item">
+                                                <div class="notification-item__body">
+                                                    <div class="notification-item__header _message">
+                                                        <img src="img/icons/bell.svg" width="20" height="20" alt="" class="notification-item__icon">
+                                                        <h3 class="notification-item__title" title="Бонус!">
+                                                            Бонус!
+                                                        </h3>
+                                                        <span class="notification-item__time">
+                                                            10 mins ago
+                                                        </span>
+                                                    </div>
+                                                    <div class="notification-item__content">
+                                                        <p>
+                                                            От сервиса начислено 20 фишек
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__notifications--item notification-item">
+                                                <div class="notification-item__body">
+                                                    <div class="notification-item__header _error">
+                                                        <img src="img/icons/error.svg" width="20" height="20" alt="" class="notification-item__icon">
+                                                        <h3 class="notification-item__title" title="Системное сообщение!">
+                                                            Системное сообщение!
+                                                        </h3>
+                                                        <span class="notification-item__time">
+                                                            10 mins ago
+                                                        </span>
+                                                    </div>
+                                                    <div class="notification-item__content">
+                                                        <p>
+                                                            У вас недостаточно средств 
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__notifications--item notification-item">
+                                                <div class="notification-item__body">
+                                                    <div class="notification-item__header _message">
+                                                        <img src="img/icons/bell.svg" width="20" height="20" alt="" class="notification-item__icon">
+                                                        <h3 class="notification-item__title" title="Личные данные!">
+                                                            Личные данные!
+                                                        </h3>
+                                                        <span class="notification-item__time">
+                                                            10 mins ago
+                                                        </span>
+                                                    </div>
+                                                    <div class="notification-item__content">
+                                                        <p>
+                                                            Пароль успешно изменен
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__notifications--item notification-item">
+                                                <div class="notification-item__body">
+                                                    <div class="notification-item__header _message">
+                                                        <img src="img/icons/bell.svg" width="20" height="20" alt="" class="notification-item__icon">
+                                                        <h3 class="notification-item__title" title="Личные данные!">
+                                                            Личные данные!
+                                                        </h3>
+                                                        <span class="notification-item__time">
+                                                            10 mins ago
+                                                        </span>
+                                                    </div>
+                                                    <div class="notification-item__content">
+                                                        <p>
+                                                            Пароль успешно изменен
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__nav--language header__language header__drop-down">
+                            <button type="button" class="header__language--target header__drop-down--target">
+                                Ru
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.49991 4.75C3.35065 4.75 3.20132 4.69507 3.08757 4.5852L0.170898 1.7727C-0.0569661 1.55298 -0.0569661 1.19702 0.170898 0.977295C0.398763 0.757568 0.767904 0.757568 0.995768 0.977295L3.49991 3.39297L6.0046 0.977734C6.23246 0.758008 6.6016 0.758008 6.82947 0.977734C7.05733 1.19746 7.05733 1.55342 6.82947 1.77314L3.9128 4.58564C3.79887 4.69551 3.64939 4.75 3.49991 4.75Z" fill="#F9F1DF"/>
+                                </svg>
+                            </button>
+                            <div class="header__drop-down--block">
+                                <div class="header__drop-down--body">
+                                    <ul class="header__drop-down--list">
+                                        <li class="header__drop-down--item">
+                                            <a href="#" class="header__drop-down--link">
+                                                RU
+                                            </a>
+                                        </li>
+                                        <li class="header__drop-down--item">
+                                            <a href="#" class="header__drop-down--link">
+                                                EN
+                                            </a>
+                                        </li>
+                                        <li class="header__drop-down--item">
+                                            <a href="#" class="header__drop-down--link">
+                                                ES
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__nav--account header__account header__drop-down">
+                            <button type="button" class="header__account--target header__drop-down--target">
+                                <img src="img/header/avatar.jpg" width="27" height="27" alt="Your avatar" class="header__account--avatar">
+                                <span class="header__account--name">
+                                    Jane_006
+                                </span>
+                                <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.49991 4.75C3.35065 4.75 3.20132 4.69507 3.08757 4.5852L0.170898 1.7727C-0.0569661 1.55298 -0.0569661 1.19702 0.170898 0.977295C0.398763 0.757568 0.767904 0.757568 0.995768 0.977295L3.49991 3.39297L6.0046 0.977734C6.23246 0.758008 6.6016 0.758008 6.82947 0.977734C7.05733 1.19746 7.05733 1.55342 6.82947 1.77314L3.9128 4.58564C3.79887 4.69551 3.64939 4.75 3.49991 4.75Z" fill="#F9F1DF"/>
+                                </svg>
+                            </button>
+                            <div class="header__drop-down--block">
+                                <div class="header__drop-down--body">
+                                    <ul class="header__drop-down--list">
+                                        <li class="header__drop-down--item">
+                                            <a href="#" class="header__drop-down--link">
+                                                Профиль
+                                            </a>
+                                        </li>
+                                        <li class="header__drop-down--item">
+                                            <a href="#" class="header__drop-down--link">
+                                                Настройки
+                                            </a>
+                                        </li>
+                                        <li class="header__drop-down--item _line">
+                                            <a href="#" class="header__drop-down--link">
+                                                Выйти
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="header__nav-mob">
+                    <div class="header__nav-mob--bg">
+                        <picture>
+                            <source srcset="img/header/bg.webp" type="image/webp">
+                            <img src="img/header/bg.png" alt="" loading="lazy" width="0" height="0" class="header__nav-mob--bg-img">
+                        </picture>
+                    </div>
+                    <div class="header__nav-mob--body">
+                        <ul class="header__nav-mob--list">
+                            <li class="header__nav-mob--item">
+                                <div class="header__nav-mob--account header__mob-account header__mob-select custom-select _active">
+                                    <button type="button" title=Профиль class="header__mob-account--target header__mob-select--target custom-select__target">
+                                        <img src="img/header/avatar.jpg" width="27" height="27" alt="" class="header__mob-account--avatar">
+                                        <span class="header__mob-account--name">
+                                            Jane_006
+                                        </span>
+                                        <svg width="7" height="5" viewBox="0 0 7 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.49991 4.75C3.35065 4.75 3.20132 4.69507 3.08757 4.5852L0.170898 1.7727C-0.0569661 1.55298 -0.0569661 1.19702 0.170898 0.977295C0.398763 0.757568 0.767904 0.757568 0.995768 0.977295L3.49991 3.39297L6.0046 0.977734C6.23246 0.758008 6.6016 0.758008 6.82947 0.977734C7.05733 1.19746 7.05733 1.55342 6.82947 1.77314L3.9128 4.58564C3.79887 4.69551 3.64939 4.75 3.49991 4.75Z" fill="#F9F1DF"/>
+                                        </svg>
+                                    </button>
+                                    <div class="header__mob-select--block custom-select__block">
+                                        <ul class="header__mob-select--list">
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="9" height="10" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.5 5C5.92031 5 7.07143 3.88066 7.07143 2.5C7.07143 1.11934 5.92031 0 4.5 0C3.07969 0 1.92857 1.11934 1.92857 2.5C1.92857 3.88066 3.07969 5 4.5 5ZM5.51853 5.9375H3.48147C1.55913 5.9375 0 7.45312 0 9.32227C0 9.69609 0.311786 9.99941 0.696295 9.99941H8.30411C8.68862 10 9 9.69727 9 9.32227C9 7.45312 7.44107 5.9375 5.51853 5.9375Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Личный кабинет
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M13.5601 4.55547C13.6503 4.79063 13.5738 5.05586 13.3878 5.22813L12.2039 6.30547C12.2339 6.53242 12.2503 6.76484 12.2503 7C12.2503 7.23516 12.2339 7.46758 12.2039 7.69453L13.3878 8.77187C13.5738 8.94414 13.6503 9.20938 13.5601 9.44453C13.4398 9.76992 13.2949 10.0844 13.1308 10.3824L13.0023 10.6039C12.8218 10.9047 12.6195 11.1891 12.398 11.4598C12.2339 11.6539 11.9687 11.7223 11.7281 11.6457L10.205 11.159C9.83862 11.4406 9.40932 11.6758 9.0019 11.8562L8.6601 13.4176C8.60542 13.6637 8.41401 13.8387 8.16245 13.9043C7.7851 13.9672 7.39682 14 6.97573 14C6.60385 14 6.21557 13.9672 5.83823 13.9043C5.58667 13.8387 5.39526 13.6637 5.34057 13.4176L4.99878 11.8562C4.56674 11.6758 4.16206 11.4406 3.79565 11.159L2.2737 11.6457C2.03198 11.7223 1.76538 11.6539 1.6035 11.4598C1.38174 11.1891 1.1794 10.9047 0.998932 10.6039L0.870963 10.3824C0.704987 10.0844 0.560612 9.76992 0.439479 9.44453C0.350885 9.20938 0.425533 8.94414 0.613112 8.77187L1.796 7.69453C1.76592 7.46758 1.75034 7.23516 1.75034 7C1.75034 6.76484 1.76592 6.53242 1.796 6.30547L0.613112 5.22813C0.425533 5.05586 0.350885 4.79336 0.439479 4.55547C0.560612 4.23008 0.70526 3.91563 0.870963 3.61758L0.998658 3.39609C1.1794 3.09531 1.38174 2.81094 1.6035 2.5416C1.76538 2.34609 2.03198 2.27828 2.2737 2.35539L3.79565 2.84102C4.16206 2.55828 4.56674 2.32313 4.99878 2.14457L5.34057 0.583242C5.39526 0.334961 5.58667 0.137812 5.83823 0.0959766C6.21557 0.0328398 6.60385 0 7.00034 0C7.39682 0 7.7851 0.0328398 8.16245 0.0959766C8.41401 0.137812 8.60542 0.334961 8.6601 0.583242L9.0019 2.14457C9.40932 2.32313 9.83862 2.55828 10.205 2.84102L11.7281 2.35539C11.9687 2.27828 12.2339 2.34609 12.398 2.5416C12.6195 2.81094 12.8218 3.09531 13.0023 3.39609L13.1308 3.61758C13.2949 3.91563 13.4398 4.23008 13.5601 4.55547ZM7.00034 9.1875C8.20893 9.1875 9.18784 8.20859 9.18784 6.97539C9.18784 5.79141 8.20893 4.78789 7.00034 4.78789C5.79174 4.78789 4.81284 5.79141 4.81284 6.97539C4.81284 8.20859 5.79174 9.1875 7.00034 9.1875Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Настройки 
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M6.5 0C10.0902 0 13 2.90977 13 6.5C13 10.0902 10.0902 13 6.5 13C5.12129 13 3.83906 12.5684 2.78535 11.8346C2.41719 11.5553 2.3268 11.0703 2.58477 10.7021C2.84121 10.334 3.34648 10.2451 3.71465 10.5016C4.5043 11.0525 5.46406 11.375 6.5 11.375C9.19141 11.375 11.375 9.19141 11.375 6.5C11.375 3.78574 9.19141 1.625 6.5 1.625C5.13145 1.625 3.93555 2.16988 3.05195 3.05195L3.83398 3.83398C4.21738 4.21738 3.9457 4.875 3.40488 4.875H0.609375C0.272949 4.875 0 4.60332 0 4.26562V1.47113C0 0.928281 0.656348 0.656348 1.04025 1.04025L1.90379 1.90379C3.07988 0.728457 4.70488 0 6.47715 0H6.5ZM6.5 3.25C6.8377 3.25 7.10938 3.52168 7.10938 3.85938V6.24863L8.73691 7.89648C8.9959 8.13516 8.9959 8.52109 8.73691 8.73691C8.52109 8.9959 8.13516 8.9959 7.89648 8.73691L6.06836 6.90879C5.9541 6.81738 5.89062 6.6625 5.89062 6.5V3.85938C5.89062 3.52168 6.1623 3.25 6.5 3.25Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    История пополнений
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.75 2.625H5.25L3.95391 0.680312C3.75977 0.389375 3.96758 0 4.31758 0H9.68242C10.0324 0 10.2402 0.389375 10.0461 0.680312L8.75 2.625ZM5.25 3.5H8.75C8.85391 3.56836 8.97148 3.64492 9.08086 3.72969C10.6559 4.72227 14 6.86055 14 11.375C14 12.8242 12.8242 14 11.375 14H2.625C1.17523 14 0 12.8242 0 11.375C0 6.86055 3.34414 4.72227 4.89453 3.72969C5.02852 3.64492 5.14609 3.56836 5.25 3.5ZM7.54961 6.125C7.54961 5.82148 7.30352 5.57539 6.97539 5.57539C6.69648 5.57539 6.45039 5.82148 6.45039 6.125V6.28906C6.29727 6.32188 6.12773 6.36836 6.01562 6.42852C5.6082 6.61445 5.25273 6.95898 5.16523 7.45937C5.11602 7.73828 5.14336 8.00898 5.2582 8.25234C5.37305 8.49297 5.55078 8.6625 5.73125 8.78555C6.04844 9.00156 6.4668 9.12734 6.78672 9.22305L6.84687 9.23945C7.22969 9.35703 7.48672 9.4418 7.64805 9.55937C7.71641 9.60859 7.74102 9.64688 7.74922 9.67148C7.76016 9.69336 7.77656 9.74258 7.75742 9.85195C7.74102 9.94766 7.68906 10.0297 7.53867 10.0926C7.37188 10.1637 7.10117 10.1992 6.75117 10.1445C6.58711 10.1172 6.29453 10.0188 6.03477 9.93125C5.97461 9.90938 5.91445 9.89023 5.85977 9.87109C5.57266 9.77539 5.26367 9.93125 5.16797 10.2184C5.07227 10.5055 5.22813 10.8145 5.51523 10.8855C5.54805 10.9211 5.58906 10.9348 5.63555 10.9512C5.82695 11.025 6.19062 11.1398 6.45039 11.2V11.375C6.45039 11.6785 6.69648 11.9246 6.97539 11.9246C7.30352 11.9246 7.54961 11.6785 7.54961 11.375V11.2246C7.69453 11.1973 7.83672 11.1316 7.96797 11.0988C8.4 10.9156 8.74453 10.5602 8.83477 10.0406C8.88398 9.75625 8.86211 9.48281 8.75273 9.23398C8.64609 8.98789 8.47383 8.80742 8.29063 8.67617C7.95977 8.43281 7.5168 8.30156 7.18594 8.20039L7.13945 8.19492C6.77578 8.07734 6.51328 7.99531 6.34648 7.88047C6.27539 7.83125 6.25352 7.79844 6.24805 7.78477C6.24258 7.77383 6.22617 7.74102 6.24258 7.64805C6.25352 7.59336 6.29453 7.50313 6.4668 7.42656C6.61992 7.34727 6.91523 7.30352 7.24883 7.33086C7.36914 7.37461 7.73828 7.4457 7.84492 7.47305C8.13477 7.55234 8.43555 7.37734 8.51211 7.08477C8.59141 6.79492 8.41641 6.49414 8.12383 6.41758C8.00352 6.38477 7.73008 6.33008 7.54961 6.29727V6.125Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Реферальная система
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.4444 0.75C13.3024 0.75 14 1.42148 14 2.25V3H0V2.25C0 1.42148 0.696354 0.75 1.55556 0.75H12.4444ZM14 9.75C14 10.5773 13.3024 11.25 12.4444 11.25H1.55556C0.696354 11.25 0 10.5773 0 9.75V5.25H14V9.75ZM2.72222 8.25C2.50833 8.25 2.33333 8.41875 2.33333 8.625C2.33333 8.83125 2.50833 9 2.72222 9H4.27778C4.49167 9 4.66667 8.83125 4.66667 8.625C4.66667 8.41875 4.49167 8.25 4.27778 8.25H2.72222ZM5.83333 9H8.94444C9.15833 9 9.33333 8.83125 9.33333 8.625C9.33333 8.41875 9.15833 8.25 8.94444 8.25H5.83333C5.61944 8.25 5.44444 8.41875 5.44444 8.625C5.44444 8.83125 5.61944 9 5.83333 9Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Вывод стредств
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#promocode-popup" class="header__mob-select--link _accent open-popup">
+                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4.15625 0H4.21641C5.08867 0 5.89805 0.462383 6.34102 1.21543L7 2.3368L7.65898 1.21543C8.10195 0.462383 8.91133 0 9.78359 0H9.84375C11.1727 0 12.25 1.07734 12.25 2.40625C12.25 2.8 12.1543 3.14727 11.9875 3.5H13.125C13.609 3.5 14 3.89102 14 4.375V6.125C14 6.60898 13.609 7 13.125 7H0.875C0.391836 7 0 6.60898 0 6.125V4.375C0 3.89102 0.391836 3.5 0.875 3.5H2.0125C1.84461 3.14727 1.75 2.8 1.75 2.40625C1.75 1.07734 2.82734 0 4.15625 0ZM5.20898 1.8807C5.00117 1.52879 4.62383 1.3125 4.21641 1.3125H4.15625C3.55195 1.3125 3.0625 1.80223 3.0625 2.40625C3.0625 3.01055 3.55195 3.5 4.15625 3.5H6.16055L5.20898 1.8807ZM9.84375 1.3125H9.78359C9.37617 1.3125 8.99883 1.52879 8.79102 1.8807L7.83945 3.5H9.84375C10.448 3.5 10.9375 3.01055 10.9375 2.40625C10.9375 1.80223 10.448 1.3125 9.84375 1.3125ZM0.875 7.875H6.125V14H2.1875C1.46262 14 0.875 13.4121 0.875 12.6875V7.875ZM7.875 14V7.875H13.125V12.6875C13.125 13.4121 12.5371 14 11.8125 14H7.875Z" fill="#61C8AF"/>
+                                                    </svg>
+                                                    Промокод
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12.7887 5.20202L8.32012 9.24972C7.92963 9.60601 7.31241 9.3179 7.31241 8.76325V6.4316C3.37426 6.49053 1.67723 7.52188 2.82838 11.4062C2.95612 11.8372 2.46252 12.1713 2.11596 11.905C1.00517 11.0526 0 9.42385 0 7.77637C0 3.69919 3.23462 2.83661 7.31216 2.78571V0.643186C7.31216 0.0894718 7.92862 -0.199574 8.31987 0.15671L12.7884 4.20442C13.0705 4.48409 13.0705 4.94485 12.7887 5.20202Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Поделиться
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.60361 3.5226L11.8468 4.01947C12.1154 4.05931 12.3411 4.25619 12.4269 4.52572C12.5126 4.7976 12.4427 5.09291 12.2486 5.29447L9.89684 7.68978L10.452 11.1257C10.4972 11.407 10.3866 11.6929 10.1609 11.8593C9.93746 12.0257 9.6418 12.0468 9.40031 11.9132L6.50239 10.3078L3.60673 11.9132C3.36298 12.0468 3.06732 12.0257 2.84389 11.8593C2.62045 11.6929 2.5076 11.407 2.555 11.1257L3.1102 7.68978L0.758018 5.29447C0.563695 5.09291 0.494632 4.7976 0.579945 4.52572C0.665031 4.25619 0.890049 4.05931 1.16066 4.01947L4.40118 3.5226L5.85465 0.421112C5.97427 0.162924 6.22705 -0.000976562 6.50239 -0.000976562C6.78 -0.000976562 7.03277 0.162924 7.15239 0.421112L8.60361 3.5226Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Оценить приложение
+                                                </a>
+                                            </li>
+                                            <li class="header__mob-select--item">
+                                                <a href="#" class="header__mob-select--link">
+                                                    <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M2.625 12H4.375C4.85898 12 5.25 11.617 5.25 11.1429C5.25 10.6687 4.85898 10.2857 4.375 10.2857H2.625C2.14184 10.2857 1.75 9.90188 1.75 9.42857V2.57143C1.75 2.09812 2.14184 1.71429 2.625 1.71429H4.375C4.85898 1.71429 5.25 1.33045 5.25 0.857143C5.25 0.383839 4.85898 0 4.375 0H2.625C1.17523 0 0 1.15125 0 2.57143V9.42857C0 10.8482 1.17523 12 2.625 12ZM13.8031 5.53125L9.86289 1.88839C9.67217 1.7122 9.39258 1.66406 9.15195 1.76534C8.91125 1.86704 8.7552 2.09936 8.7552 2.35596L8.75269 4.28454L5.25269 4.28451C4.76897 4.28451 4.37714 4.66835 4.37714 5.14165V6.85594C4.37714 7.32924 4.76925 7.71308 5.25269 7.71308L8.75269 7.71311L8.7552 9.61757C8.7552 9.87413 8.91125 10.1064 9.15195 10.2082C9.39266 10.3095 9.67231 10.2613 9.86289 10.0851L13.8031 6.44229C14.0656 6.225 14.0656 5.775 13.8031 5.53125Z" fill="#F9F1DF"/>
+                                                    </svg>
+                                                    Выйти
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__nav-mob--item">
+                                <a href="#" class="header__nav-mob--link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="header__nav-mob--item">
+                                <a href="online-games.html" class="header__nav-mob--link">
+                                    Игры
+                                </a>
+                            </li>
+                            <li class="header__nav-mob--item">
+                                <a href="#" class="header__nav-mob--link">
+                                    Комнаты
+                                </a>
+                            </li>
+                            <li class="header__nav-mob--item">
+                                <a href="#" class="header__nav-mob--link">
+                                    Новости
+                                </a>
+                            </li>
+                            <li class="header__nav-mob--item">
+                                <a href="#" class="header__nav-mob--link">
+                                    Преимущества
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="header__burger" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="news-page page-padding" data-aos="fade-in" data-aos-delay="600">
+                <div class="news-page__container container">
+                    <div class="news-page__header page-header" data-aos="fade-in" data-aos-delay="200">
+                        <a href="#" class="news-page__forward-btn page-header__forward-btn" title="Назад">
+                            <svg width="5" height="7" viewBox="0 0 5 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.25 3.49991C0.25 3.35065 0.304932 3.20132 0.414795 3.08757L3.2273 0.170898C3.44702 -0.0569662 3.80298 -0.0569662 4.02271 0.170898C4.24243 0.398763 4.24243 0.767904 4.02271 0.995768L1.60703 3.49991L4.02227 6.0046C4.24199 6.23246 4.24199 6.6016 4.02227 6.82947C3.80254 7.05733 3.44658 7.05733 3.22686 6.82947L0.414356 3.9128C0.304493 3.79887 0.25 3.64939 0.25 3.49991Z" fill="#F9F1DF"/>
+                            </svg>
+                        </a>
+                        <h2 class="news-page__section-title section-title page-header__title _decor-none">
+                            Новости комании
+                        </h2>
+                        <div class="news-page__bread-crumbs page-header__bread-crumbs">
+                            <ul class="page-header__bread-crumbs--list">
+                                <li class="page-header__bread-crumbs--item">
+                                    <a href="index.html" class="page-header__bread-crumbs--link">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="page-header__bread-crumbs--item">
+                                    <a class="page-header__bread-crumbs--link">
+                                        Новости комании
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="news-page__main">
+                        <div class="news-page__main--block news-page__block">
+                            <h3 class="news-page__title">
+                                Название новости или статьи
+                            </h3>
+                            <time class="news-page__time" datetime="2022-12-12">
+                                12  / 12  /  2022
+                            </time>
+                            <div class="news-page__image">
+                                <div class="news-page__image--body">
+                                    <picture>
+                                        <source srcset="img/main-page/news/image-large.webp" type="image/webp">
+                                        <img src="img/main-page/news/image-large.jpg" alt="" width="300" class="news-page__image--img">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="news-page__text">
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h4>
+                                <p>
+                                    Ut a enim hendrerit, dignissim tellus vitae, porttitor purus. Ut laoreet odio ut ipsum accumsan, et varius diam pretium. Maecenas vitae ullamcorper magna, et vehicula mi. Sed nec risus mattis, condimentum nulla id, venenatis magna. Suspendisse in mollis arcu. Nulla viverra porttitor ligula quis vulputate.
+                                </p>
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h4>
+                                <p>
+                                    Vivamus at feugiat sem. Fusce elit lacus, fermentum quis interdum quis, efficitur quis justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim hendrerit, dignissim tellus vitae, porttitor purus. Ut laoreet odio ut ipsum accumsan, et varius diam pretium. Maecenas vitae ullamcorper magna, et vehicula mi. Sed nec risus mattis, condimentum nulla id, venenatis magna. Suspendisse in mollis arcu. Nulla viverra porttitor ligula quis vulputate. Vivamus at feugiat sem. Fusce elit lacus, fermentum quis interdum quis, efficitur quis justo.
+                                </p>
+                                <p>
+                                    Ut a enim hendrerit, dignissim tellus vitae, porttitor purus. Ut laoreet odio ut ipsum accumsan, et varius diam pretium. Maecenas vitae ullamcorper magna, et vehicula mi. Sed nec risus mattis, condimentum nulla id, venenatis magna. Suspendisse in mollis arcu. Nulla viverra porttitor ligula quis vulputate.
+                                </p>
+                                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h4>
+                                <p>
+                                    Vivamus at feugiat sem. Fusce elit lacus, fermentum quis interdum quis, efficitur quis justo.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut a enim hendrerit, dignissim tellus vitae, porttitor purus. Ut laoreet odio ut ipsum accumsan, et varius diam pretium. Maecenas vitae ullamcorper magna, et vehicula mi. Sed nec risus mattis, condimentum nulla id, venenatis magna. Suspendisse in mollis arcu. Nulla viverra porttitor ligula quis vulputate. Vivamus at feugiat sem. Fusce elit lacus, fermentum quis interdum quis, efficitur quis justo.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="news-page__main--aside news-page__aside">
+                            <div class="news-page__aside--body">
+                                <ul class="news-page__aside--list">
+                                    <li class="news-page__aside--item">
+                                        <a href="#" class="news-list__item--body">
+                                            <div class="news-list__item--image">
+                                                <div class="news-list__item--image-body">
+                                                    <picture>
+                                                        <source srcset="img/news/image-1.webp" type="image/webp">
+                                                        <img src="img/news/image-1.png" loading="lazy" alt="" width="311" height="150" class="news-list__item--img">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <h3 class="news-list__item--title" title="Название новости или статьи">
+                                                Название новости или статьи
+                                            </h3>
+                                            <time class="news-list__item--time" datetime="2022-12-12">
+                                                12  / 12  /  2022
+                                            </time>
+                                            <div class="news-list__item--text">
+                                                Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non elei...
+                                            </div>
+                                            <div class="news-list__item--footer">
+                                                <span class="news-list__item--link">
+                                                    Смотреть статью
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="news-page__aside--item">
+                                        <a href="#" class="news-list__item--body">
+                                            <div class="news-list__item--image">
+                                                <div class="news-list__item--image-body">
+                                                    <picture>
+                                                        <source srcset="img/news/image-2.webp" type="image/webp">
+                                                        <img src="img/news/image-2.png" loading="lazy" alt="" width="311" height="150" class="news-list__item--img">
+                                                    </picture>
+                                                </div>
+                                            </div>
+                                            <h3 class="news-list__item--title" title="Название новости или статьи">
+                                                Название новости или статьи
+                                            </h3>
+                                            <time class="news-list__item--time" datetime="2022-12-12">
+                                                12  / 12  /  2022
+                                            </time>
+                                            <div class="news-list__item--text">
+                                                Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non elei...
+                                            </div>
+                                            <div class="news-list__item--footer">
+                                                <span class="news-list__item--link">
+                                                    Смотреть статью
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="news-list__row">
+                        <li class="news-list__item">
+    <a href="#" class="news-list__item--body">
+        <div class="news-list__item--image">
+            <div class="news-list__item--image-body">
+                <picture>
+                    <source srcset="img/news/image-1.webp" type="image/webp">
+                    <img src="img/news/image-1.png" loading="lazy" alt="" width="311" height="150" class="news-list__item--img">
+                </picture>
+            </div>
+        </div>
+        <h3 class="news-list__item--title" title="Название новости или статьи">
+            Название новости или статьи
+        </h3>
+        <time class="news-list__item--time" datetime="2022-12-12">
+            12  / 12  /  2022
+        </time>
+        <div class="news-list__item--text">
+            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non elei...
+        </div>
+        <div class="news-list__item--footer">
+            <span class="news-list__item--link">
+                Смотреть статью
+            </span>
+        </div>
+    </a>
+</li><li class="news-list__item">
+    <a href="#" class="news-list__item--body">
+        <div class="news-list__item--image">
+            <div class="news-list__item--image-body">
+                <picture>
+                    <source srcset="img/news/image-2.webp" type="image/webp">
+                    <img src="img/news/image-2.png" loading="lazy" alt="" width="311" height="150" class="news-list__item--img">
+                </picture>
+            </div>
+        </div>
+        <h3 class="news-list__item--title" title="Название новости или статьи если очень длинное">
+            Название новости или статьи если очень длинное
+        </h3>
+        <time class="news-list__item--time" datetime="2022-12-12">
+            12  / 12  /  2022
+        </time>
+        <div class="news-list__item--text">
+            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non elei...
+        </div>
+        <div class="news-list__item--footer">
+            <span class="news-list__item--link">
+                Смотреть статью
+            </span>
+        </div>
+    </a>
+</li><li class="news-list__item">
+    <a href="#" class="news-list__item--body">
+        <div class="news-list__item--image">
+            <div class="news-list__item--image-body">
+                <picture>
+                    <source srcset="img/news/image-3.webp" type="image/webp">
+                    <img src="img/news/image-3.png" loading="lazy" alt="" width="311" height="150" class="news-list__item--img">
+                </picture>
+            </div>
+        </div>
+        <h3 class="news-list__item--title" title="Название новости или статьи если очень длинное">
+            Название новости или статьи если очень длинное
+        </h3>
+        <time class="news-list__item--time" datetime="2022-12-12">
+            12  / 12  /  2022
+        </time>
+        <div class="news-list__item--text">
+            Proin orci ex, ornare non auctor sit amet, egestas id neque. Donec non elei...
+        </div>
+        <div class="news-list__item--footer">
+            <span class="news-list__item--link">
+                Смотреть статью
+            </span>
+        </div>
+    </a>
+</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" data-aos="fade-in" data-aos-anchor=".main">
+            
+            <div class="footer__container container _large">
+                <div class="footer__intro">
+                    <a href="index.html" class="footer__logo">
+                        <img src="img/logo.svg" width="100" height="39" loading="lazy" alt="" class="footer__logo--img">
+                    </a>
+                    <div class="footer__contacts">
+                        <a href="tel:+38098111111" class="footer__contacts--link" aria-label="+38098111111">
+                            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.599373 10.6435L4.03698 9.36192C4.44189 9.20955 4.91682 9.3123 5.19183 9.60931L6.58873 11.092C8.78279 10.1553 10.565 8.60405 11.6422 6.69795L9.93731 5.4847C9.59672 5.24279 9.48076 4.83207 9.65299 4.47999L11.1266 1.49094C11.3196 1.10774 11.7951 0.898094 12.2605 0.992036L15.4542 1.63255C15.9056 1.72208 16.2215 2.06782 16.2215 2.47168C16.2215 9.42225 9.72016 15.0753 1.72653 15.0753C1.26174 15.0753 0.865384 14.8007 0.76178 14.408L0.0251496 11.6311C-0.0815272 11.2275 0.158915 10.8088 0.599373 10.6435Z" fill="#F9F1DF"/>
+                            </svg>
+                            <span>
+                                +38098111111
+                            </span>
+                        </a>
+                        <a href="mailto:boardgames@gmail.com" class="footer__contacts--link" aria-label="boardgames@gmail.com">
+                            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.751 0.214844C16.6506 0.214844 17.3804 0.849156 17.3804 1.63164C17.3804 2.07734 17.1394 2.49648 16.7286 2.76508L9.34197 7.58219C8.95498 7.83308 8.42542 7.83308 8.03844 7.58219L0.651765 2.76508C0.241459 2.49648 0 2.07734 0 1.63164C0 0.849156 0.729502 0.214844 1.62941 0.214844H15.751ZM7.38667 8.33781C8.16065 8.84255 9.21976 8.84255 9.99374 8.33781L17.3804 3.5207V9.66016C17.3804 10.7021 16.4062 11.5492 15.2079 11.5492H2.17255C0.972556 11.5492 0 10.7021 0 9.66016V3.5207L7.38667 8.33781Z" fill="#F9F1DF"/>
+                            </svg>
+                            <span>
+                                boardgames@gmail.com
+                            </span>
+                        </a>
+                    </div>
+                    <div class="footer__social">
+                        <ul class="footer__social--list">
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="Instagram">
+                                    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.5028 20.6722C7.73521 20.6722 7.40895 20.6576 6.32891 20.6103C5.48667 20.5826 4.65533 20.4114 3.87069 20.1041C2.51312 19.5758 1.43964 18.5019 0.911836 17.1441C0.616295 16.3566 0.456889 15.5246 0.440444 14.6836C0.377441 13.6058 0.377441 13.2526 0.377441 10.5063C0.377441 7.73087 0.392067 7.40686 0.440444 6.33245C0.457249 5.49263 0.616649 4.66177 0.911836 3.87536C1.43906 2.51578 2.51429 1.44096 3.87407 0.914251C4.66007 0.617468 5.49114 0.457647 6.33116 0.441734C7.40557 0.380981 7.75883 0.380981 10.5028 0.380981C13.2929 0.380981 13.6135 0.395607 14.6767 0.441734C15.5189 0.457784 16.3522 0.617588 17.1405 0.914251C18.4999 1.44156 19.575 2.51617 20.1028 3.87536C20.4033 4.67323 20.5635 5.51708 20.5764 6.36957C20.6394 7.44736 20.6394 7.7995 20.6394 10.5446C20.6394 13.2897 20.6237 13.6497 20.5764 14.7151C20.5597 15.5569 20.3999 16.3897 20.1039 17.1778C19.5748 18.5366 18.4997 19.6108 17.1405 20.1389C16.3533 20.4339 15.5217 20.5933 14.6812 20.6103C13.6068 20.6722 13.2547 20.6722 10.5028 20.6722ZM10.4646 2.16192C7.71271 2.16192 7.42695 2.17542 6.35253 2.2238C5.71124 2.23229 5.07615 2.35064 4.47484 2.57369C3.5869 2.91346 2.88429 3.61321 2.54089 4.49976C2.31613 5.10761 2.19777 5.74965 2.19101 6.3977C2.13138 7.48786 2.13138 7.77362 2.13138 10.5063C2.13138 13.2064 2.14151 13.5338 2.19101 14.6172C2.20108 15.2587 2.31937 15.8939 2.54089 16.4961C2.88479 17.382 3.58729 18.0812 4.47484 18.421C5.07574 18.6455 5.71109 18.7639 6.35253 18.7709C7.44157 18.8339 7.72846 18.8339 10.4646 18.8339C13.2243 18.8339 13.51 18.8204 14.5755 18.7709C15.2172 18.7631 15.8528 18.6447 16.4543 18.421C17.3368 18.0783 18.0349 17.3807 18.3781 16.4983C18.6024 15.8899 18.7208 15.2476 18.728 14.5992H18.7404C18.7887 13.5237 18.7887 13.2368 18.7887 10.4883C18.7887 7.73987 18.7764 7.45074 18.728 6.37632C18.7179 5.73556 18.5996 5.1011 18.3781 4.49976C18.0357 3.61612 17.3375 2.91715 16.4543 2.57369C15.8529 2.34951 15.2172 2.23113 14.5755 2.2238C13.4875 2.16192 13.2029 2.16192 10.4646 2.16192ZM10.5028 15.7029C8.39897 15.7043 6.50151 14.4381 5.69535 12.4948C4.8892 10.5515 5.33314 8.31401 6.82013 6.82573C8.30713 5.33745 10.5443 4.89157 12.4882 5.69605C14.4322 6.50052 15.7 8.39688 15.7005 10.5007C15.6974 13.3708 13.3729 15.6973 10.5028 15.7029ZM10.5028 7.12335C8.63878 7.12335 7.12769 8.63444 7.12769 10.4985C7.12769 12.3625 8.63878 13.8736 10.5028 13.8736C12.3668 13.8736 13.8779 12.3625 13.8779 10.4985C13.8736 8.63624 12.365 7.12768 10.5028 7.12335ZM15.903 6.3212C15.2341 6.31871 14.6935 5.77509 14.6947 5.10616C14.696 4.43724 15.2386 3.89562 15.9075 3.89562C16.5764 3.89562 17.1191 4.43723 17.1203 5.10615C17.1206 5.42888 16.9924 5.73845 16.764 5.96645C16.5355 6.19444 16.2257 6.32209 15.903 6.3212Z" fill="#F9F1DF"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="Twitter">
+                                    <svg width="27" height="20" viewBox="0 0 27 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M23.0005 3.18434C24.1178 2.56467 24.9538 1.58894 25.3524 0.439323C24.3025 1.01724 23.1539 1.42433 21.956 1.64301C20.2954 0.0132644 17.6642 -0.383342 15.5328 0.674807C13.4013 1.73296 12.2973 3.9839 12.8376 6.16986C8.53714 5.96956 4.53051 4.08499 1.81471 0.985088C0.397392 3.25304 1.12167 6.15226 3.46989 7.61059C2.62075 7.58526 1.79044 7.37197 1.0482 6.98851C1.0482 7.00932 1.0482 7.03013 1.0482 7.05095C1.04869 9.41341 2.84343 11.4484 5.33945 11.9166C4.55182 12.1154 3.72566 12.1446 2.92398 12.0021C3.62594 14.0225 5.63303 15.4066 7.92068 15.4479C6.02599 16.8275 3.68611 17.5756 1.27753 17.572C0.850611 17.5725 0.424028 17.5498 0 17.5037C2.44586 18.9618 5.29255 19.7358 8.19987 19.7331C12.2446 19.7588 16.1318 18.2795 18.9918 15.626C21.8519 12.9724 23.4462 9.36611 23.418 5.61369C23.418 5.39862 23.4126 5.18471 23.4018 4.97195C24.4493 4.26963 25.3534 3.39958 26.0716 2.40269C25.0957 2.80399 24.0605 3.06746 23.0005 3.18434Z" fill="#F9F1DF"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="Telegram">
+                                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M23.1053 11.2519C23.1053 17.4653 18.0683 22.5023 11.8549 22.5023C5.64147 22.5023 0.604492 17.4653 0.604492 11.2519C0.604492 5.03844 5.64147 0.00146484 11.8549 0.00146484C18.0683 0.00146484 23.1053 5.03844 23.1053 11.2519ZM12.2581 8.30692C11.1638 8.76206 8.9768 9.70409 5.69708 11.133C5.1645 11.3448 4.88552 11.552 4.86012 11.7546C4.8172 12.097 5.24596 12.2318 5.82982 12.4154C5.90923 12.4403 5.99152 12.4662 6.07588 12.4936C6.65031 12.6804 7.42302 12.8988 7.82471 12.9075C8.18909 12.9154 8.59578 12.7651 9.04478 12.4568C12.1091 10.3883 13.691 9.34278 13.7903 9.32024C13.8603 9.30434 13.9574 9.28434 14.0232 9.34281C14.089 9.40128 14.0825 9.51201 14.0755 9.54172C14.0331 9.72279 12.35 11.2875 11.4791 12.0972C11.2075 12.3497 11.0149 12.5287 10.9756 12.5696C10.8874 12.6612 10.7975 12.7479 10.7111 12.8311C10.1774 13.3456 9.77724 13.7314 10.7332 14.3614C11.1927 14.6641 11.5603 14.9145 11.927 15.1642C12.3276 15.437 12.7271 15.7091 13.244 16.0479C13.3757 16.1342 13.5014 16.2239 13.6239 16.3112C14.09 16.6435 14.5088 16.9421 15.0262 16.8944C15.3268 16.8668 15.6373 16.5841 15.7951 15.741C16.1678 13.7486 16.9004 9.43151 17.0697 7.65256C17.0845 7.4967 17.0658 7.29723 17.0509 7.20967C17.0359 7.12211 17.0046 6.99735 16.8907 6.90499C16.7559 6.79562 16.5479 6.77255 16.4548 6.77419C16.0316 6.78165 15.3824 7.00739 12.2581 8.30692Z" fill="#F9F1DF"/>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="footer__social--item">
+                                <a href="#" class="footer__social--link" title="Facebook">
+                                    <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.858276 11.5029C0.859585 17.0374 4.88412 21.7498 10.3502 22.6172V14.7543H7.49602V11.5029H10.3536V9.0278C10.2259 7.85499 10.6265 6.68613 11.4468 5.83823C12.267 4.99033 13.422 4.55128 14.5984 4.64014C15.4428 4.65378 16.285 4.72898 17.1185 4.86515V7.63163H15.6964C15.2069 7.5675 14.7147 7.72919 14.3585 8.07114C14.0023 8.41309 13.8207 8.89829 13.8649 9.39006V11.5029H16.9824L16.484 14.7554H13.8649V22.6172C19.7764 21.6829 23.9217 16.2841 23.2978 10.3318C22.6739 4.37955 17.4991 -0.0423576 11.5223 0.269559C5.5456 0.581476 0.859226 5.51802 0.858276 11.5029Z" fill="#F9F1DF"/>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <nav class="footer__nav">
+                    <div class="footer__nav--row">
+                        <div class="footer__nav--col">
+                            <ul class="footer__nav--list">
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Игры
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Комнаты
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Новости
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Преимущества
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__nav--col">
+                            <ul class="footer__nav--list">
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Правила использования
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Политика конфеденциальности
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Документ
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Статья о сервисе
+                                    </a>
+                                </li>
+                                <li class="footer__nav--item">
+                                    <a href="#" class="footer__nav--link">
+                                        Статья
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="footer__hot">
+                    <h2 class="footer__hot--title">
+                        Горячие предложения!
+                    </h2>
+                    <ul class="footer__hot--list">
+                        <li class="footer__hot--item">
+                            <a href="#" class="footer__hot--link" title="Название игры">
+                                <picture>
+                                    <source srcset="img/main-page/games/image-6.webp" type="image/webp">
+                                    <img src="img/main-page/games/image-6.png" alt="" loading="lazy" width="300" class="footer__hot--img">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="footer__hot--item">
+                            <a href="#" class="footer__hot--link" title="Название игры">
+                                <picture>
+                                    <source srcset="img/main-page/games/image-7.webp" type="image/webp">
+                                    <img src="img/main-page/games/image-7.png" alt="" loading="lazy" width="300" class="footer__hot--img">
+                                </picture>
+                            </a>
+                        </li>
+                        <li class="footer__hot--item">
+                            <a href="#" class="footer__hot--link" title="Название игры">
+                                <picture>
+                                    <source srcset="img/main-page/games/image-1.webp" type="image/webp">
+                                    <img src="img/main-page/games/image-1.png" alt="" loading="lazy" width="300" class="footer__hot--img">
+                                </picture>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__copy">
+                    Все права защищены <br>
+                    Версия обновлена 10 Июля 2022
+                </div>
+            </div>
+        </footer>
+
+        <div class="registration-popup popup" id="registration-popup" style="display: none;">
+            <div class="registration-popup__wrapper popup-wrapper">
+                <div class="registration-popup__bg popup-bg popup-close"></div>
+                <div class="registration-popup__body popup-body">
+                    <div class="registration-popup__decor popup-decor">
+                        <div class="popup-decor__element">
+                            <picture>
+                                <source srcset="img/popups/decor-image-1.webp" type="image/webp">
+                                <img src="img/popups/decor-image-1.png" alt="" loading="lazy" width="0" height="0" class="popup-decor__element--img">
+                            </picture>
+                        </div>
+                        <div class="popup-decor__element">
+                            <picture>
+                                <source srcset="img/popups/decor-image-2.webp" type="image/webp">
+                                <img src="img/popups/decor-image-2.png" alt="" loading="lazy" width="0" height="0" class="popup-decor__element--img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="registration-popup__container popup-container">
+                        <button type="button" class="registration-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="registration-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="registration-popup__title popup-title section-title _center">
+                            Регистрация
+                        </h2>
+                        <form action="#" class="registration-popup__form popup-form">
+                            <div class="registration-popup__form--list popup-form-list">
+                                <label class="registration-popup__label popup-label">
+                                    <input type="email" name="email" required placeholder="Email" class="registration-popup__input popup-input email-valid-input">
+                                    <span class="registration-popup__input-placeholder popup-input-placeholder">Email</span>
+                                </label>
+                                <label class="registration-popup__label popup-label">
+                                    <input type="text" name="name" required placeholder="Имя пользователя" class="registration-popup__input popup-input">
+                                    <span class="registration-popup__input-placeholder popup-input-placeholder">Имя пользователя</span>
+                                </label>
+                                <label class="registration-popup__label popup-label">
+                                    <input type="password" name="password" required placeholder="Пароль" class="registration-popup__input popup-input">
+                                    <span class="registration-popup__input-placeholder popup-input-placeholder">Пароль</span>
+                                </label>
+                                <label class="registration-popup__label popup-label">
+                                    <input type="password" name="password-repeat" required placeholder="Повторите пароль" class="registration-popup__input popup-input">
+                                    <span class="registration-popup__input-placeholder popup-input-placeholder">Повторите пароль</span>
+                                </label>
+                            </div>
+                            <div class="registration-popup__checkbox popup-checkbox">
+                                <label class="popup-checkbox__label">
+                                    <input type="checkbox" name="service-usage-rules" required class="popup-checkbox__input">
+                                    <span class="popup-checkbox__element"></span>
+                                    <span class="popup-checkbox__text">
+                                        Я соглашаюсь со всеми <a href="index.html">правилами использования сервиса</a>
+                                    </span>
+                                </label>
+                            </div>
+                            <button type="submit" class="registration-popup__submit popup-submit btn _large _shadow">
+                                Зарегистрироваться
+                            </button>
+                            <a href="#login-popup" class="registration-popup__link popup-link popup-close open-popup">
+                                У меня уже есть аккаунт
+                            </a>
+                            <div class="registration-popup__via popup-via">
+                                <div class="popup-via__body">
+                                    <h3 class="popup-via__title">
+                                        Зарегестрироваться через
+                                    </h3>
+                                    <ul class="popup-via__list">
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Facebook">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4687H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92187 17.3438 4.92187V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4687H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Google">
+                                                <svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path d="M19.8,10.2c0-0.7-0.1-1.4-0.2-2h-9.4V12h5.4c-0.2,1.2-0.9,2.3-2,3v0c-0.9,0.6-2.1,1-3.4,1
+                                                    c-2.6,0-4.8-1.8-5.6-4.1h0l0,0c-0.4-1.2-0.4-2.6,0-3.8v0l0,0C5.4,5.7,7.6,4,10.2,4c1.4,0,2.8,0.5,3.8,1.5l2.9-2.9
+                                                    C15.1,0.9,12.7,0,10.2,0C6.4,0,3,2.1,1.3,5.5h0c-1.4,2.8-1.4,6.2,0,9l0,0v0C3,17.9,6.4,20,10.2,20c2.7,0,5-0.9,6.6-2.4l0,0
+                                                    C18.7,15.8,19.8,13.3,19.8,10.2z"/>
+                                                </svg>             
+                                            </a>
+                                        </li>
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Apple">
+                                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13.279 9.49609C13.2707 8.0625 13.9623 6.98047 15.3623 6.18359C14.579 5.13281 13.3957 4.55469 11.8332 4.44141C10.354 4.33203 8.73734 5.25 8.14567 5.25C7.52067 5.25 6.08734 4.48047 4.96234 4.48047C2.63734 4.51563 0.166504 6.21875 0.166504 9.68359C0.166504 10.707 0.366504 11.7643 0.766504 12.8555C1.29984 14.2891 3.22484 17.8047 5.23317 17.7461C6.28317 17.7227 7.02484 17.0469 8.3915 17.0469C9.7165 17.0469 10.404 17.7461 11.5748 17.7461C13.5998 17.7188 15.3415 14.5234 15.8498 13.0859C13.1332 11.8867 13.279 9.57031 13.279 9.49609ZM10.9207 3.08203C12.0582 1.81641 11.954 0.664063 11.9207 0.25C10.9165 0.304688 9.754 0.890625 9.0915 1.61328C8.36234 2.38672 7.93317 3.34375 8.02484 4.42188C9.11234 4.5 10.104 3.97656 10.9207 3.08203Z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="login-popup popup" id="login-popup" style="display: none;">
+            <div class="login-popup__wrapper popup-wrapper">
+                <div class="login-popup__bg popup-bg popup-close"></div>
+                <div class="login-popup__body popup-body">
+                    <div class="login-popup__decor popup-decor">
+                        <div class="popup-decor__element">
+                            <picture>
+                                <source srcset="img/popups/decor-image-1.webp" type="image/webp">
+                                <img src="img/popups/decor-image-1.png" alt="" loading="lazy" width="0" height="0" class="popup-decor__element--img">
+                            </picture>
+                        </div>
+                        <div class="popup-decor__element">
+                            <picture>
+                                <source srcset="img/popups/decor-image-2.webp" type="image/webp">
+                                <img src="img/popups/decor-image-2.png" alt="" loading="lazy" width="0" height="0" class="popup-decor__element--img">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="login-popup__container popup-container">
+                        <button type="button" class="login-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="login-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="login-popup__title popup-title section-title _center">
+                            Вход
+                        </h2>
+                        <form action="#" class="login-popup__form popup-form">
+                            <div class="login-popup__form--list popup-form-list">
+                                <label class="login-popup__label popup-label">
+                                    <input type="email" name="email" required placeholder="Email" class="login-popup__input popup-input email-valid-input">
+                                    <span class="login-popup__input-placeholder popup-input-placeholder">Email</span>
+                                </label>
+                                <label class="login-popup__label popup-label">
+                                    <input type="password" name="password" required placeholder="Пароль" class="login-popup__input popup-input">
+                                    <span class="login-popup__input-placeholder popup-input-placeholder">Пароль</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="login-popup__submit popup-submit btn _large _shadow">
+                                Войти
+                            </button>
+                            <a href="#registration-popup" class="login-popup__link popup-link popup-close open-popup">
+                                Зарегестрироваться
+                            </a>
+                            <a href="#forgot-password-popup" class="login-popup__link popup-link popup-close open-popup">
+                                Забыли пароль?
+                            </a>
+                            <div class="login-popup__via popup-via">
+                                <div class="popup-via__body">
+                                    <h3 class="popup-via__title">
+                                        Войти через
+                                    </h3>
+                                    <ul class="popup-via__list">
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Facebook">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4687H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92187 17.3438 4.92187V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4687H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Google">
+                                                <svg width="20" height="20" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path d="M19.8,10.2c0-0.7-0.1-1.4-0.2-2h-9.4V12h5.4c-0.2,1.2-0.9,2.3-2,3v0c-0.9,0.6-2.1,1-3.4,1
+                                                    c-2.6,0-4.8-1.8-5.6-4.1h0l0,0c-0.4-1.2-0.4-2.6,0-3.8v0l0,0C5.4,5.7,7.6,4,10.2,4c1.4,0,2.8,0.5,3.8,1.5l2.9-2.9
+                                                    C15.1,0.9,12.7,0,10.2,0C6.4,0,3,2.1,1.3,5.5h0c-1.4,2.8-1.4,6.2,0,9l0,0v0C3,17.9,6.4,20,10.2,20c2.7,0,5-0.9,6.6-2.4l0,0
+                                                    C18.7,15.8,19.8,13.3,19.8,10.2z"/>
+                                                </svg>             
+                                            </a>
+                                        </li>
+                                        <li class="popup-via__item">
+                                            <a href="#" class="popup-via__btn" title="Apple">
+                                                <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M13.279 9.49609C13.2707 8.0625 13.9623 6.98047 15.3623 6.18359C14.579 5.13281 13.3957 4.55469 11.8332 4.44141C10.354 4.33203 8.73734 5.25 8.14567 5.25C7.52067 5.25 6.08734 4.48047 4.96234 4.48047C2.63734 4.51563 0.166504 6.21875 0.166504 9.68359C0.166504 10.707 0.366504 11.7643 0.766504 12.8555C1.29984 14.2891 3.22484 17.8047 5.23317 17.7461C6.28317 17.7227 7.02484 17.0469 8.3915 17.0469C9.7165 17.0469 10.404 17.7461 11.5748 17.7461C13.5998 17.7188 15.3415 14.5234 15.8498 13.0859C13.1332 11.8867 13.279 9.57031 13.279 9.49609ZM10.9207 3.08203C12.0582 1.81641 11.954 0.664063 11.9207 0.25C10.9165 0.304688 9.754 0.890625 9.0915 1.61328C8.36234 2.38672 7.93317 3.34375 8.02484 4.42188C9.11234 4.5 10.104 3.97656 10.9207 3.08203Z"/>
+                                                </svg>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forgot-password-popup popup" id="forgot-password-popup" style="display: none;">
+            <div class="forgot-password-popup__wrapper popup-wrapper">
+                <div class="forgot-password-popup__bg popup-bg popup-close"></div>
+                <div class="forgot-password-popup__body popup-body">
+                    <div class="forgot-password-popup__container popup-container">
+                        <button type="button" class="forgot-password-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="forgot-password-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="forgot-password-popup__title popup-title section-title _center">
+                            Забыли пароль?
+                        </h2>
+                        <div class="forgot-password-popup__text popup-text">
+                            Введите ваш email и пароль будет отправлен вам на почту
+                        </div>
+                        <form action="#" class="forgot-password-popup__form popup-form">
+                            <div class="forgot-password-popup__form--list popup-form-list">
+                                <label class="forgot-password-popup__label popup-label">
+                                    <input type="email" name="email" required placeholder="Email" class="forgot-password-popup__input popup-input email-valid-input">
+                                    <span class="forgot-password-popup__input-placeholder popup-input-placeholder">Email</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="forgot-password-popup__submit popup-submit btn _large _shadow _disabled">
+                                Войти
+                            </button>
+                            <a href="#login-popup" class="forgot-password-popup__link popup-link popup-close open-popup">
+                                Назад
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="password-send-popup popup" id="password-send-popup" style="display: none;">
+            <div class="password-send-popup__wrapper popup-wrapper">
+                <div class="password-send-popup__bg popup-bg popup-close"></div>
+                <div class="password-send-popup__body popup-body">
+                    <div class="password-send-popup__container popup-container">
+                        <button type="button" class="password-send-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="password-send-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="password-send-popup__title popup-title section-title _center">
+                            Забыли пароль?
+                        </h2>
+                        <div class="password-send-popup__text popup-text">
+                            Ваш пароль будет выслан в течении пары минут вам на почту
+                        </div>
+                        <a href="#login-popup" class="password-send-popup__btn btn _large _shadow popup-btn popup-close open-popup">
+                            Войти в аккаунт
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="subscribe-popup popup" id="subscribe-popup" style="display: none;">
+            <div class="subscribe-popup__wrapper popup-wrapper">
+                <div class="subscribe-popup__bg popup-bg popup-close"></div>
+                <div class="subscribe-popup__body popup-body">
+                    <div class="subscribe-popup__container popup-container">
+                        <button type="button" class="subscribe-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="subscribe-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="subscribe-popup__title popup-title section-title _center">
+                            Подпишитесь!
+                        </h2>
+                        <div class="subscribe-popup__text popup-text">
+                            Получайте все новости нашего сервиса первыми! И удача всегда будет с вами!
+                        </div>
+                        <form action="#" class="subscribe-popup__form popup-form">
+                            <div class="subscribe-popup__form--list popup-form-list">
+                                <label class="subscribe-popup__label popup-label">
+                                    <input type="email" name="email" required placeholder="Email" class="subscribe-popup__input popup-input email-valid-input">
+                                    <span class="subscribe-popup__input-placeholder popup-input-placeholder">Email</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="subscribe-popup__submit popup-submit btn _large _shadow _disabled">
+                                Подписаться
+                            </button>
+                            <a class="subscribe-popup__link popup-link popup-close">
+                                Назад
+                            </a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="promocode-popup popup" id="promocode-popup" style="display: none;">
+            <div class="promocode-popup__wrapper popup-wrapper">
+                <div class="promocode-popup__bg popup-bg popup-close"></div>
+                <div class="promocode-popup__body popup-body">
+                    <div class="promocode-popup__container popup-container">
+                        <button type="button" class="promocode-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <div class="promocode-popup__logo popup-logo">
+                            <img src="img/logo.svg" width="100" height="38" alt="" class="popup-logo__img">
+                        </div>
+                        <h2 class="promocode-popup__title popup-title section-title _center">
+                            Промокод
+                        </h2>
+                        <form action="#" class="promocode-popup__form popup-form">
+                            <div class="promocode-popup__form--list popup-form-list">
+                                <label class="promocode-popup__label popup-label">
+                                    <input type="text" name="promocode" required placeholder="Промокод" class="promocode-popup__input popup-input">
+                                    <span class="promocode-popup__input-placeholder popup-input-placeholder">Промокод</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="promocode-popup__submit popup-submit btn _large _shadow">
+                                Применить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+</html>

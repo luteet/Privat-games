@@ -1,33 +1,33 @@
-.news {
+.last-news {
 
-    // .news__container
+    // .last-news__container
 
     &__container {
     }
 
-    // .news__row
+    // .last-news__row
 
     &__row {
         
     }
 
-    // .news__header
+    // .last-news__header
 
     &__header {
         //width: 100%;
     }
 
-    // .news__title
+    // .last-news__title
 
     &__title {
     }
 
-    // .news__more-link
+    // .last-news__more-link
 
     &__more-link {
     }
 
-    // .news__list
+    // .last-news__list
 
     &__list {
         padding-top: 25px;
@@ -43,7 +43,7 @@
         
     }
 
-    // .news__large-article
+    // .last-news__large-article
 
     &__large-article {
 
@@ -59,7 +59,7 @@
         display: flex;
         justify-content: center;
 
-        // .news__large-article--body
+        // .last-news__large-article--body
 
         &--body {
             color: var(--light);
@@ -79,14 +79,14 @@
             
         }
 
-        // .news__large-article--image
+        // .last-news__large-article--image
 
         &--image {
             position: relative;
             width: 100%; padding-top: 62.8%;
         }
 
-        // .news__large-article--img
+        // .last-news__large-article--img
 
         &--img {
             position: absolute;
@@ -96,7 +96,7 @@
             border-radius: 4px;
         }
 
-        // .news__large-article--title
+        // .last-news__large-article--title
 
         &--title {
             padding-top: 26px;
@@ -106,7 +106,7 @@
             color: var(--light);
         }
 
-        // .news__large-article--time
+        // .last-news__large-article--time
 
         &--time {
             font-weight: 300;
@@ -115,7 +115,7 @@
             color: var(--light);
         }
 
-        // .news__large-article--text
+        // .last-news__large-article--text
 
         &--text {
             margin-top: 6px;
@@ -125,7 +125,7 @@
         }
     }
 
-    // .news__article
+    // .last-news__article
 
     &__article {
 
@@ -137,7 +137,7 @@
         }
         
 
-        // .news__article--list
+        // .last-news__article--list
 
         &--list {
             display: flex;
@@ -159,7 +159,7 @@
             }
         }
 
-        // .news__article--body
+        // .last-news__article--body
 
         &--body {
             padding: 5px 0 5px 0;
@@ -183,7 +183,7 @@
             
         }
 
-        // .news__article--info
+        // .last-news__article--info
 
         &--info {
             //max-width: 337px;
@@ -193,7 +193,7 @@
             }
         }
 
-        // .news__article--title
+        // .last-news__article--title
 
         &--title {
             font-weight: 700;
@@ -201,7 +201,7 @@
             margin-bottom: -3px;
         }
 
-        // .news__article--time
+        // .last-news__article--time
 
         &--time {
             margin-top: 6px;
@@ -211,7 +211,7 @@
             line-height: 100%;
         }
 
-        // .news__article--text
+        // .last-news__article--text
 
         &--text {
             margin-top: 6px;
@@ -220,7 +220,7 @@
             line-height: 130%;
         }
 
-        // .news__article--image
+        // .last-news__article--image
 
         &--image {
             /* flex: 0 1 25%;
@@ -229,7 +229,7 @@
             text-align: right;
         }
 
-        // .news__article--img
+        // .last-news__article--img
 
         &--img {
             width: 110px; height: 75px;
@@ -241,7 +241,7 @@
         }
     }
 
-    // .news__game
+    // .last-news__game
 
     &__game {
         margin-top: 82px;
