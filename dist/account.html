@@ -201,7 +201,11 @@
                         </div>
                         <div class="header__nav--account header__account header__drop-down">
                             <button type="button" class="header__account--target header__drop-down--target">
-                                <img src="img/header/avatar.jpg" width="27" height="27" alt="Your avatar" class="header__account--avatar">
+                                <!-- <img src="img/header/avatar.jpg" width="27" height="27" alt="Your avatar" class="header__account--avatar"> -->
+                                <picture>
+                                    <source srcset="img/header/avatar.webp" type="image/webp">
+                                    <img src="img/header/avatar.jpg" alt="" width="27" height="27" alt="Ваш аватар" loading="lazy" class="header__account--avatar">
+                                </picture>
                                 <span class="header__account--name">
                                     Jane_006
                                 </span>
