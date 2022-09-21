@@ -80,6 +80,9 @@ body {
     flex: 1 0 auto;
     position: relative;
 
+    display: flex;
+    flex-direction: column;
+
     z-index: 2;
 }
 
@@ -273,6 +276,12 @@ body {
 
 .notification-item {
 
+    &._removing &__body {
+        opacity: 0;
+    }
+
+    width: 100%;
+
     // .notification-item__body
 
     &__body {
@@ -280,6 +289,10 @@ body {
         background: var(--dark-6);
         border: 1px solid #454340;
         border-radius: 6px;
+
+        width: 100%;
+
+        transition: opacity .2s ease-in-out;
     }
 
     // .notification-item__header
@@ -329,6 +342,41 @@ body {
         color: var(--gray);
         font-size: 0.75rem;
         white-space: nowrap;
+    }
+
+    // .notification-item__close-btn
+
+    &__close-btn {
+        flex: 0 0 20px;
+        width: 20px; height: 20px;
+        background: transparent;
+
+        margin-left: 19px;
+
+        position: relative;
+        &::before {
+            content: '';
+            width: 30px; height: 30px;
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+        }
+
+        & svg {
+            width: 100%; height: 100%;
+
+            & path {
+                transition: stroke .2s ease-in-out;
+            }
+        }
+
+        &:hover svg path {
+            stroke: var(--teal-light);
+        }
+
+        &:active svg path {
+            stroke: var(--teal);
+        }
     }
 
     // .notification-item__content
@@ -961,6 +1009,68 @@ body {
             height: 100%; width: auto;
             object-fit: contain;
             max-width: 100%; max-height: 900px;
+
+            user-select: none;
+            -webkit-user-drag: none;
         }
+    }
+}
+
+.notifications {
+
+    position: fixed;
+    right: 0; bottom: 0;
+    z-index: 2;
+    max-width: 400px;
+    width: 100%;
+    height: calc(var(--height-screen, 100vh) - var(--height-header, 0px));
+
+    display: flex;
+    align-items: flex-end;
+
+    //overflow-y: auto; overflow-x: hidden;
+    padding: 26px;
+
+    // .notifications__body
+
+    &__body {
+        overflow-y: auto;
+        max-height: 100%;
+        padding: 6.5px 0;
+
+        width: 100%;
+
+        //display: grid;
+
+        /* display: flex;
+        align-items: flex-end; */
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        /* &::-webkit-scrollbar-button {
+            width: 2px;
+        } */
+        &::-webkit-scrollbar-thumb {
+            
+            background: #454340;
+            border-radius: 10px;
+        }
+    }
+
+    // .notifications__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        
+
+        margin: -6.5px 0;
+    }
+
+    // .notifications__item
+
+    &__item {
+        margin: 6.5px 0;
     }
 }

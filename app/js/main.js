@@ -554,6 +554,67 @@ body.addEventListener('click', function (event) {
   
   // =-=-=-=-=-=-=-=-=-=- </показывать весь текст при нажатии на "больше"> -=-=-=-=-=-=-=-=-=-=-
 
+
+
+  // =-=-=-=-=-=-=-=-=-=- <FAQ> -=-=-=-=-=-=-=-=-=-=-
+
+  let faqItemQuestion = $('.faq__item--question');
+  if(faqItemQuestion) {
+    
+    const item = faqItemQuestion.closest('.faq__item'),
+          answear = item.querySelector('.faq__item--answear');
+
+    if(!item.classList.contains('_sliding')) {
+      item.classList.add('_sliding')
+
+      if(item.classList.contains('_active')) {
+        slideUp(answear,500)
+        answear.style.display = "block";
+        item.classList.remove('_active');
+        
+      } else {
+        slideDown(answear,500);
+        item.classList.add('_active');
+
+      }
+
+      setTimeout(() => {
+        item.classList.remove('_sliding')
+      },500)
+
+    }
+
+    
+
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </FAQ> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <Удаления увидомления> -=-=-=-=-=-=-=-=-=-=-
+
+  let notificationItemCloseBtn = $('.notification-item__close-btn');
+  if(notificationItemCloseBtn) {
+    const item = notificationItemCloseBtn.closest('.notification-item');
+
+    if(!item.classList.contains('_removing')) {
+
+      item.classList.add('_removing');
+
+      slideUp(item);
+
+      setTimeout(() => {
+        item.remove();
+      },500)
+
+    }
+
+    
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </Удаления увидомления> -=-=-=-=-=-=-=-=-=-=-
+
   
 
 })
@@ -588,12 +649,6 @@ document.querySelectorAll('.custom-multiple-select').forEach(customMultipleSelec
   ],
   });
 })
-
-
-
-
-
-
 
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <email validator> -=-=-=-=-=-=-=-=-=-=-=-=
@@ -690,7 +745,8 @@ window.onscroll = scroll;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- <slider> -=-=-=-=-=-=-=-=-=-=-=-=
 
-let introSlider = new Swiper('.intro__slider', {
+if(document.querySelector('.intro__slider')) {
+  let introSlider = new Swiper('.intro__slider', {
   
     spaceBetween: 30,
     slidesPerView: 1,
@@ -723,6 +779,7 @@ let introSlider = new Swiper('.intro__slider', {
       },
     } */
 }); 
+}
 
 let onlineGamesSlider;
 
@@ -770,28 +827,26 @@ function resize() {
   resizeCheckFunc(768,
     function () {  // screen > 768px
 
-      onlineGamesSlider = new Swiper('.online-games__slider', {
+      if(document.querySelector('.intro__slider')) {
+        onlineGamesSlider = new Swiper('.online-games__slider', {
   
-        spaceBetween: 16,
-        slidesPerView: 3,
-        centeredSlides: false,
-      
-        //loop: true,
+          spaceBetween: 16,
+          slidesPerView: 3,
+          centeredSlides: false,
         
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-        breakpoints: {
-          800: {
-            slidesPerView: 4,
+          //loop: true,
+          
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
           },
-          /* 600: {
-            slidesPerView: 2,
-            centeredSlides: false,
-          }, */
-        }
-      }); 
+          breakpoints: {
+            800: {
+              slidesPerView: 4,
+            },
+          }
+        }); 
+      }
 
   },
   function () {  // screen < 768px

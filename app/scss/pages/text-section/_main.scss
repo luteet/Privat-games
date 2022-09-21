@@ -1,0 +1,51 @@
+.text-section {
+
+    // .text-section__container
+
+    &__container {
+    }
+
+    // .text-section__header
+
+    &__header {
+    }
+
+    // .text-section__forward-btn
+
+    &__forward-btn {
+    }
+
+    // .text-section__section-title
+
+    &__section-title {
+    }
+
+    // .text-section__bread-crumbs
+
+    &__bread-crumbs {
+    }
+
+    // .text-section__main
+
+    &__main {
+        padding-top: 24px;
+    }
+
+    // .text-section__content
+
+    &__content {
+        line-height: 130%;
+        color: #B6AE9D;
+        & > * {
+            padding: 10px 0;
+        }
+
+        h3 {
+            font-weight: 700;
+        }
+
+        p {
+            font-weight: 300;
+        }
+    }
+}

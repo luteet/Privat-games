@@ -1,0 +1,171 @@
+.page-404 {
+
+    flex: 1 1 auto;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 75vh;
+
+    // .page-404__container
+
+    &__container {
+        width: 100%;
+
+        display: grid;
+    }
+
+    // .page-404__layer
+
+    &__layer {
+
+        grid-area: 1/1;
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        
+        @include _768 {
+            min-height: 100%;
+        }
+
+        &:nth-child(1) {
+            align-self: start;
+            max-width: 665px;
+            //padding-left: 95px; padding-right: 30px;
+            padding: 15px 30px 30px 95px;
+            @include _768 {
+                padding: 55px 30px 50px 135px;
+            }
+            margin-inline: auto;
+            align-items: center;
+            min-height: auto;
+
+            //padding-top: 15px;
+
+            z-index: 1;
+        }
+
+        &:nth-child(1) > *:first-child &--img {
+            max-width: 30px;
+            @include _768 {
+                max-width: 50px;
+            }
+        }
+
+        &:nth-child(2) {
+            z-index: 2;
+            align-self: center;
+        }
+
+        &:nth-child(3) {
+            z-index: 3;
+            align-self: center;
+
+            grid-row: 2;
+
+            @include _768 {
+                grid-row: 1;
+            }
+        }
+
+        &:nth-child(4) {
+            z-index: 4;
+            max-width: 945px;
+            justify-self: end;
+            align-self: start;
+            
+            padding: 50px 0px 30px 0px;
+
+            align-items: center;
+
+            @include _768 {
+                padding: 55px 30px 50px 0px;
+            }
+            
+        }
+
+        // .page-404__layer--img
+
+        &--img {
+            object-fit: contain;
+            max-width: 20vw;
+
+            height: auto;
+            @include _768 {
+                height: initial;
+            }
+        }
+    }
+
+    &__info {
+        @include _768 {
+            display: grid;
+        }
+
+        width: 100%;
+    }
+
+    &__logo {
+        
+        @include _768 {
+            grid-row: 2; grid-column: 1;
+
+            justify-self: center;
+            align-self: center;
+        }
+
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    &__text {
+
+        padding-top: 10px;
+        
+        @include _768 {
+            grid-row: 3; grid-column: 1;
+            justify-self: center;
+            align-self: center;
+
+            margin-inline: 0;
+        }
+
+        margin-inline: auto;
+
+        max-width: 321px;
+
+        font-weight: 300;
+        font-size: 0.875rem;
+        line-height: 150%;
+
+        text-align: center;
+        
+    }
+
+    // .page-404__code
+
+    &__code {
+
+        margin-top: -50px;
+
+        display: grid;
+        width: 100%; padding-top: 31.3%;
+        position: relative;
+
+        grid-row: 1/5; grid-column: 1/1;
+
+        // .page-404__code--value
+
+        &--value {
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            z-index: -1;
+            object-fit: contain; object-position: center center;
+        }
+    }
+}
