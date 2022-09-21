@@ -10,7 +10,8 @@
 <body>
 
     <div class="wrapper">
-        <div class="wrapper-bg" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.jpg)"></div>
+        <div class="wrapper-bg _webp-true" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.webp)"></div>
+        <div class="wrapper-bg _webp-false" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.jpg)"></div>
         <header class="header" data-aos="fade-in" data-aos-delay="100">
             <div class="header__container container _large">
                 <a href="index.html" class="header__logo">
@@ -249,7 +250,10 @@
                             <li class="header__nav-mob--item">
                                 <div class="header__nav-mob--account header__mob-account header__mob-select custom-select _active">
                                     <button type="button" title=Профиль class="header__mob-account--target header__mob-select--target custom-select__target">
-                                        <img src="img/header/avatar.jpg" width="27" height="27" alt="" class="header__mob-account--avatar">
+                                        <picture>
+                                            <source srcset="img/header/avatar.webp" type="image/webp">
+                                            <img src="img/header/avatar.jpg" width="27" height="27" alt="" loading="lazy" class="header__mob-account--avatar">
+                                        </picture>
                                         <span class="header__mob-account--name">
                                             Jane_006
                                         </span>
