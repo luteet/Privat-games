@@ -840,7 +840,7 @@ function resize() {
   resizeCheckFunc(768,
     function () {  // screen > 768px
 
-      if(document.querySelector('.intro__slider')) {
+      if(document.querySelector('.online-games__slider')) {
         onlineGamesSlider = new Swiper('.online-games__slider', {
   
           spaceBetween: 16,
