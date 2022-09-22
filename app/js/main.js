@@ -622,11 +622,34 @@ body.addEventListener('click', function (event) {
       },500)
 
     }
-
-    
   }
 
   // =-=-=-=-=-=-=-=-=-=- </Удаления увидомления> -=-=-=-=-=-=-=-=-=-=-
+
+
+
+  // =-=-=-=-=-=-=-=-=-=- <Кнопка микрофона и чата> -=-=-=-=-=-=-=-=-=-=-
+
+  let gameCommunicationBtn = $('.game__communication--btn');
+  if(gameCommunicationBtn) {
+    gameCommunicationBtn.classList.toggle('_active');
+  }
+
+  let gameChatCloseBtn = $('.game__chat--close-btn'),
+      chatBtn = document.querySelector('.chat-btn');
+  if(gameChatCloseBtn) {
+
+    chatBtn.classList.remove('_active');
+
+  }/*  else if(chatBtn) {
+    if(chatBtn.classList.contains('_active') && !$('.game__chat') && !$('.chat-btn')) {
+      chatBtn.classList.remove('_active');
+    }
+  } */
+
+  // =-=-=-=-=-=-=-=-=-=- </Кнопка микрофона и чата> -=-=-=-=-=-=-=-=-=-=-
+
+  
 
   
 
@@ -734,20 +757,77 @@ function getCoords(elem) {
   };
 }
 
+let hToDown = 50,
+    hToUp = 50,
+
+    headerPos = getCoords(header),
+
+    hPosToDown, hPosToUp, hCheck = [true, true], hPosCheck = false,
+    hTopCheck = false, scrolled = [0, 0], checkScrolled = '';
+
+function headerScrollFunc() {
+    
+  scrolled[0] = headerPos.top
+  headerPos = getCoords(header);
+  scrolled[1] = headerPos.top
+  
+  if (!hPosCheck) {
+
+      hPosCheck = true;
+
+      hPosToDown = headerPos.top + hToDown;
+      hPosToUp = headerPos.top - hToUp;
+
+  }
+
+  if (scrolled[0] > scrolled[1]) {checkScrolled = 'up'; } else if (scrolled[0] < scrolled[1]) { checkScrolled = 'down'; }
+
+  if (!hTopCheck && headerPos.top > 0) {
+    hTopCheck = true;
+
+    header.classList.remove('_on-top');
+  } else if (headerPos.top == 0) {
+    hTopCheck = false;
+    header.classList.add('_on-top');
+  }
+  
+  if (checkScrolled == 'down') hPosToUp = headerPos.top - hToUp;
+  if (checkScrolled == 'up') hPosToDown = headerPos.top + hToDown;
+  
+  if (hPosToUp >= headerPos.top && hCheck[0]) {
+    hCheck[0] = false; hCheck[1] = true;
+
+    header.classList.remove('_hide'); // SHOW HEADER
+  }
+
+  if (hPosToDown <= headerPos.top && hCheck[1]) {
+    hCheck[1] = false; hCheck[0] = true;
+
+    header.classList.add('_hide'); // HIDE HEADER
+  }
+
+}
+
+headerScrollFunc();
+
 function scroll() {
   offsetTop = getCoords(topElement).top;
 
   html.style.setProperty('--height-screen', window.innerHeight + 'px');
   html.style.setProperty('--height-header', header.offsetHeight + 'px');
   
-  if(offsetTop <= 0) {
+  /* if(offsetTop <= 0) {
     
     header.classList.add('_on-top');
   } else {
     header.classList.remove('_on-top');
-  }
+  } */
+
+  headerScrollFunc();
 
 }
+
+
 
 scroll()
 
