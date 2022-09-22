@@ -1227,7 +1227,7 @@
         }
         
         @media (min-width: 1150px) {
-            margin-bottom: -60px;
+            margin-bottom: -40px;
         }
     }
 
@@ -1245,11 +1245,22 @@
         @media (min-width: 900px) {
             min-height: 110px;
         }
+
+        &:last-child &--body {
+            
+        }
         
         &--body {
             padding-top: 300%;
             width: 100%;
             position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0; top: 0;
+                width: 200%; height: 200%;
+            }
         }
 
         position: relative;
@@ -1257,18 +1268,19 @@
 
         margin: 0;
 
-        transition: top .2s ease-in-out;
+        transition: padding .2s ease-in-out;
 
         &:hover {
             
-            top: -25px;
+            top: 0;
 
             @media (min-width: 900px) {
-                top: -55px;
+                top: 0;
             }
 
             @media (min-width: 1150px) {
-                top: -75px;
+                top: 0;
+                padding-bottom: 55px;
             }
             
         }

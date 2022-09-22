@@ -8605,7 +8605,7 @@ body.webp-true .wrapper-bg._webp-true {
   position: relative;
   top: 0;
   margin: 0;
-  transition: top 0.2s ease-in-out;
+  transition: padding 0.2s ease-in-out;
 }
 
 .game-user-cards__item--body {
@@ -8614,8 +8614,17 @@ body.webp-true .wrapper-bg._webp-true {
   position: relative;
 }
 
+.game-user-cards__item--body::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 200%;
+  height: 200%;
+}
+
 .game-user-cards__item:hover {
-  top: -25px;
+  top: 0;
 }
 
 .game-user-cards__img {
@@ -9731,7 +9740,7 @@ body.webp-true .wrapper-bg._webp-true {
   }
 
   .game-user-cards__item:hover {
-    top: -55px;
+    top: 0;
   }
 }
 
@@ -10052,11 +10061,12 @@ body.webp-true .wrapper-bg._webp-true {
   }
 
   .game-user-cards__list {
-    margin-bottom: -60px;
+    margin-bottom: -40px;
   }
 
   .game-user-cards__item:hover {
-    top: -75px;
+    top: 0;
+    padding-bottom: 55px;
   }
 }
 
