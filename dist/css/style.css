@@ -8148,6 +8148,18 @@ body.webp-true .wrapper-bg._webp-true {
   transition: width 0.1s linear;
 }
 
+.game__player--block {
+  display: -ms-grid;
+  display: grid;
+  height: 30px;
+}
+
+.game__player--block > * {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: 1/1;
+}
+
 .game__player--status {
   color: #61C8AF;
   line-height: 100%;
@@ -8168,7 +8180,7 @@ body.webp-true .wrapper-bg._webp-true {
 .game__player--cards-list {
   position: absolute;
   left: 50%;
-  top: 100%;
+  top: calc(100% - 40px);
   -webkit-transform: translate(-50%, -10%);
           transform: translate(-50%, -10%);
   width: min(71px, 20vw);
@@ -9318,6 +9330,7 @@ body.webp-true .wrapper-bg._webp-true {
 
   .game__player--cards-list {
     width: 90px;
+    top: calc(100% - 30px);
     -webkit-transform: translate(-50%, -20px);
             transform: translate(-50%, -20px);
   }
@@ -10380,9 +10393,17 @@ body.webp-true .wrapper-bg._webp-true {
     font-size: 1rem;
   }
 
+  .game__player--block {
+    height: 36px;
+  }
+
   .game__player--status {
     font-size: 1rem;
     margin-top: 11px;
+  }
+
+  .game__player--cards-list {
+    top: calc(100% - 36px);
   }
 
   .game__player--cards-item-body {

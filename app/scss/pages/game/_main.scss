@@ -410,6 +410,8 @@
             width: auto;
         }
 
+        
+
         // .game__player--body
 
         &--body {
@@ -519,6 +521,14 @@
         // .game__player--block
 
         &--block {
+            display: grid;
+            height: 30px;
+            @media(min-width: 1150px) {
+                height: 36px;
+            }
+            & > * {
+                grid-area: 1/1;
+            }
         }
 
         // .game__player--status
@@ -547,17 +557,22 @@
 
         &--cards {
             width: 100%;
+            
         }
 
         // .game__player--cards-list
 
         &--cards-list {
             position: absolute;
-            left: 50%; top: 100%;
+            left: 50%; top: calc(100% - 40px);
             transform: translate(-50%,-10%);
             width: min(71px, 20vw);
+            @media(min-width: 1150px) {
+                top: calc(100% - 36px);
+            }
             @media(min-width: 650px) {
                 width: 90px;
+                top: calc(100% - 30px);
                 transform: translate(-50%,-20px);
             }
 
