@@ -7912,6 +7912,7 @@ body.webp-true .wrapper-bg._webp-true {
   grid-area: player-2;
   -ms-grid-column-align: start;
       justify-self: start;
+  margin-left: -10px;
 }
 
 .game__grid--item:nth-child(4) {
@@ -7920,6 +7921,7 @@ body.webp-true .wrapper-bg._webp-true {
   grid-area: player-3;
   -ms-grid-column-align: end;
       justify-self: end;
+  margin-right: -10px;
 }
 
 .game__grid--item:nth-child(5) {
@@ -7938,6 +7940,7 @@ body.webp-true .wrapper-bg._webp-true {
   grid-area: player-4;
   -ms-grid-column-align: start;
       justify-self: start;
+  margin-left: -10px;
 }
 
 .game__grid--item:nth-child(7) {
@@ -7946,6 +7949,7 @@ body.webp-true .wrapper-bg._webp-true {
   grid-area: player-5;
   -ms-grid-column-align: end;
       justify-self: end;
+  margin-right: -10px;
 }
 
 .game__grid--item:nth-child(8) {
@@ -8059,6 +8063,10 @@ body.webp-true .wrapper-bg._webp-true {
   top: 0;
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.game__player {
+  width: 90px;
 }
 
 .game__player--body {
@@ -8767,7 +8775,7 @@ body.webp-true .wrapper-bg._webp-true {
 }
 
 .game__table-cards--list {
-  max-width: min(565px, 40vw);
+  max-width: min(565px, 37vw);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -8850,7 +8858,7 @@ body.webp-true .wrapper-bg._webp-true {
 .game-user-cards {
   position: absolute;
   left: 50%;
-  top: 45px;
+  top: 65px;
   -webkit-transform: translate(-45%, -100%);
           transform: translate(-45%, -100%);
   overflow: hidden;
@@ -9141,6 +9149,12 @@ body.webp-true .wrapper-bg._webp-true {
   }
 }
 
+@media (min-width: 450px) {
+  .game__table-cards--item {
+    padding: 10px 13%;
+  }
+}
+
 @media (min-width: 500px) {
   .advantages__header--decor {
     margin-top: -85px;
@@ -9187,6 +9201,12 @@ body.webp-true .wrapper-bg._webp-true {
 
   .news-page__aside--item {
     flex: 0 1 50%;
+  }
+}
+
+@media (min-width: 550px) {
+  .game__table-cards--card {
+    min-height: 60px;
   }
 }
 
@@ -9258,11 +9278,13 @@ body.webp-true .wrapper-bg._webp-true {
   }
 
   .game__grid--item:nth-child(3) {
+    margin-left: 0;
     -ms-grid-column-align: center;
         justify-self: center;
   }
 
   .game__grid--item:nth-child(4) {
+    margin-right: 0;
     -ms-grid-column-align: center;
         justify-self: center;
   }
@@ -9272,8 +9294,22 @@ body.webp-true .wrapper-bg._webp-true {
     padding-right: 63px;
   }
 
+  .game__grid--item:nth-child(6) {
+    margin-left: 0px;
+    padding-left: 15px;
+  }
+
+  .game__grid--item:nth-child(7) {
+    margin-right: 0;
+    padding-right: 20px;
+  }
+
   .game__cards--back {
     top: -15px;
+  }
+
+  .game__player {
+    width: auto;
   }
 
   .game__player--info {
@@ -9294,9 +9330,6 @@ body.webp-true .wrapper-bg._webp-true {
 
   .game__user-menu {
     height: 0;
-    /* position: absolute;
-    left: 50%; bottom: 0;
-    transform: translate3d(-50%,0,0); */
     padding-inline: 5%;
     margin-bottom: 46px;
     margin-top: 0;
@@ -9342,7 +9375,7 @@ body.webp-true .wrapper-bg._webp-true {
     top: 45px;
     -webkit-transform: translate(-45%, -100%);
             transform: translate(-45%, -100%);
-    padding: 100px 45px 0 0;
+    padding: 50px 45px 0 0;
   }
 
   .game-user-cards__item:hover {
@@ -9394,7 +9427,7 @@ body.webp-true .wrapper-bg._webp-true {
 @media (min-width: 740px) {
   .game-user-cards {
     width: 250px;
-    padding: 150px 45px 0 0;
+    padding: 50px 45px 0 0;
     -webkit-transform: translate(-45%, -100%);
             transform: translate(-45%, -100%);
   }
@@ -10023,6 +10056,12 @@ body.webp-true .wrapper-bg._webp-true {
   }
 }
 
+@media (min-width: 800px) {
+  .game__grid--item:nth-child(7) {
+    padding-right: 40px;
+  }
+}
+
 @media (min-width: 900px) {
   .game__player--min-message {
     font-size: 1rem;
@@ -10294,11 +10333,13 @@ body.webp-true .wrapper-bg._webp-true {
   .game__grid--item:nth-child(6) {
     -ms-grid-column-align: center;
         justify-self: center;
+    padding-left: 0;
   }
 
   .game__grid--item:nth-child(7) {
     -ms-grid-column-align: center;
         justify-self: center;
+    padding-right: 0;
   }
 
   .game__bet {

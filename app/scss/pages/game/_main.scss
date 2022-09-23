@@ -196,7 +196,9 @@
             &:nth-child(3) {
                 grid-area: player-2;
                 justify-self: start;
+                margin-left: -10px;
                 @media(min-width: 650px) {
+                    margin-left: 0;
                     justify-self: center;
                 }
             }
@@ -204,7 +206,9 @@
             &:nth-child(4) {
                 grid-area: player-3;
                 justify-self: end;
+                margin-right: -10px;
                 @media(min-width: 650px) {
+                    margin-right: 0;
                     justify-self: center;
                 }
             }
@@ -226,17 +230,41 @@
             &:nth-child(6) {
                 grid-area: player-4;
                 justify-self: start;
+
+                margin-left: -10px;
+
+                @media (min-width: 650px) {
+                    margin-left: 0px;
+                    padding-left: 15px;
+                }
+
                 @media (min-width: 1150px) {
                     justify-self: center;
+                    padding-left: 0;
                 }
+                
             }
 
             &:nth-child(7) {
                 grid-area: player-5;
                 justify-self: end;
+
+                margin-right: -10px;
+
+                @media (min-width: 650px) {
+                    margin-right: 0;
+                    padding-right: 20px;
+                }
+
+                @media (min-width: 800px) {
+                    padding-right: 40px;
+                }
+
                 @media (min-width: 1150px) {
                     justify-self: center;
+                    padding-right: 0;
                 }
+                
             }
 
             &:nth-child(8) {
@@ -375,6 +403,12 @@
     // .game__player
 
     &__player {
+
+        width: 90px;
+
+        @media (min-width: 650px) {
+            width: auto;
+        }
 
         // .game__player--body
 
@@ -924,9 +958,6 @@
         
         @media(min-width: 650px) {
             height: 0;
-            /* position: absolute;
-            left: 50%; bottom: 0;
-            transform: translate3d(-50%,0,0); */
 
             padding-inline: 5%;
             margin-bottom: 46px; margin-top: 0;
@@ -1381,7 +1412,7 @@
         // .game__table-cards--list
 
         &--list {
-            max-width: min(565px, 40vw);
+            max-width: min(565px, 37vw);
 
             @media(min-width: 650px) {
                 max-width: min(665px, 40vw);
@@ -1406,6 +1437,10 @@
         &--item {
             flex: 0 1 50%;
             padding: 10px 13%;
+
+            @media (min-width: 450px) {
+                padding: 10px 13%;
+            }
 
             @media(min-width: 650px) {
                 padding: 10px 15px;
@@ -1437,6 +1472,11 @@
             grid-area: 1/1;
             width: 100%; padding-top: 150%;
             min-height: 60px;
+
+            @media (min-width: 550px) {
+                min-height: 60px;
+            }
+
             @media(min-width: 650px) {
                 padding-top: 125%;
             }
@@ -1523,7 +1563,7 @@
 .game-user-cards {
 
     position: absolute;
-    left: 50%; top: 45px;
+    left: 50%; top: 65px;
     
     transform: translate(-45%,-100%);
 
@@ -1536,12 +1576,12 @@
         width: 230px;
         top: 45px;
         transform: translate(-45%,-100%);
-        padding: 100px 45px 0 0;
+        padding: 50px 45px 0 0;
     }
 
     @media (min-width: 740px) {
         width: 250px;
-        padding: 150px 45px 0 0;
+        padding: 50px 45px 0 0;
         transform: translate(-45%,-100%);
     }
 
