@@ -827,8 +827,6 @@ function scroll() {
 
 }
 
-
-
 scroll()
 
 window.onscroll = scroll;
@@ -886,7 +884,6 @@ AOS.init({
   // Global settings:
   duration: 700,
   disable: "mobile", // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-  
 
 });
 

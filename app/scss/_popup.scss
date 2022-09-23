@@ -53,6 +53,12 @@
 
         padding: 22px 25px;
         border-radius: 14px;
+
+        &._center {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
     }
 
     &-decor {
@@ -121,6 +127,10 @@
         font-size: 0.875rem;
         line-height: 133%;
         color: #B6AE9D;
+
+        &._left {
+            text-align: left;
+        }
     }
 
     &-btn {
@@ -394,6 +404,21 @@
                 & svg path {
                     fill: var(--teal-light-2);
                 }
+            }
+        }
+    }
+
+    &-row {
+        padding-top: 23px;
+
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &._btn-row {
+            margin: -5.5px;
+            & > * {
+                margin: 5.5px;
             }
         }
     }

@@ -3,19 +3,7 @@
         <main class="main">
             <section class="game page-padding-top">
                 <div class="game__container container">
-                    <div class="game__header">
-                        <h2 class="game__header--name section-title _decor-none">
-                            Дурак
-                        </h2>
-                        <div class="game__header--block">
-                            <a href="#" class="game__header--btn btn _dark">
-                                Выйти
-                            </a>
-                            <a href="#" class="game__header--btn btn _red">
-                                Пригласить +
-                            </a>
-                        </div>
-                    </div>
+                    @@include("html/game/_header.html")
                     <div class="game__main">
                         <div class="game__main--table game__bg">
                             <picture>
@@ -156,6 +144,8 @@
                             </div>
                             <div class="game__grid--item">
                                 <div class="game__user">
+                                    <div class="game__user--block">
+                                    </div>
                                     <div class="game__user--info">
                                         <div class="game__user--info-body">
                                             <h3 class="game__user--name">

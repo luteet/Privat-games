@@ -12,7 +12,7 @@
     <div class="wrapper">
         <div class="wrapper-bg _webp-true" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.webp)"></div>
         <div class="wrapper-bg _webp-false" data-aos="fade-in" data-aos-delay="200" style="background-image: url(img/body-bg.jpg)"></div>
-        <header class="header" data-aos="fade-in" data-aos-delay="100">
+        <header class="header">
             <div class="header__container container _large">
                 <a href="index.html" class="header__logo">
                     <img src="img/logo.svg" alt="" width="150" class="header__logo--img">
@@ -31,7 +31,7 @@
                                 </a>
                             </li>
                             <li class="header__nav--item">
-                                <a href="#" class="header__nav--link">
+                                <a href="rooms.html" class="header__nav--link">
                                     Комнаты
                                 </a>
                             </li>
@@ -1069,6 +1069,64 @@
                             </div>
                             <button type="submit" class="promocode-popup__submit popup-submit btn _large _shadow">
                                 Применить
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-exit-popup popup" id="game-exit-popup" style="display: none;">
+            <div class="game-exit-popup__wrapper popup-wrapper">
+                <div class="game-exit-popup__bg popup-bg popup-close"></div>
+                <div class="game-exit-popup__body popup-body">
+                    <div class="game-exit-popup__container popup-container">
+                        <button type="button" class="promocode-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <h2 class="game-exit-popup__title popup-title section-title _decor-none">
+                            Выход из игры
+                        </h2>
+                        <div class="game-exit-popup__text popup-text _left">
+                            Если вы выйдете из игры то вам автоматически будет засчитан проигрышь и снята сумма ставки команты
+                        </div>
+                        <a href="#" class="game-exit-popup__btn btn popup-btn _red">
+                            Выйти из игры
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-invite-popup popup" id="game-invite-popup" style="display: none;">
+            <div class="game-exit-popup__wrapper popup-wrapper">
+                <div class="game-exit-popup__bg popup-bg popup-close"></div>
+                <div class="game-exit-popup__body popup-body">
+                    <div class="game-exit-popup__container popup-container">
+                        <button type="button" class="promocode-popup__close-btn popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <h2 class="game-exit-popup__title popup-title section-title _decor-none">
+                            Выход из игры
+                        </h2>
+                        <div class="game-exit-popup__text popup-text _left">
+                            Если вы выйдете из игры то вам автоматически будет засчитан проигрышь и снята сумма ставки команты
+                        </div>
+                        <form action="#" class="game-invite-popup__form popup-form">
+                            <div class="game-invite-popup__form--list popup-form-list">
+                                <label class="game-invite-popup__label popup-label">
+                                    <input type="email" name="email" required placeholder="Email" class="game-invite-popup__input popup-input email-valid-input">
+                                    <span class="game-invite-popup__input-placeholder popup-input-placeholder">Email</span>
+                                </label>
+                            </div>
+                            <button type="submit" class="game-invite-popup__submit popup-submit btn _large _shadow _disabled">
+                                Отправить
                             </button>
                         </form>
                     </div>

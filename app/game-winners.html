@@ -1,0 +1,379 @@
+@@include("html/_header.html")
+
+        <main class="main">
+            <section class="game page-padding-top">
+                <div class="game__container container">
+                    @@include("html/game/_header.html")
+                    <div class="game__main">
+                        <div class="game__main--table game__bg">
+                            <picture>
+                                <source srcset="img/game/table.webp" media="(min-width: 992px)" type="image/webp">
+                                <source srcset="img/game/table-mob-horizontal.webp" media="(min-width: 650px)" type="image/webp">
+                                <source srcset="img/game/table-mob.webp" type="image/webp">
+                                <img src="img/game/table.png" alt="" width="300" class="game__bg--img">
+                            </picture>
+                        </div>
+                        <div class="game__main--grid game__grid">
+                            <div class="game__grid--item">
+                                <div class="game__bet">
+                                    <span class="game__bet--value">1500</span>
+                                    <img src="img/icons/chip.svg" alt="" class="game__bet--currency">
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Jane456
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--cards">
+                                                <ul class="game__player--cards-list">
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Длинное имя игрока
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--min-message">
+                                                +400
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7547 11.6664C12.9791 10.4219 13.6654 8.74602 13.6654 7.00016C13.6654 5.2543 12.9791 3.5784 11.7547 2.33392C11.7432 2.31589 11.7278 2.30057 11.7098 2.28905C11.6983 2.27102 11.683 2.25571 11.6649 2.24419C10.4205 1.01973 8.74456 0.333496 6.9987 0.333496C5.25284 0.333496 3.57694 1.01973 2.33246 2.24419C2.31442 2.25571 2.29911 2.27102 2.28759 2.28905C2.26955 2.30057 2.25424 2.31589 2.24272 2.33392C1.01826 3.5784 0.332031 5.2543 0.332031 7.00016C0.332031 8.74602 1.01826 10.4219 2.24272 11.6664L2.28759 11.7113C2.29911 11.7293 2.31442 11.7446 2.33246 11.7561C3.57694 12.9806 5.25284 13.6668 6.9987 13.6668C8.74456 13.6668 10.4205 12.9806 11.6649 11.7561C11.683 11.7446 11.6983 11.7293 11.7098 11.7113C11.7278 11.6998 11.7432 11.6844 11.7547 11.6664ZM1.38382 7.51294H2.92856C3.02085 8.2425 3.30877 8.93351 3.76181 9.51275L2.66576 10.6088C1.93296 9.73159 1.48568 8.65141 1.38382 7.51294ZM2.66576 3.39152L3.76181 4.48757C3.30877 5.06682 3.02085 5.75783 2.92856 6.48739H1.38382C1.48568 5.34891 1.93296 4.26873 2.66576 3.39152ZM12.6136 6.48739H11.0688C10.9765 5.75783 10.6886 5.06682 10.2356 4.48757L11.3316 3.39152C12.0644 4.26873 12.5117 5.34891 12.6136 6.48739ZM9.51129 3.76328C8.93204 3.31023 8.24103 3.02231 7.51147 2.93002V1.38529C8.64995 1.48714 9.73013 1.93442 10.6073 2.66722L9.51129 3.76328ZM6.48592 2.93002C5.75636 3.02231 5.06535 3.31023 4.48611 3.76328L3.39005 2.66722C4.26727 1.93442 5.34745 1.48714 6.48592 1.38529V2.93002ZM4.48611 10.237C5.06535 10.6901 5.75636 10.978 6.48592 11.0703V12.615C5.34745 12.5132 4.26727 12.0659 3.39005 11.3331L4.48611 10.237ZM7.51147 11.0703C8.24103 10.978 8.93204 10.6901 9.51129 10.237L10.6073 11.3331C9.73013 12.0659 8.64995 12.5132 7.51147 12.615V11.0703ZM10.2356 9.51275C10.6886 8.93351 10.9765 8.2425 11.0688 7.51294H12.6136C12.5117 8.65141 12.0644 9.73159 11.3316 10.6088L10.2356 9.51275Z" fill="#F9F1DF"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Игорь
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--min-message _accent">
+                                                +1000
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.7547 11.6664C12.9791 10.4219 13.6654 8.74602 13.6654 7.00016C13.6654 5.2543 12.9791 3.5784 11.7547 2.33392C11.7432 2.31589 11.7278 2.30057 11.7098 2.28905C11.6983 2.27102 11.683 2.25571 11.6649 2.24419C10.4205 1.01973 8.74456 0.333496 6.9987 0.333496C5.25284 0.333496 3.57694 1.01973 2.33246 2.24419C2.31442 2.25571 2.29911 2.27102 2.28759 2.28905C2.26955 2.30057 2.25424 2.31589 2.24272 2.33392C1.01826 3.5784 0.332031 5.2543 0.332031 7.00016C0.332031 8.74602 1.01826 10.4219 2.24272 11.6664L2.28759 11.7113C2.29911 11.7293 2.31442 11.7446 2.33246 11.7561C3.57694 12.9806 5.25284 13.6668 6.9987 13.6668C8.74456 13.6668 10.4205 12.9806 11.6649 11.7561C11.683 11.7446 11.6983 11.7293 11.7098 11.7113C11.7278 11.6998 11.7432 11.6844 11.7547 11.6664ZM1.38382 7.51294H2.92856C3.02085 8.2425 3.30877 8.93351 3.76181 9.51275L2.66576 10.6088C1.93296 9.73159 1.48568 8.65141 1.38382 7.51294ZM2.66576 3.39152L3.76181 4.48757C3.30877 5.06682 3.02085 5.75783 2.92856 6.48739H1.38382C1.48568 5.34891 1.93296 4.26873 2.66576 3.39152ZM12.6136 6.48739H11.0688C10.9765 5.75783 10.6886 5.06682 10.2356 4.48757L11.3316 3.39152C12.0644 4.26873 12.5117 5.34891 12.6136 6.48739ZM9.51129 3.76328C8.93204 3.31023 8.24103 3.02231 7.51147 2.93002V1.38529C8.64995 1.48714 9.73013 1.93442 10.6073 2.66722L9.51129 3.76328ZM6.48592 2.93002C5.75636 3.02231 5.06535 3.31023 4.48611 3.76328L3.39005 2.66722C4.26727 1.93442 5.34745 1.48714 6.48592 1.38529V2.93002ZM4.48611 10.237C5.06535 10.6901 5.75636 10.978 6.48592 11.0703V12.615C5.34745 12.5132 4.26727 12.0659 3.39005 11.3331L4.48611 10.237ZM7.51147 11.0703C8.24103 10.978 8.93204 10.6901 9.51129 10.237L10.6073 11.3331C9.73013 12.0659 8.64995 12.5132 7.51147 12.615V11.0703ZM10.2356 9.51275C10.6886 8.93351 10.9765 8.2425 11.0688 7.51294H12.6136C12.5117 8.65141 12.0644 9.73159 11.3316 10.6088L10.2356 9.51275Z" fill="#F9F1DF"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <form action="#" class="game__cards">
+                                    <div class="game__cards--symbol">
+                                        <img src="img/game/cards/symbols/Spades.svg"  alt="">
+                                    </div>
+                                    <button class="game__cards--element _hidden">
+                                        <div class="game__cards--back">
+                                            <img src="img/game/cards/Back.svg" alt="">
+                                        </div>
+                                        <div class="game__cards--last">
+                                            <img src="img/game/cards/2-3.svg" alt="">
+                                        </div>
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Jane456
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--cards">
+                                                <ul class="game__player--cards-list">
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Jane456
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--cards">
+                                                <ul class="game__player--cards-list">
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                    <li class="game__player--cards-item">
+                                                        <div class="game__player--cards-item-body">
+                                                            <img src="img/game/cards/Back.svg" alt="" class="game__player--cards-img">
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="game__grid--item">
+                                <div class="game__user">
+                                    <div class="game__user--block">
+                                        <div class="game__user--min-message">
+                                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7 0C3.13359 0 0 3.13359 0 7C0 10.8664 3.13359 14 7 14C10.8664 14 14 10.8664 14 7C14 3.13359 10.8664 0 7 0ZM6.34375 4.15625C6.34375 3.79531 6.63906 3.5 7 3.5C7.36094 3.5 7.65625 3.79395 7.65625 4.15625V7.65625C7.65625 8.01855 7.3623 8.3125 7 8.3125C6.6377 8.3125 6.34375 8.01992 6.34375 7.65625V4.15625ZM7 10.9375C6.52531 10.9375 6.14031 10.5525 6.14031 10.0778C6.14031 9.60312 6.52504 9.21812 7 9.21812C7.47496 9.21812 7.85969 9.60312 7.85969 10.0778C7.85859 10.552 7.47578 10.9375 7 10.9375Z" fill="#F9F1DF"/>
+                                            </svg>
+                                            Так нельзя походить
+                                        </div>
+                                    </div>
+                                    <div class="game__user--cards game-user-cards">
+                                        <ul class="game-user-cards__list">
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                            <li class="game-user-cards__item">
+                                                <div class="game-user-cards__item--body">
+                                                    <img src="img/game/cards/2.svg" alt="" class="game-user-cards__img">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="game__user--info">
+                                        <div class="game__user--info-body">
+                                            <h3 class="game__user--name">
+                                                Вы: Евгений
+                                            </h3>
+                                        </div>
+                                    </div>
+                                    <div class="game__user--avatar">
+                                        <img src="img/account/avatar.png" alt="" class="game__user--avatar-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game__main--table game__table">
+                            <div class="game__table--block">
+                                <div class="game__table--min-message">
+                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M7 0C3.13359 0 0 3.13359 0 7C0 10.8664 3.13359 14 7 14C10.8664 14 14 10.8664 14 7C14 3.13359 10.8664 0 7 0ZM6.34375 4.15625C6.34375 3.79531 6.63906 3.5 7 3.5C7.36094 3.5 7.65625 3.79395 7.65625 4.15625V7.65625C7.65625 8.01855 7.3623 8.3125 7 8.3125C6.6377 8.3125 6.34375 8.01992 6.34375 7.65625V4.15625ZM7 10.9375C6.52531 10.9375 6.14031 10.5525 6.14031 10.0778C6.14031 9.60312 6.52504 9.21812 7 9.21812C7.47496 9.21812 7.85969 9.60312 7.85969 10.0778C7.85859 10.552 7.47578 10.9375 7 10.9375Z" fill="#F9F1DF"/>
+                                    </svg>
+                                    Так нельзя походить
+                                </div>
+                            </div>
+                            <div class="game__table-cards">
+                                <ul class="game__table-cards--list">
+                                    <li class="game__table-cards--item _accent">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/3-2.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/4-2.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                    <li class="game__table-cards--item">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/3-3.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/4-3.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                    <li class="game__table-cards--item">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/5-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/6-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                    <li class="game__table-cards--item">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/5-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/6-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                    <li class="game__table-cards--item">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/5-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/6-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                    <li class="game__table-cards--item">
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/5-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                        <div class="game__table-cards--card">
+                                            <img src="img/game/cards/6-4.svg" alt="" class="game__table-cards--img">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        @@include("html/game/_user-menu-none.html")
+                    </div>
+                </div>
+            </section>
+        </main>
+
+@@include("html/_footer.html", {
+    "bg": ''
+})
