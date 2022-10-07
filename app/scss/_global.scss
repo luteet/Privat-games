@@ -40,7 +40,6 @@ body {
         overflow: hidden;
     }
     
-    
 }
 
 .top-element {
@@ -109,6 +108,9 @@ body.webp-true .wrapper-bg._webp-true {
     }
     &._large {
         max-width: #{$containerLarge}px;
+    }
+    &._large-2 {
+        max-width: 1261px;
     }
 }
 

@@ -641,15 +641,39 @@ body.addEventListener('click', function (event) {
 
     chatBtn.classList.remove('_active');
 
-  }/*  else if(chatBtn) {
-    if(chatBtn.classList.contains('_active') && !$('.game__chat') && !$('.chat-btn')) {
-      chatBtn.classList.remove('_active');
-    }
-  } */
+  }
 
   // =-=-=-=-=-=-=-=-=-=- </Кнопка микрофона и чата> -=-=-=-=-=-=-=-=-=-=-
 
   
+
+  // =-=-=-=-=-=-=-=-=-=- <История ходов> -=-=-=-=-=-=-=-=-=-=-
+
+  let checkersHistoryHeader = $('.checkers__history--header');
+  if(checkersHistoryHeader && slideCheck) {
+
+    const wrapper = checkersHistoryHeader.closest('.checkers__history--wrapper'),
+          list = wrapper.querySelector('.checkers__history--list');
+
+    if(!wrapper.classList.contains('_active')) {
+
+      wrapper.classList.add('_active')
+      slideDown(list);
+
+    } else {
+
+      slideUp(list);
+      list.style.display = "block";
+      
+      setTimeout(() => {
+        wrapper.classList.remove('_active')
+      },0)
+
+    }
+
+  }
+
+  // =-=-=-=-=-=-=-=-=-=- </История ходов> -=-=-=-=-=-=-=-=-=-=-
 
   
 

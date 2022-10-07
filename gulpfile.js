@@ -11,6 +11,7 @@ const scss         = require('gulp-sass')(require('sass')),
       webpHTML     = require('gulp-webp-html'),
       include      = require('gulp-file-include'),
       minCSS       = require('gulp-cssmin'),
+      cssbeautify  = require('gulp-cssbeautify'),
       mediaGroup   = require('gulp-group-css-media-queries'),
       ttf2woff     = require('gulp-ttf2woff'),
       ttf2woff2    = require('gulp-ttf2woff2'),
@@ -110,14 +111,9 @@ function styles() {
 }
 
 function stylesOriginal() {
-    return src('app/scss/style.scss')
-        .pipe(scss())
-        .pipe(mediaGroup())
+    return src('dist/css/style.min.css')
         .pipe(concat('style.css'))
-        .pipe(autoprefixer({
-            overrideBrowserslist: ['last 1 version'],
-            grid: true
-        }))
+        .pipe(cssbeautify())
         .pipe(dest('dist/css'))
 }
 
