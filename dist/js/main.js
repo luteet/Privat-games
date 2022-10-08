@@ -649,11 +649,11 @@ body.addEventListener('click', function (event) {
 
   // =-=-=-=-=-=-=-=-=-=- <История ходов> -=-=-=-=-=-=-=-=-=-=-
 
-  let checkersHistoryHeader = $('.checkers__history--header');
-  if(checkersHistoryHeader && slideCheck) {
+  let gameHistoryHeader = $('.game__history--header');
+  if(gameHistoryHeader && slideCheck) {
 
-    const wrapper = checkersHistoryHeader.closest('.checkers__history--wrapper'),
-          list = wrapper.querySelector('.checkers__history--list');
+    const wrapper = gameHistoryHeader.closest('.game__history--wrapper'),
+          list = wrapper.querySelector('.game__history--list');
 
     if(!wrapper.classList.contains('_active')) {
 

@@ -3,7 +3,9 @@
         <main class="main">
             <section class="game page-padding-top">
                 <div class="game__container container">
-                    @@include("html/game/_header.html")
+                    @@include("html/game/_header.html", {
+                        "title": 'Дурак',
+                    })
                     <div class="game__main">
                         <div class="game__main--table game__bg">
                             <picture>
