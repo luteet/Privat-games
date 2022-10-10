@@ -65,8 +65,7 @@ function scriptsMin() {
 }
 
 function scripts() {
-    return src('app/js/main.js')
-    .pipe(scriptsMin())
+    return src('app/js/*.js')
     .pipe(dest('dist/js'))
     .pipe(browserSync.stream())
 }
@@ -194,7 +193,7 @@ function zipDel() {
 
 function watching() {
     watch(['app/scss/**/*.scss'], series(styles, stylesOriginal));
-    watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
+    watch(['app/js/**/*.js', '!app/js/main.min.js'], series(scriptsMin, scripts));
     watch(['app/json/*.json'], json);
     watch(['app/video/*'], video);
     watch(['app/audio/*'], audio);

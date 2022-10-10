@@ -1,0 +1,625 @@
+.one-thousand {
+
+    padding-bottom: 50px;
+    @include _992 {
+        padding-bottom: 100px;
+    }
+
+    // .one-thousand__container
+
+    &__container {
+        max-width: calc(1283px + (var(--container-padding) * 2));
+    }
+
+    // .one-thousand__main
+
+    &__main {
+
+        margin-top: 26px;
+        position: relative;
+
+        display: grid;
+
+        min-height: 654px;
+
+        @media(min-width: 650px) {
+            min-height: 355px;
+        }
+
+        // .one-thousand__main--bg
+
+        &--bg {
+            grid-area: 1/1;
+        }
+
+        // .one-thousand__main--grid
+
+        &--grid {
+            grid-area: 1/1;
+        }
+
+        // .one-thousand__main--table
+
+        &--table {
+            grid-area: 1/1;
+            align-self: center;
+        }
+    }
+
+    // .one-thousand__bg
+
+    &__bg {
+
+        width: 100%; padding-top: 152.667%;
+        @media(min-width: 650px) {
+            padding-top: 49.962%;
+        }
+        min-height: 100%;
+        position: relative;
+
+        // .one-thousand__bg--img
+
+        &--img {
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            user-select: none; -webkit-user-drag: none;
+        }
+    }
+
+    // .one-thousand__grid
+
+    &__grid {
+
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: auto auto auto;
+
+        grid-template-areas:
+        "bet cards null"
+        "player-1 null-2 player-2"
+        "null-3 user null-4";
+
+        @media(min-width: 650px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 30% auto 30%;
+        }
+
+        @media(min-width: 1150px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 40% auto 20%;
+            margin-top: -35px;
+        }
+
+        z-index: 2;
+
+        min-height: 100%;
+
+        // .one-thousand__grid--item
+
+        &--item {
+            &:nth-child(1) {
+                grid-area: bet;
+                padding-top: 35%;
+                padding-left: 35%;
+
+                @media(min-width: 650px) {
+                    padding-top: 35px;
+                    padding-left: 45px;
+                }
+
+                @media (min-width: 1150px) {
+                    padding-top: 100px;
+                    padding-left: 65px;
+                }
+            }
+
+            &:nth-child(2) {
+                display: grid;
+
+                & > * {
+                    grid-area: 1/1;
+                }
+
+                grid-area: cards;
+                justify-self: center; align-self: center;
+                margin-left: 0px;
+
+                width: 100%;
+                
+                @media(min-width: 650px) {
+                    margin-left: 0;
+                    justify-self: center; align-self: start;
+                    margin-top: -30px;
+                }
+
+                @media(min-width: 900px) {
+                    margin-top: -15px;
+                }
+
+                @media(min-width: 1150px) {
+                    margin-top: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                grid-area: player-1;
+                justify-self: start; align-self: center;
+
+                margin-left: -10px;
+
+                @media (min-width: 650px) {
+                    margin-left: 0px;
+                    padding-left: 15px;
+                    align-self: start;
+                }
+
+                @media (min-width: 1150px) {
+                    justify-self: center;
+                    padding-left: 0;
+                }
+            }
+
+            &:nth-child(4) {
+                grid-area: player-2;
+                justify-self: end; align-self: center;
+
+                margin-right: -10px;
+
+                @media (min-width: 650px) {
+                    margin-right: 0;
+                    padding-right: 20px;
+                    align-self: start;
+                }
+
+                @media (min-width: 800px) {
+                    padding-right: 40px;
+                }
+
+                @media (min-width: 1150px) {
+                    justify-self: center;
+                    padding-right: 0;
+                }
+            }
+
+            &:nth-child(5) {
+                grid-area: user;
+                justify-self: center;
+                align-self: end;
+
+                margin-bottom: -15px;
+
+                @media (min-width: 650px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // .one-thousand__back-cards
+
+    &__back-cards {
+
+        width: 100%;
+        
+        display: flex;
+        justify-content: center;
+
+        margin-top: 20%; margin-bottom: 20%;
+        @media (min-width: 650px) {
+            margin-top: 12%; margin-bottom: 6%;
+        }
+
+        @media (min-width: 1150px) {
+            margin-bottom: 12%;
+        }
+
+        // .one-thousand__back-cards--list
+
+        &--list {
+            display: flex;
+            justify-content: center;
+
+            width: 100%; max-width: 40%;
+            margin-left: -5%;
+
+            @media (min-width: 650px) {
+                max-width: 13.3%;
+                margin-left: -7%;
+            }
+        }
+
+        // .one-thousand__back-cards--item
+
+        &--item {
+            flex: 1 1 auto;
+            max-width: 33.333%;
+        }
+
+        // .one-thousand__back-cards--item-body
+
+        &--item-body {
+            width: 100%; padding-top: 300%;
+            max-width: 30%;
+            position: relative;
+            
+            @media (min-width: 650px) {
+                min-height: 100%; padding-top: 200%;
+            }
+        }
+
+        // .one-thousand__back-cards--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: auto; height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+
+    // .one-thousand__open-cards
+
+    &__open-cards {
+
+        width: 100%;
+        max-width: 50%;
+        margin-inline: auto;
+
+        @media (min-width: 650px) {
+            max-width: 25%;
+        }
+
+        // .one-thousand__open-cards--list
+
+        &--list {
+            width: 100%; margin-left: -24%;
+            @media (min-width: 650px) {
+                margin-left: -25%;
+            }
+
+            display: flex;
+            justify-content: center;
+        }
+
+        // .one-thousand__open-cards--item
+
+        &--item {
+            flex: 1 1 auto;
+        }
+
+        // .one-thousand__open-cards--item-body
+
+        &--item-body {
+            width: 100%; padding-top: 350%;
+            position: relative;
+        }
+
+        // .one-thousand__open-cards--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: auto; height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+
+    // .one-thousand__user
+
+    &__user {
+
+        &--cards {
+
+            top: 25px;
+
+            @media (min-width: 650px) {
+                width: 250px;
+                top: 37px;
+            }
+
+            @media (min-width: 740px) {
+                width: 310px;
+                top: 37px;
+            }
+
+            @media (min-width: 900px) {
+                width: 450px;
+                top: 45px;
+            }
+
+            @media (min-width: 1150px) {
+                width: 500px;
+            }
+
+            & .game-user-cards__item--body {
+                
+                @media (min-width: 650px) {
+                    height: 70px;
+                }
+
+                @media (min-width: 740px) {
+                    height: 90px;
+                }
+
+                @media (min-width: 900px) {
+                    height: 115px;
+                }
+
+                @media (min-width: 1150px) {
+                    height: 155px;
+                }
+            }
+
+            & .game-user-cards__list {
+
+                /* @media (min-width: 740px) {
+                    margin-bottom: -10px;
+                } */
+
+                @media (min-width: 900px) {
+                    margin-bottom: -30px;
+                }
+                
+                @media (min-width: 1150px) {
+                    margin-bottom: -30px;
+                }
+            }
+        }
+    }
+
+    // .one-thousand__table
+
+    &__table {
+
+        // .one-thousand__table--content
+
+        &--content {
+            margin-top: 45%;
+
+            @media(min-width: 650px) {
+                margin-top: 0;
+            }
+        }
+
+        // .one-thousand__table--cards
+
+        &--cards {
+        }
+
+        // .one-thousand__table--maryazhi
+
+        &--maryazhi {
+        }
+    }
+
+    // .one-thousand__maryazhi
+
+    &__maryazhi {
+
+        margin-top: 35%;
+
+        @media(min-width: 650px) {
+            margin-top: 11px;
+        }
+
+        @media (min-width: 1150px) {
+            margin-top: 58px;
+        }
+
+        opacity: .3;
+
+        // .one-thousand__maryazhi--title
+
+        &--title {
+            font-size: 0.75rem;
+        }
+
+        // .one-thousand__maryazhi--list
+
+        &--list {
+            padding-top: 0px;
+            @media(min-width: 650px) {
+                padding-top: 15px;
+            }
+            @media (min-width: 1150px) {
+                padding-top: 18px;
+            }
+
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+
+        // .one-thousand__maryazhi--item
+
+        &--item {
+
+            font-size: 0.625rem;
+
+            padding: 5px 3px;
+            @media(min-width: 650px) {
+                padding: 5px;
+                font-size: 0.75rem;
+            }
+
+            white-space: nowrap;
+
+            display: inline-flex;
+            align-items: center;
+
+            font-family: var(--title-font);
+            text-transform: uppercase;
+
+            @media (min-width: 1150px) {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+
+            & svg {
+                margin-right: 2px;
+                width: 15px; height: 15px;
+                @media(min-width: 650px) {
+                    width: 20px; height: 20px;
+                    margin-right: 5px;
+                }
+                @media (min-width: 1150px) {
+                    width: auto; height: auto;
+                    margin-right: 7px;
+                }
+            }
+        }
+    }
+
+    // .one-thousand__cards
+
+    &__cards {
+
+        width: 100%; max-width: 75%;
+        @media (min-width: 650px) {
+            max-width: 30%;
+        }
+        margin-inline: auto;
+
+        // .one-thousand__cards--list
+
+        &--list {
+            width: 100%; 
+
+            display: flex;
+            justify-content: center;
+
+            position: relative;
+
+            margin-bottom: 40%;
+            @media (min-width: 650px) {
+                margin-bottom: 25%;
+            }
+        }
+
+        // .one-thousand__cards--item
+
+        &--item {
+            flex: 1 1 auto;
+            width: 100%;
+            max-width: 26.5%;
+
+            position: absolute;
+            left: 50%; top: 0;
+            transform: translate(-50%,-50%);
+
+            &:nth-child(1) {
+                transform: translate(-125%,-50%);
+            }
+
+            &:nth-child(2) {
+                transform: translate(25%,-50%);
+            }
+
+            &:nth-child(3) {
+                transform: translate(-50%,-25%);
+                z-index: 3;
+            }
+        }
+
+        // .one-thousand__cards--item-body
+
+        &--item-body {
+            position: relative;
+            width: 100%; padding-top: 200%;
+
+        }
+
+        // .one-thousand__cards--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0px 8.93023px 8.93023px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
+
+.one-thousand-popup {
+
+    // .one-thousand-popup__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        padding-top: 20px;
+    }
+
+    // .one-thousand-popup__player
+
+    &__player {
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+
+        // .one-thousand-popup__player--avatar
+
+        &--avatar {
+            flex: 0 0 58px;
+            border-radius: 50%;
+            background: #2C2C2C;
+            padding: 3px;
+            border: 1px solid #4F4F4F;
+            width: 58px; height: 58px;
+
+            margin-right: 20px;
+        }
+
+        // .one-thousand-popup__player--avatar-img
+
+        &--avatar-img {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+        }
+
+        // .one-thousand-popup__player--info
+
+        &--info {
+            display: flex;
+            flex-direction: column;
+
+            flex: 1 1 auto;
+        }
+
+        // .one-thousand-popup__player--info-header
+
+        &--info-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        // .one-thousand-popup__player--name
+
+        &--name {
+            line-height: 100%;
+        }
+
+        // .one-thousand-popup__player--param
+
+        &--param {
+            font-size: 0.75rem;
+            line-height: 100%;
+            padding-top: 5px;
+        }
+    }
+}
+

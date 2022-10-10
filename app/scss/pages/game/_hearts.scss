@@ -1,0 +1,501 @@
+.hearts {
+
+    padding-bottom: 50px;
+    @include _992 {
+        padding-bottom: 100px;
+    }
+
+    // .hearts__container
+
+    &__container {
+        max-width: calc(1283px + (var(--container-padding) * 2));
+    }
+
+    // .hearts__main
+
+    &__main {
+
+        margin-top: 26px;
+        position: relative;
+
+        display: grid;
+
+        min-height: 654px;
+
+        @media(min-width: 650px) {
+            min-height: 355px;
+        }
+
+        // .hearts__main--bg
+
+        &--bg {
+            grid-area: 1/1;
+        }
+
+        // .hearts__main--grid
+
+        &--grid {
+            grid-area: 1/1;
+        }
+
+        // .hearts__main--table
+
+        &--table {
+            grid-area: 1/1;
+            align-self: center;
+        }
+    }
+
+    // .hearts__bg
+
+    &__bg {
+
+        width: 100%; padding-top: 152.667%;
+        @media(min-width: 650px) {
+            padding-top: 49.962%;
+        }
+        min-height: 100%;
+        position: relative;
+
+        // .hearts__bg--img
+
+        &--img {
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            user-select: none; -webkit-user-drag: none;
+        }
+    }
+
+    // .hearts__grid
+
+    &__grid {
+
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: auto auto auto;
+
+        grid-template-areas:
+        "bet player-1 null"
+        "player-2 null-2 player-3"
+        "null-3 user null-4";
+
+        @media(min-width: 650px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 30% auto 30%;
+
+            grid-template-areas:
+            "bet player-1 null"
+            "player-2 null-2 player-3"
+            "null-3 user null-4";
+        }
+
+        @media(min-width: 1150px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 40% auto 20%;
+            margin-top: -35px;
+        }
+
+        z-index: 2;
+
+        min-height: 100%;
+
+        // .hearts__grid--item
+
+        &--item {
+            &:nth-child(1) {
+                grid-area: bet;
+                padding-top: 25%;
+                padding-left: 30%;
+
+                @media(min-width: 650px) {
+                    padding-top: 35px;
+                    padding-left: 45px;
+                }
+
+                @media (min-width: 1150px) {
+                    padding-top: 100px;
+                    padding-left: 65px;
+                }
+            }
+
+            &:nth-child(2) {
+                grid-area: player-1;
+                justify-self: center;
+                margin-left: -10px;
+                
+                @media(min-width: 650px) {
+                    margin-left: 0;
+                    justify-self: center;
+                    margin-top: -30px;
+                }
+
+                @media(min-width: 900px) {
+                    margin-top: -15px;
+                }
+
+                @media(min-width: 1150px) {
+                    margin-top: 0;
+                }
+            }
+
+            &:nth-child(3) {
+                grid-area: player-2;
+                justify-self: start; align-self: end;
+
+                margin-left: -10px;
+
+                @media (min-width: 650px) {
+                    margin-left: 0px;
+                    padding-left: 15px;
+                    align-self: start;
+                }
+
+                @media (min-width: 1150px) {
+                    justify-self: center;
+                    padding-left: 0;
+                }
+            }
+
+            &:nth-child(4) {
+                grid-area: player-3;
+                justify-self: end; align-self: end;
+
+                margin-right: -10px;
+
+                @media (min-width: 650px) {
+                    margin-right: 0;
+                    padding-right: 20px;
+                    align-self: start;
+                }
+
+                @media (min-width: 800px) {
+                    padding-right: 40px;
+                }
+
+                @media (min-width: 1150px) {
+                    justify-self: center;
+                    padding-right: 0;
+                }
+            }
+
+            &:nth-child(5) {
+                grid-area: user;
+                justify-self: center;
+                align-self: end;
+
+                margin-bottom: -15px;
+
+                @media (min-width: 650px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        // .hearts__grid--table
+
+        &--table {
+        }
+    }
+
+    // .hearts__user
+
+    &__user {
+
+        &--cards {
+
+            top: 37px;
+
+            @media (min-width: 650px) {
+                top: 50px;
+            }
+
+            @media (min-width: 900px) {
+                top: 65px;
+            }
+        
+            @media (min-width: 1150px) {
+                top: 65px;
+            }
+
+        }
+
+        & .game__user--info {
+            margin-bottom: -15px;
+            padding-bottom: 15px;
+            @media (min-width: 900px) {
+                margin-bottom: -5px;
+                padding-bottom: 7px;
+            }
+        }
+
+        & .game__user--info-body {
+            //padding-bottom: 0;
+            @media (min-width: 900px) {
+                //padding-bottom: 0;
+            }
+        }
+    }
+
+    // .hearts__table
+
+    &__table {
+    }
+
+    &__table-cards {
+
+        max-width: 61%;
+        width: 100%;
+        
+        @media (min-width: 650px) {
+            max-width: 37%;
+        }
+
+        &._row &--item {
+            flex: 1 1 auto;
+            padding: 5px;
+            max-width: 70px;
+
+            position: static;
+            transform: translate(0%,0%) !important;
+
+            @media (min-width: 900px) {
+                padding: 15px;
+                max-width: 102px;
+            }
+
+            @media (min-width: 1250px) {
+                max-width: 132px;
+            }
+        }
+
+        &._row &--list {
+            padding-top: 0px;
+
+            @media (min-width: 650px) {
+                padding-top: 0px;
+            }
+
+            @media (min-width: 900px) {
+                padding-top: 0px;
+            }
+        }
+
+        &--list {
+            display: flex;
+            justify-content: center;
+
+            margin-inline: auto;
+
+            position: relative;
+
+            max-width: 500px;
+            width: 100%;
+
+            @media (min-width: 650px) {
+                max-width: 500px;
+                padding-top: 30px;
+            }
+
+            @media (min-width: 900px) {
+                max-width: 100%;
+                padding-top: 0px;
+            }
+        
+            @media (min-width: 1150px) {
+                max-width: 100%;
+            }
+        }
+
+        &--item {
+            width: 100%;
+
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+
+            margin-top: 25px;
+            max-width: 57px;
+
+            @media (min-width: 900px) {
+                margin-top: 0;
+                max-width: 70px;
+            }
+            
+            @media (min-width: 1250px) {
+                max-width: 102px;
+            }
+            
+            &:nth-child(1) {
+                //transform: translate(0,-75%);
+                //margin-top: -90px;
+
+                transform: translate(-50%,-90%);
+                
+                @media (min-width: 650px) {
+                    transform: translate(0%,-75%);
+                }
+
+                @media (min-width: 1000px) {
+                    transform: translate(-50%,-90%);
+                }
+            }
+
+            &:nth-child(2) {
+                //margin-left: 0px; margin-bottom: -60px;
+                z-index: 2;
+                transform: translate(25%,-50%);
+                
+                @media (min-width: 650px) {
+                    transform: translate(75%,-50%);
+                }
+
+                @media (min-width: 1000px) {
+                    transform: translate(25%,-50%);
+                }
+                
+                @media (min-width: 1250px) {
+                    transform: translate(25%,-20%);
+                }
+            }
+
+            &:nth-child(3) {
+                
+                transform: translate(-120%,-50%);
+                z-index: 2;
+
+                @media (min-width: 650px) {
+                    transform: translate(-75%,-50%);
+                    z-index: 3;
+                }
+                
+                @media (min-width: 1000px) {
+                    transform: translate(-120%,-50%);
+                    z-index: 2;
+                }
+
+                @media (min-width: 1250px) {
+                    transform: translate(-120%,-20%);
+                }
+                
+            }
+
+            &:nth-child(4) {
+
+                transform: translate(-50%,-20%);
+                z-index: 3;
+                
+                @media (min-width: 650px) {
+                    z-index: 2;
+                    transform: translate(-160%,-75%);
+                }
+                
+                @media (min-width: 1000px) {
+                    transform: translate(-50%,-20%);
+                    z-index: 3;
+                }
+
+                @media (min-width: 1250px) {
+                    transform: translate(-50%,-0%);
+                }
+            }
+        }
+
+        &--img {
+            max-width: 100%;
+            box-shadow: 0px 8.930233001708984px 8.930233001708984px 0px #00000040;
+
+        }
+    }
+}
+
+.hearts-round-popup {
+
+    // .hearts-round-popup__wrapper
+
+    &__wrapper {
+    }
+
+    // .hearts-round-popup__bg
+
+    &__bg {
+    }
+
+    // .hearts-round-popup__body
+
+    &__body {
+    }
+
+    // .hearts-round-popup__container
+
+    &__container {
+    }
+
+    // .hearts-round-popup__list
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        padding-bottom: 44px; padding-top: 20px;
+    }
+
+    // .hearts-round-popup__player
+
+    &__player {
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+
+        display: flex;
+        align-items: center;
+
+        // .hearts-round-popup__player--avatar
+
+        &--avatar {
+            border-radius: 50%;
+            background: #2C2C2C;
+            padding: 3px;
+            border: 1px solid #4F4F4F;
+            width: 58px; height: 58px;
+
+            margin-right: 20px;
+        }
+
+        // .hearts-round-popup__player--avatar-img
+
+        &--avatar-img {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+        }
+
+        // .hearts-round-popup__player--info
+
+        &--info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        // .hearts-round-popup__player--name
+
+        &--name {
+            line-height: 100%;
+        }
+
+        // .hearts-round-popup__player--param
+
+        &--param {
+            font-size: 0.75rem;
+            line-height: 100%;
+            padding-top: 5px;
+        }
+    }
+
+    // .hearts-round-popup__btn
+
+    &__btn {
+    }
+}
