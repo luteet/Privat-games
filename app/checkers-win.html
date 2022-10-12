@@ -350,9 +350,11 @@
         </main>
 
         <script>
-            document.querySelector('body').classList.add('_popup-active')
+            window.onload = function() {
+                Popup.open('#checkers-win-popup')
+            }
         </script>
-        <div class="checkers-win-popup popup" id="checkers-win-popup" style="display: block; opacity: 1;">
+        <div class="checkers-win-popup popup" id="checkers-win-popup" style="display: none;">
             <div class="checkers-win-popup__wrapper popup-wrapper">
                 <div class="checkers-win-popup__bg popup-bg popup-close"></div>
                 <div class="checkers-win-popup__body popup-body">
@@ -372,7 +374,7 @@
                             <br>
                             <br>
                         </div>
-                        <a href="#" class="checkers-win-popup__btn btn popup-btn popup-close _green">
+                        <a href="#" class="checkers-win-popup__btn btn popup-btn _green">
                             Ок
                         </a>
                     </div>

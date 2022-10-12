@@ -376,12 +376,12 @@
         </header>
 
         <main class="main">
-            <section class="checkers page-padding-top">
-                <div class="checkers__container container _large-2">
+            <section class="backgammon page-padding-top">
+                <div class="backgammon__container container _large-2">
                     <div class="game__header">
     <div class="game__header--col">
         <h2 class="game__header--name section-title _decor-none">
-            Шашки
+            Нарды
         </h2>
     </div>
     <div class="game__header--col">
@@ -395,17 +395,17 @@
         </div>
     </div>
 </div>
-                    <div class="checkers__main">
-                        <div class="checkers__main--row checkers__row">
-                            <div class="checkers__col">
-                                <div class="checkers__col--item">
+                    <div class="backgammon__main">
+                        <div class="backgammon__main--row backgammon__row">
+                            <div class="backgammon__col">
+                                <div class="backgammon__col--item">
                                     <div class="game__bet">
                                         <span class="game__bet--value">1500</span>
                                         <img src="img/icons/chip.svg" alt="" class="game__bet--currency">
                                     </div>
                                 </div>
-                                <div class="checkers__col--item">
-                                    <div class="checkers__communication game__communication">
+                                <div class="backgammon__col--item">
+                                    <div class="backgammon__communication game__communication">
                                         <button class="game__communication--btn micro-btn game-btn" type="button" title="Выключить микрофон" data-title-off="Выключить микрофон" data-title-on="Включить микрофон">
                                             <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="status-off">
                                                 <path d="M17.958 21.75L16.1252 21.75V20.167C17.0908 20.0347 17.9997 19.7263 18.8294 19.2895L16.8016 17.7C16.1144 17.918 15.3822 18.0365 14.6134 17.988C11.5173 17.7937 8.95797 14.8641 8.95797 11.7609V11.5839L6.70797 9.82031L6.70798 11.6302C6.70798 15.8325 9.70657 19.5802 13.7908 20.1473V21.7481L11.9158 21.7481C11.0875 21.7481 10.458 22.4198 10.458 23.2059C10.458 23.6625 10.8377 24 11.208 24H18.6658C19.0801 24 19.3736 23.6642 19.3736 23.2922C19.458 22.4203 18.8298 21.75 17.958 21.75ZM29.5689 21.9891L22.1017 16.1344C22.8222 14.9184 23.2516 13.5136 23.2516 11.9995V10.125C23.2516 9.50391 22.7477 9 22.1688 9C21.5477 9 21.0438 9.50391 21.0438 10.125L21.0438 11.9578C21.0438 12.9478 20.7833 13.8689 20.3514 14.6878L19.1453 13.7428C19.3907 13.1953 19.5434 12.5981 19.5434 11.9578L16.8683 11.9578L15.2534 10.6922C15.39 10.549 15.5801 10.4579 15.7934 10.4579H19.5012V9H15.708C15.2938 9 15.0002 8.66419 15.0002 8.29219C15.0002 7.92019 15.336 7.54219 15.708 7.54219L19.4158 7.54225V6L15.708 5.99993C15.2938 5.99993 15.0002 5.66412 15.0002 5.29212C15.0002 4.92012 15.336 4.5843 15.708 4.5843L19.458 4.58429C19.458 2.05304 17.3692 0.0106969 14.8206 0.0866344C12.3986 0.0756562 10.458 2.22422 10.458 4.6875L10.458 7.04203L1.81938 0.239578C1.61313 0.0784219 1.36844 0 1.12657 0C0.792818 0 0.461412 0.148031 0.240209 0.430734C-0.143604 0.920156 -0.0583851 1.6275 0.430896 2.01047L28.1387 23.7183C28.6309 24.1028 29.3373 24.0149 29.7179 23.5271C30.1455 23.0812 30.0564 22.3734 29.5689 21.9891Z" fill="#54534F"/>
@@ -569,8 +569,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkers__col checkers__game">
-                                <div class="checkers__player">
+                            <div class="backgammon__col backgammon__game">
+                                <div class="backgammon__player">
                                     <div class="game__player">
                                         <div class="game__player--body">
                                             <div class="game__player--avatar">
@@ -583,231 +583,436 @@
                                                 <progress class="game__player--progress" max="100" value="100"></progress>
                                             </div>
                                             <div class="game__player--block">
-                                                <div class="checkers__player--move">
-                                                    E6 - D5
+                                                <div class="game__player--status">
+                                                    Готов
+                                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 6C0 2.68594 2.68594 0 6 0C9.31406 0 12 2.68594 12 6C12 9.31406 9.31406 12 6 12C2.68594 12 0 9.31406 0 6ZM8.71406 4.96406C8.96953 4.70859 8.96953 4.29141 8.71406 4.03594C8.45859 3.78047 8.04141 3.78047 7.78594 4.03594L5.25 6.57187L4.21406 5.53594C3.95859 5.28047 3.54141 5.28047 3.28594 5.53594C3.03047 5.79141 3.03047 6.20859 3.28594 6.46406L4.78594 7.96406C5.04141 8.21953 5.45859 8.21953 5.71406 7.96406L8.71406 4.96406Z" fill="#61C8AF"/>
+                                                    </svg>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="checkers__table">
-                                    <div class="checkers__table--board">
-                                        <div class="checkers__table--board-body">
+                                <div class="backgammon__table">
+                                    <div class="backgammon__table--board">
+                                        <div class="backgammon__table--board-body">
                                             <picture>
-                                                <source srcset="img/checkers/table.webp" media="(min-width: 500px)" type="image/webp">
-                                                <source srcset="img/checkers/table-mob.webp" type="image/webp">
-                                                <img src="img/checkers/table.png" alt="" width="300" height="300" class="checkers__table--img">
+                                                <source srcset="img/backgammon/table.webp" media="(min-width: 500px)" type="image/webp">
+                                                <source srcset="img/backgammon/table-mob.webp" type="image/webp">
+                                                <img src="img/backgammon/table.png" alt="" width="300" height="300" class="backgammon__table--img">
                                             </picture>
                                         </div>
                                     </div>
-                                    <div class="checkers__table--grid checkers__grid">
-                                        <div class="checkers__grid--wrapper">
-                                            <div class="checkers__grid--table">
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white-with-crown.svg" alt="">
+                                    <div class="backgammon__table--grid backgammon__grid">
+                                        <div class="backgammon__grid--wrapper">
+                                            <div class="backgammon__grid--table">
+                                                <div class="backgammon__grid--table-place">
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker _transparent">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black-active.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white-active.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
+                                                <div class="backgammon__grid--table-place">
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-black.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div class="backgammon__grid--item">
+                                                        <div class="backgammon__grid--triangle">
+                                                            <svg preserveAspectRatio="none" viewBox="0 0 100 100">
+                                                                <polygon points="100,100 50,0 0,100" fill="transparent" stroke="#444444" stroke-width="2" opacity="1"></polygon>
+                                                            </svg>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
+                                                        </div>
+                                                        <div class="backgammon__grid--checker">
+                                                            <div class="backgammon__grid--checker-body">
+                                                                <img src="img/backgammon/checker-white.svg" alt="" class="backgammon__grid--checker-img">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell _transparent">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell _possible-move">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-white.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell">
-                                                    <div class="checkers__grid--checker">
-                                                        <div class="checkers__grid--checker-body">
-                                                            <img src="img/checkers/checker-black-with-crown.svg" alt="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
-                                                <div class="checkers__grid--cell"></div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="checkers__table--lost checkers__lost">
-                                        <div class="checkers__lost--list">
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
+                                    <div class="backgammon__table--lost backgammon__lost">
+                                        <div class="backgammon__lost--place">
+                                            <ul class="backgammon__lost--list">
+                                                <li class="backgammon__lost--item">
+                                                    <div class="backgammon__lost--item-body">
+                                                        <img src="img/backgammon/checker-black-lost.svg" alt="" class="backgammon__lost--img">
+                                                    </div>
+                                                </li>
+                                                <li class="backgammon__lost--item">
+                                                    <div class="backgammon__lost--item-body">
+                                                        <img src="img/backgammon/checker-black-lost.svg" alt="" class="backgammon__lost--img">
+                                                    </div>
+                                                </li>
+                                                <li class="backgammon__lost--item">
+                                                    <div class="backgammon__lost--item-body">
+                                                        <img src="img/backgammon/checker-black-lost.svg" alt="" class="backgammon__lost--img">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="backgammon__lost--place">
+                                            <ul class="backgammon__lost--list">
+                                                <li class="backgammon__lost--item">
+                                                    <div class="backgammon__lost--item-body">
+                                                        <img src="img/backgammon/checker-white-lost.svg" alt="" class="backgammon__lost--img">
+                                                    </div>
+                                                </li>
+                                                <li class="backgammon__lost--item">
+                                                    <div class="backgammon__lost--item-body">
+                                                        <img src="img/backgammon/checker-white-lost.svg" alt="" class="backgammon__lost--img">
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="backgammon__table--dice backgammon__dice">
+                                        <div class="backgammon__dice--wrapper">
+                                            <div class="backgammon__dice--item">
+                                                <img src="img/backgammon/dice/dice-1.svg" alt="" class="backgammon__dice--img">
                                             </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
-                                            </div>
-                                            <div class="checkers__lost--item">
-                                                <img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img">
+                                            <div class="backgammon__dice--item">
+                                                <img src="img/backgammon/dice/dice-2.svg" alt="" class="backgammon__dice--img">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="checkers__user">
+                                <div class="backgammon__user">
                                     <div class="game__user">
                                         <div class="game__user--block">
                                             
@@ -826,254 +1031,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="checkers__col">
-                                <div class="checkers__history game__history">
-    <div class="game__history--wrapper">
-        <button type="button" class="game__history--header">
-            <h3 class="game__history--header-title">
-                История ходов
-            </h3>
-            <div class="game__history--header-arrow">
-                <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6.37453 7.37465C6.11867 7.37465 5.86268 7.28048 5.66769 7.09216L0.667953 2.27098C0.277349 1.89433 0.277349 1.28415 0.667953 0.907491C1.05856 0.530836 1.69134 0.530836 2.08194 0.907491L6.37453 5.04843L10.6681 0.908244C11.0587 0.53159 11.6914 0.53159 12.082 0.908244C12.4727 1.2849 12.4727 1.89508 12.082 2.27173L7.08231 7.09291C6.887 7.28124 6.63077 7.37465 6.37453 7.37465Z" fill="#F9F1DF"/>
-                </svg>
-            </div>
-        </button>
-        <ul class="game__history--list">
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-            <li class="checkers__history--item game__history--item">
-                <div class="checkers__history--avatar">
-                    <img src="img/account/avatar.png" alt="">
-                </div>
-                <h4 class="checkers__history--name">
-                    Вы: Евгений
-                </h4>
-                <span class="checkers__history--move">
-                    E3 - F5
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
-                                <div class="checkers__ready">
-                                    <h3 class="game__user-menu--title section-title _decor-none">
-                                        Вы готовы?
-                                    </h3>
-                                    <div class="game__user-menu--timer">
-                                        Осталось:
-                                        <b>10 сек</b>
+                            <div class="backgammon__col">
+                                <div class="backgammon__col--item"></div>
+                                <div class="backgammon__col--item">
+                                    <div class="backgammon__ready">
+                                        <h3 class="game__user-menu--title section-title _decor-none">
+                                            Ход противника
+                                        </h3>
                                     </div>
-                                    <button class="game__user-menu--main-btn btn _large _shadow" type="button">
-                                        Я готов
-                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -1081,39 +1046,6 @@
                 </div>
             </section>
         </main>
-
-        <script>
-            window.onload = function() {
-                Popup.open('#checkers-win-popup')
-            }
-        </script>
-        <div class="checkers-win-popup popup" id="checkers-win-popup" style="display: none;">
-            <div class="checkers-win-popup__wrapper popup-wrapper">
-                <div class="checkers-win-popup__bg popup-bg popup-close"></div>
-                <div class="checkers-win-popup__body popup-body">
-                    <div class="checkers-win-popup__container popup-container">
-                        <button type="button" class="popup-close-btn popup-close" title="Закрыть">
-                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
-                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
-                            </svg>
-                        </button>
-                        <h2 class="checkers-win-popup__title popup-title section-title _decor-none">
-                            Вы выграли
-                        </h2>
-                        <div class="checkers-win-popup__text popup-text _left">
-                            Поздравляем!
-                            <br>
-                            <br>
-                            <br>
-                        </div>
-                        <a href="#" class="checkers-win-popup__btn btn popup-btn _green">
-                            Ок
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <footer class="footer" data-aos="fade-in" data-aos-anchor=".main">
             

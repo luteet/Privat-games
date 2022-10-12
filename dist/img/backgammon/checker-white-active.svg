@@ -1,0 +1,17 @@
+<svg width="36" height="37" viewBox="0 0 36 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="18" cy="18.7676" r="17" fill="#EEEEEE" stroke="#444444" stroke-width="2"/>
+<circle r="15" transform="matrix(-1 0 0 1 18 18.7676)" fill="white"/>
+<circle r="14.5" transform="matrix(-1 0 0 1 18 18.7676)" stroke="url(#paint0_linear_49_28655)" stroke-opacity="0.1"/>
+<ellipse rx="11" ry="11" transform="matrix(1 -8.43373e-08 -9.06212e-08 -1 18 18.7676)" fill="white"/>
+<path d="M28.5 18.7676C28.5 12.9686 23.799 8.26758 18 8.26758C12.201 8.26758 7.5 12.9686 7.5 18.7676C7.5 24.5666 12.201 29.2676 18 29.2676C23.799 29.2676 28.5 24.5666 28.5 18.7676Z" stroke="url(#paint1_linear_49_28655)" stroke-opacity="0.1"/>
+<defs>
+<linearGradient id="paint0_linear_49_28655" x1="15" y1="0" x2="15" y2="30" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1"/>
+</linearGradient>
+<linearGradient id="paint1_linear_49_28655" x1="18" y1="29.7676" x2="18" y2="7.76758" gradientUnits="userSpaceOnUse">
+<stop stop-color="white"/>
+<stop offset="1"/>
+</linearGradient>
+</defs>
+</svg>

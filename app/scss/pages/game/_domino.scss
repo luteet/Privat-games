@@ -1,0 +1,355 @@
+.domino {
+
+    padding-bottom: 50px;
+    @include _992 {
+        padding-bottom: 100px;
+    }
+    
+
+    // .domino__container
+
+    &__container {
+        max-width: calc(1283px + (var(--container-padding) * 2));
+        position: relative;
+    }
+
+    // .domino__main
+
+    &__main {
+
+        display: grid;
+
+        margin-top: 170px;
+
+        @media(min-width: 650px) {
+            min-height: 355px;
+            margin-top: 90px;
+        }
+
+        @media (min-width: 900px) {
+            margin-top: 26px;
+        }
+        // .domino__main--table
+
+        &--table {
+            grid-area: 1/1;
+            align-self: center;
+        }
+
+        // .domino__main--grid
+
+        &--grid {
+            grid-area: 1/1;
+        }
+
+        // .domino__main--user-menu
+
+        &--user-menu {
+
+            margin-top: 250px;
+
+            @media(min-width: 650px) {
+                height: auto;
+                margin-bottom: 0; margin-top: 30px;
+            }
+            
+            @media(min-width: 900px) {
+                height: 0;
+                margin-bottom: 60px; margin-top: 0;
+
+                grid-area: 1/1;
+                align-self: end;
+            }
+            
+        }
+    }
+
+    // .domino__board
+
+    &__board {
+
+        width: 100%; padding-top: 152.667%;
+        @media(min-width: 650px) {
+            padding-top: 60.85%;
+        }
+        @include _992 {
+            padding-top: 58%;
+        }
+        min-height: 100%;
+        position: relative;
+
+        // .domino__board--img
+
+        &--img {
+            width: 100%; height: 100%;
+            position: absolute;
+            left: 0; top: 0;
+            user-select: none; -webkit-user-drag: none;
+        }
+    }
+
+    // .domino__grid
+
+    &__grid {
+
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        grid-template-rows: auto auto auto;
+
+        grid-template-areas:
+        "bet player-1 null-1"
+        "player-2 null-2 player-3"
+        "null-3 user null-4";
+
+        @media(min-width: 650px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 30% auto 30%;
+        }
+
+        @media(min-width: 1150px) {
+            grid-template-columns: 25% 50% 25%;
+            grid-template-rows: 40% auto 20%;
+            margin-top: -35px;
+        }
+
+        z-index: 2;
+
+        min-height: 100%;
+
+        // .domino__grid--item
+
+        &--item {
+            &:nth-child(1) {
+                grid-area: bet;
+                padding-top: 25%;
+                padding-left: 30%;
+
+                @media(min-width: 650px) {
+                    padding-top: 35px;
+                    padding-left: 45px;
+                }
+
+                @media (min-width: 1150px) {
+                    padding-top: 100px;
+                    padding-left: 65px;
+                }
+            }
+
+            &:nth-child(2) {
+                grid-area: player-1;
+                justify-self: center;
+                margin-left: 0px;
+                margin-top: -50px;
+
+                &._top {
+                    margin-top: -140px;
+                    margin-left: -10px;
+                }
+                
+                @media(min-width: 650px) {
+                    margin-left: 0;
+                    justify-self: center;
+                    margin-top: -30px;
+                    &._top {
+                        margin-top: -100px;
+                    }
+                }
+
+                @media(min-width: 900px) {
+                    margin-top: -15px;
+                    &._top {
+                        margin-top: -15px;
+                    }
+                }
+
+                & .game__player--domino {
+                    position: absolute;
+                    left: 50%; top: 100%;
+                    transform: translate(-50%, -45%);
+
+                    @media (min-width: 740px) {
+                        transform: translate(-50%, -25%);
+                    }
+                }
+            }
+
+            &:nth-child(3) {
+                grid-area: player-2;
+                &._top {
+                    grid-area: bet;
+                    margin-top: -140px;
+                }
+                justify-self: start;
+
+                margin-left: -10px;
+
+                @media (min-width: 650px) {
+                    margin-left: 0px;
+                    padding-left: 15px;
+                    &._top {
+                        margin-top: -100px;
+                    }
+                }
+
+                @media(min-width: 740px) {
+                    align-self: center;
+                }
+
+                @media (min-width: 800px) {
+                    &._top {
+                        margin-top: -80px;
+                    }
+                }
+
+                @media (min-width: 1150px) {
+                    justify-self: start; align-self: start;
+                    padding-left: 0;
+                    margin-left: -20px;
+                    margin-top: 0;
+                    &._top {
+                        grid-area: player-2;
+                        margin-top: 0;
+                    }
+                }
+
+                & .game__player--domino {
+                    position: absolute;
+                    right: 50%; top: 100%;
+                    transform: translate(50%, -15%);
+
+                    @media (min-width: 740px) {
+                        right: 0; top: 50%;
+                        transform: translate(125%, -50%);
+                    }
+                      
+                }
+            }
+
+            &:nth-child(4) {
+                &._top {
+                    grid-area: null-1;
+                    margin-top: -140px;
+                }
+                grid-area: player-3;
+                
+                justify-self: end;
+
+                margin-right: -10px;
+
+                @media (min-width: 650px) {
+                    margin-right: 0px;
+                    padding-right: 20px; 
+                    &._top {
+                        margin-top: -100px;
+                    }
+                }
+
+                @media(min-width: 740px) {
+                    align-self: center;
+                }
+
+                @media (min-width: 800px) {
+                    padding-right: 40px;
+                    &._top {
+                        margin-top: -70px;
+                        padding-right: 15px;
+                    }
+                }
+
+                @media (min-width: 1150px) {
+                    align-self: start;
+                    justify-self: end;
+                    padding-right: 0;
+                    margin-right: -25px;
+                    &._top {
+                        grid-area: player-3;
+                        margin-top: 0;
+                    }
+                }
+
+                & .game__player--domino {
+                    position: absolute;
+                    left: 50%; top: 100%;
+                    transform: translate(-50%, -25%);
+
+                    @media (min-width: 740px) {
+                        left: 0; top: 50%;
+                        transform: translate(-125%, -50%);
+                    }
+                }
+            }
+
+            &:nth-child(5) {
+                grid-area: user;
+                justify-self: center;
+                align-self: end;
+
+                margin-bottom: -15px;
+
+                @media (min-width: 650px) {
+                    margin-bottom: 0;
+                }
+
+                & .game__user--domino {
+                    position: absolute;
+                    left: 50%; top: 0%;
+                    transform: translate(-50%, -110%);
+                }
+
+                
+            }
+        }
+    }
+
+    // .domino__player
+
+    &__player {
+
+        & .game__player--domino {
+            z-index: -1;
+        }
+    }
+
+    // .domino__user
+
+    &__user {
+        margin-bottom: -95px;
+    }
+
+    // .domino__table
+
+    &__table {
+
+         // .domino__table--place
+
+        &--place {
+        }
+
+        // .domino__table--element
+
+        &--element {
+            position: absolute;
+            &._accent &-body {
+                background: rgba(97, 200, 175, 0.6);
+            }
+        }
+
+        // .domino__table--element-body
+
+        &--element-body {
+            width: 52px; padding-top: 200%;
+            position: relative;
+            border-radius: 3px;
+        }
+
+        // .domino__table--element-img
+
+        &--element-img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            border-radius: 3px;
+            z-index: -1;
+        }
+    }
+}

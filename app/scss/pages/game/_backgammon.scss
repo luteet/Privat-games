@@ -1,0 +1,578 @@
+.backgammon {
+
+    // .backgammon__container
+
+    &__container {
+    }
+
+    // .backgammon__main
+
+    &__main {
+
+        @include _768 {
+            margin-top: -25px;
+        }
+
+        @include _992 {
+            margin-top: -75px;
+        }
+
+        display: grid;
+
+        & > * {
+            grid-area: 1/1;
+        }
+
+        // .backgammon__main--row
+
+        &--row {
+            width: 100%;
+        }
+
+        // .backgammon__main--message
+
+        &--message {
+        }
+    }
+
+    // .backgammon__row
+
+    &__row {
+        display: grid;
+        grid-template-columns: 100%;
+        justify-content: space-between;
+
+        max-width: 1150px;
+        margin-inline: auto;
+
+        @include _992 {
+            grid-template-columns: 16.5% 64% 19.5%;
+        }
+    }
+
+    // .backgammon__col
+
+    &__col {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        //padding-top: 20px;
+        @media (min-width: 500px) {
+            padding-top: 40px;
+        }
+        @include _992 {
+            padding-top: 80px;
+        }
+
+        &:nth-child(1) &--item {
+            &:nth-child(1) {
+                
+            }
+
+            &:nth-child(2) {
+                align-self: flex-start;
+            }
+        }
+        
+        &:nth-child(1) {
+            grid-row: 1/3; grid-column: 1/3;
+            align-items: center;
+
+            @media (min-width: 500px) {
+                align-items: flex-start;
+            }
+
+            @include _992 {
+                grid-row: auto; grid-column: auto;
+                padding-bottom: 75%;
+            }
+        }
+
+        &:nth-child(2) {
+            grid-row: 1/3; grid-column: 1/3;
+            margin-bottom: 145px;
+
+            @media (min-width: 500px) {
+                margin-bottom: 45px;
+            }
+            
+            @include _992 {
+                grid-row: auto; grid-column: auto;
+                margin-bottom: 0;
+                
+            }
+        }
+
+        &:nth-child(3) {
+            grid-row: 1/3; grid-column: 1/3;
+            align-items: flex-end;
+            
+            @include _992 {
+                grid-row: auto; grid-column: auto;
+                align-items: flex-end;
+
+                padding-bottom: 60%;
+            }
+        }
+
+        // .backgammon__col--item
+
+        &--item {
+        }
+    }
+
+    // .backgammon__communication
+
+    &__communication {
+        z-index: 5;
+        align-self: start;
+    }
+
+    // .backgammon__game
+
+    &__game {
+        margin-inline: -15px;
+
+        padding-top: 45px;
+        
+        @media (min-width: 500px) {
+            padding-top: 0;
+            margin-inline: 0;
+            margin-top: -45px;
+        }
+
+        @include _992 {
+            padding-top: 95px;
+            margin-top: -75px;
+        }
+        
+        & > * {
+            align-self: center;
+        }
+    }
+
+    // .backgammon__player
+
+    &__player {
+        max-width: 105px;
+
+        margin-bottom: -15px;
+        @include _992 {
+            margin-bottom: -20px;
+        }
+
+        & .game__player--status {
+            margin-top: -5px;
+            @media (min-width: 1150px) {
+                margin-top: 0;
+            }
+        }
+    }
+
+    // .backgammon__table
+
+    &__table {
+
+        display: grid;
+        width: 100%;
+
+        margin: 0 -35px;
+
+        position: relative;
+
+        & > * {
+            grid-area: 1/1;
+        }
+
+        // .backgammon__table--board
+
+        &--board {
+            width: 100%;
+        }
+
+        // .backgammon__table--board-body
+
+        &--board-body {
+            position: relative;
+            width: 100%; padding-top: 91.9%;
+            @media (min-width: 500px) {
+                padding-top: 76.89%;
+            }
+        }
+
+        // .backgammon__table--img
+
+        &--img {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+            z-index: -1;
+
+            //user-drag: none;
+            -webkit-user-drag: none;
+            user-select: none;
+        }
+
+        // .backgammon__table--grid
+
+        &--grid {
+        }
+
+        // .backgammon__table--lost
+
+        &--lost {
+            position: absolute;
+            right: 0; top: 0;
+            height: 100%;
+        }
+
+        // .backgammon__table--dice
+
+        &--dice {
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    // .backgammon__lost
+
+    &__lost {
+
+        display: none;
+
+        @media (min-width: 500px) {
+            display: grid;
+            grid-template-rows: 50% 50%;
+
+            width: 17%;
+            padding: 12% 6% 10.5% 5.85%;
+        }
+
+        // .backgammon__lost--place
+
+        &--place {
+            @media (min-width: 500px) {
+                width: 100%;
+                &:first-child {
+                    padding-bottom: 90%;
+                }
+    
+                &:last-child {
+                    padding-top: 90%;
+                }
+            }
+        }
+
+        // .backgammon__lost--list
+
+        &--list {
+            @media (min-width: 500px) {
+                display: flex;
+                flex-direction: column;
+                width: 100%; height: 100%;
+            }
+            
+            //margin: -2px 0;
+        }
+
+        // .backgammon__lost--item
+
+        &--item {
+
+            @media (min-width: 500px) {
+                flex: 1 1 auto;
+                max-height: 6.666667%;
+                position: relative;
+                width: 100%; //padding-top: 20%;
+                //margin: 2px 0;
+                padding: 1px 0;
+            }
+            
+        }
+
+        // .backgammon__lost--item-body
+
+        &--item-body {
+
+            @media (min-width: 500px) {
+                width: 100%; min-height: 100%; //padding-top: 15%;
+                position: relative;
+            }
+            
+            //background: #000;
+        }
+
+        // .backgammon__lost--img
+
+        &--img {
+
+            @media (min-width: 500px) {
+                position: absolute;
+                left: 0; top: 0;
+                width: 100%; height: 100%;
+                object-fit: contain;
+            }
+            
+        }
+    }
+
+    // .backgammon__dice
+
+    &__dice {
+
+        pointer-events: none;
+
+        //padding: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        // .backgammon__dice--wrapper
+
+        &--wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 12%;
+            min-width: 80px;
+        }
+
+        // .backgammon__dice--item
+
+        &--item {
+        }
+
+        // .backgammon__dice--img
+
+        &--img {
+            width: 25px; height: 25px;
+            @media (min-width: 500px) {
+                width: 30px; height: 30px;
+            }
+            object-fit: contain;
+        }
+    }
+
+    // .backgammon__grid
+
+    &__grid {
+
+        width: 100%;
+
+        margin-right: 0;
+
+        z-index: 2;
+
+        padding: 11.25% 7.4% 0 7.5%;
+        
+        @media (min-width: 500px) {
+            padding: 12% 14.5% 0 15%;
+        }
+
+        // .backgammon__grid--wrapper
+
+        &--wrapper {
+            width: 100%; padding-top: 83.6%;
+            @media (min-width: 500px) {
+                padding-top: 77.5%;
+            }
+
+            position: relative;
+        }
+
+        // .backgammon__grid--table
+
+        &--table {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; height: 100%;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        // .backgammon__grid--table-place
+
+        &--table-place {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: 47.5% 52.5%;
+            &:nth-child(1) {
+                padding-right: 1.5%;
+            }
+            &:nth-child(2) {
+                padding-left: 1.5%;
+            }
+        }
+
+        // .backgammon__grid--item
+
+        &--item {
+            position: relative;
+            margin-bottom: 140%;
+
+            @media (min-width: 500px) {
+                margin-bottom: 100%;
+            }
+            &:nth-child(n + 7) {
+                //margin-top: 50px;
+                //align-self: end;
+                margin-top: 140%;
+                margin-bottom: 0;
+
+                justify-content: flex-end;
+                //flex-direction: column-reverse;
+                
+                padding-bottom: 35%;
+
+                @media (min-width: 500px) {
+                    padding-bottom: 45%;
+                    margin-top: 100%;
+                }
+            }
+
+            display: flex;
+            flex-direction: column;
+
+            max-height: 100%;
+
+            &._active {
+                cursor: pointer;
+            }
+
+            
+        }
+
+        &--item &--triangle {
+            transform: scale(-1);
+        }
+
+        &--item._active &--triangle {
+            opacity: 1;
+        }
+
+        &--item:nth-child(n + 7) &--triangle {
+            transform: scale(1);
+            height: 90%; bottom: 0; top: auto;
+        }
+
+        // .backgammon__grid--triangle
+
+        &--triangle {
+            position: absolute;
+            left: -1px; top: 0;
+            width: 100%; height: 100%;
+
+            opacity: 0;
+
+            transition: opacity .2s ease-in-out;
+
+            & svg {
+                width: 100%; height: 100%;
+                & polygon {
+                    stroke-width: 3;
+                }
+            }
+        }
+
+        // .backgammon__grid--checker
+
+        &--checker {
+            flex: 1 1 auto;
+            width: 100%;
+            max-height: 17.3333%;
+
+            position: relative;
+
+            cursor: pointer;
+            
+            &._transparent {
+                opacity: 0.5;
+            }
+        }
+
+        // .backgammon__grid--checker-body
+
+        &--checker-body {
+            position: absolute;
+            left: 0; top: 0;
+            width: 100%; padding-top: 100%;
+        }
+
+        // .backgammon__grid--checker-img
+
+        &--checker-img {
+            position: absolute;
+            left: 50%; top: 50%;
+            width: 90%; height: 90%;
+            transform: translate(-50%,-50%);
+            object-fit: contain;
+
+            filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.35));
+        }
+    }
+
+    // .backgammon__user
+
+    &__user {
+        text-align: center;
+        max-width: 135px;
+    }
+
+    // .backgammon__ready
+
+    &__ready {
+        text-align: right;
+
+        padding-left: 30px;
+        min-height: 50px;
+    }
+
+    // .backgammon__message
+
+    &__message {
+
+        z-index: 2;
+        align-self: center; justify-self: center;
+
+        text-align: center;
+
+        padding: 34px;
+        margin-top: 0%;
+        @media (min-width: 900px) {
+            margin-top: 5%;
+        }
+
+        // .backgammon__message--body
+
+        &--body {
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.85);
+            border-radius: 20px;
+        }
+
+        // .backgammon__message--title
+
+        &--title {
+            font-size: 0.75rem;
+            @include _992 {
+                font-size: 1.125rem;
+            }
+        }
+
+        // .backgammon__message--text
+
+        &--text {
+            padding-top: 8px;
+
+            line-height: 133%;
+            font-size: 0.75rem;
+            @include _992 {
+                font-size: 1rem;
+            }
+        }
+    }
+}
