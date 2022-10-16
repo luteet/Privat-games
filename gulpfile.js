@@ -45,7 +45,7 @@ function scriptsLib() {
         //'node_modules/slick-carousel/slick/slick.min.js', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Попап (jQuery)
         //'node_modules/wowjs/dist/wow.min.js', // Анимация
-        //'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range]
+        'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range]
         //'node_modules/fslightbox/index.js', // Галерея
         //'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для window.scroll()
         //'node_modules/chart.js/dist/chart.min.js', // График
@@ -124,7 +124,7 @@ function CSSlibBuild() {
         //'node_modules/slick-carousel/slick/slick.css', // Слайдер (jQuery)
         //'node_modules/magnific-popup/dist/magnific-popup.css' // Попап (jQuery)
         'node_modules/aos/dist/aos.css', // Анимация
-        //'node_modules/nouislider/dist/nouislider.css', // Кастомный input[range]
+        'node_modules/nouislider/dist/nouislider.css', // Кастомный input[range]
     ])
     .pipe(concat('_libs.scss'))
     .pipe(dest('app/scss'))

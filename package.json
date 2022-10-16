@@ -30,6 +30,7 @@
     "gulp-zip": "^4.2.0",
     "lc-select": "^1.1.5",
     "normalize.css": "^8.0.1",
+    "nouislider": "^15.6.1",
     "sass": "^1.45.0",
     "swiper": "^8.4.2"
   }

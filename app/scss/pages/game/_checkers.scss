@@ -433,44 +433,4 @@
         text-align: right;
     }
 
-    // .checkers__message
-
-    &__message {
-
-        z-index: 2;
-        align-self: center; justify-self: center;
-
-        text-align: center;
-
-        padding: 34px;
-
-        // .checkers__message--body
-
-        &--body {
-            padding: 20px;
-            background: rgba(0, 0, 0, 0.85);
-            border-radius: 20px;
-        }
-
-        // .checkers__message--title
-
-        &--title {
-            font-size: 0.75rem;
-            @include _992 {
-                font-size: 1.125rem;
-            }
-        }
-
-        // .checkers__message--text
-
-        &--text {
-            padding-top: 8px;
-
-            line-height: 133%;
-            font-size: 0.75rem;
-            @include _992 {
-                font-size: 1rem;
-            }
-        }
-    }
 }

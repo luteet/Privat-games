@@ -1,0 +1,203 @@
+@@include("html/_header.html")
+
+        <main class="main">
+            <section class="preferance page-padding-top">
+                <div class="preferance__container container">
+                    @@include("html/game/_header.html", {
+                        "title": 'Преферанс',
+                    })
+                    <div class="preferance__main">
+                        <div class="preferance__main--table preferance__bg">
+                            <picture>
+                                <source srcset="img/game/table.webp" media="(min-width: 992px)" type="image/webp">
+                                <source srcset="img/game/table-mob-horizontal.webp" media="(min-width: 650px)" type="image/webp">
+                                <source srcset="img/game/table-mob.webp" type="image/webp">
+                                <img src="img/game/table.png" alt="" width="300" class="preferance__bg--img">
+                            </picture>
+                        </div>
+                        <div class="preferance__main--grid preferance__grid">
+                            <div class="preferance__grid--item">
+                                <div class="game__bet">
+                                    <span class="game__bet--value">1500</span>
+                                    <img src="img/icons/chip.svg" alt="" class="game__bet--currency">
+                                </div>
+                            </div>
+                            <div class="preferance__grid--item">
+                            </div>                         
+                            <div class="preferance__grid--item">
+                                <div class="preferance__player game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Игорь
+                                            </h3>
+                                            <progress class="game__player--progress" max="100" value="100"></progress>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--status">
+                                                Готов
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6C0 2.68594 2.68594 0 6 0C9.31406 0 12 2.68594 12 6C12 9.31406 9.31406 12 6 12C2.68594 12 0 9.31406 0 6ZM8.71406 4.96406C8.96953 4.70859 8.96953 4.29141 8.71406 4.03594C8.45859 3.78047 8.04141 3.78047 7.78594 4.03594L5.25 6.57187L4.21406 5.53594C3.95859 5.28047 3.54141 5.28047 3.28594 5.53594C3.03047 5.79141 3.03047 6.20859 3.28594 6.46406L4.78594 7.96406C5.04141 8.21953 5.45859 8.21953 5.71406 7.96406L8.71406 4.96406Z" fill="#61C8AF"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preferance__grid--item">
+                                <div class="preferance__player game__player">
+                                    <div class="game__player--body">
+                                        <div class="game__player--avatar">
+                                            <img src="img/account/avatar.png" width="76" height="76" alt="" class="game__player--avatar-img">
+                                        </div>
+                                        <div class="game__player--info">
+                                            <h3 class="game__player--name">
+                                                Снова Игорь
+                                            </h3>
+                                        </div>
+                                        <div class="game__player--block">
+                                            <div class="game__player--status">
+                                                Готов
+                                                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0 6C0 2.68594 2.68594 0 6 0C9.31406 0 12 2.68594 12 6C12 9.31406 9.31406 12 6 12C2.68594 12 0 9.31406 0 6ZM8.71406 4.96406C8.96953 4.70859 8.96953 4.29141 8.71406 4.03594C8.45859 3.78047 8.04141 3.78047 7.78594 4.03594L5.25 6.57187L4.21406 5.53594C3.95859 5.28047 3.54141 5.28047 3.28594 5.53594C3.03047 5.79141 3.03047 6.20859 3.28594 6.46406L4.78594 7.96406C5.04141 8.21953 5.45859 8.21953 5.71406 7.96406L8.71406 4.96406Z" fill="#61C8AF"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="preferance__grid--item">
+                                <div class="preferance__user game__user">
+                                    <div class="game__user--block">
+                                        
+                                    </div>
+                                    <div class="game__user--info">
+                                        <div class="game__user--info-body">
+                                            <h3 class="game__user--name">
+                                                Вы: Евгений
+                                            </h3>
+                                            <progress class="game__user--progress" max="100" value="100"></progress>
+                                        </div>
+                                    </div>
+                                    <div class="game__user--avatar">
+                                        <img src="img/account/avatar.png" alt="" class="game__user--avatar-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="preferance__main--table preferance__table">
+                            <div class="preferance__table--field preferance__field">
+                                <svg viewBox="0 0 290 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <text fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="74.5%" y="35.5%"></tspan>
+                                    </text>
+                                    <text fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="74.5%" y="55.5%"></tspan>
+                                    </text>
+                                    <text fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="74.5%" y="84%"></tspan>
+                                    </text>
+                                    <text fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="52%" y="96%"></tspan>
+                                    </text>
+                                    <text fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="97%" y="96%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="40%" y="-43%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="45%" y="-27%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="45%" y="-14.5%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="33.5%" y="-3%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="67%" y="-3%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(-90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="10%" y="87%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(-90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="5%" y="104%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(-90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="5%" y="117%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(-90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="17.5%" y="128.5%"></tspan>
+                                    </text>
+                                    <text transform="translate(0 30) rotate(-90)" fill="#F9F1DF" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+                                        <tspan x="-17.5%" y="128.5%"></tspan>
+                                    </text>
+                                    <rect x="0.5" y="0.5" width="289" height="219" rx="9.5" stroke="#D9D9D9"/>
+                                    <path d="M26.5 0.5H263.5V183C263.5 188.247 259.247 192.5 254 192.5H36C30.7533 192.5 26.5 188.247 26.5 183V0.5Z" stroke="#D9D9D9"/>
+                                    <path d="M50.5 0.5H237.5V157C237.5 162.247 233.247 166.5 228 166.5H60C54.7533 166.5 50.5 162.247 50.5 157V0.5Z" stroke="#D9D9D9"/>
+                                    <circle cx="143.5" cy="73.5" r="27" stroke="#D9D9D9"/>
+                                    <line x1="144.5" y1="2.18556e-08" x2="144.5" y2="46" stroke="#D9D9D9"/>
+                                    <line x1="124.354" y1="93.3536" x2="2.35355" y2="215.354" stroke="#D9D9D9"/>
+                                    <line y1="-0.5" x2="172.534" y2="-0.5" transform="matrix(0.707107 0.707107 0.707107 -0.707107 165 93)" stroke="#D9D9D9"/>
+                                    <line y1="109.5" x2="26" y2="109.5" stroke="#D9D9D9"/>
+                                    <line x1="264" y1="109.5" x2="290" y2="109.5" stroke="#D9D9D9"/>
+                                    <line x1="144.5" y1="219" x2="144.5" y2="193" stroke="#D9D9D9"/>
+                                </svg>                                    
+                            </div>
+                        </div>
+                        <div class="preferance__main--message game__message">
+                            <div class="game__message--body">
+                                <h3 class="game__message--title section-title _center">
+                                    Ожидаем  готовность  комнаты
+                                </h3>
+                                <div class="game__message--text">
+                                    Оставайтесь и одержите победу!
+                                </div>
+                            </div>
+                        </div>
+                        @@include("html/game/_user-menu.html")
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            window.onload = function() {
+                Popup.open('#preferance-win-popup')
+            }
+        </script>
+        <div class="preferance-win-popup popup" id="preferance-win-popup" style="display: none;">
+            <div class="preferance-win-popup__wrapper popup-wrapper">
+                <div class="preferance-win-popup__bg popup-bg popup-close"></div>
+                <div class="preferance-win-popup__body popup-body">
+                    <div class="preferance-win-popup__container popup-container">
+                        <button type="button" class="popup-close-btn popup-close" title="Закрыть">
+                            <svg viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.7886 4.23486L4.59619 12.7049" stroke="#F9F1DF"/>
+                                <path d="M4.59619 4.23486L13.7886 12.7049" stroke="#F9F1DF"/>
+                            </svg>
+                        </button>
+                        <h2 class="preferance-win-popup__title popup-title section-title _decor-none">
+                            Вы выграли
+                        </h2>
+                        <div class="preferance-win-popup__text popup-text _left">
+                            Поздравляем!
+                            <br>
+                            <br>
+                            <br>
+                        </div>
+                        <a href="#" class="preferance-win-popup__btn btn popup-btn _green">
+                            Ок
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+@@include("html/_footer.html", {
+    "bg": ''
+})

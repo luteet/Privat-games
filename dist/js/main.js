@@ -277,18 +277,75 @@ class Popup {
 
 new Popup()
 
-  
-//let popupCheck = true, popupCheckClose = true;
-
-
-
-
-/* let testFunc = popup({
-  //duration: 200,
-  //idOnURL: false,
-}); */
-
 // =-=-=-=-=-=-=-=-=-=-=-=- </popup> -=-=-=-=-=-=-=-=-=-=-=-=
+
+function customeRange() {
+  const range = document.querySelectorAll('.input-range');
+
+  if (range[0]) {
+    range.forEach(thisRange => {
+
+      let rangeBody = thisRange.closest('.input-range-body'),
+          rangeElem = rangeBody.querySelector('.input-range-elem'),
+          rangeValue = rangeBody.querySelector('.input-range-value');
+
+      let start     = Number(thisRange.dataset.start),
+          step      = Number(thisRange.getAttribute('step')),
+          min       = Number(thisRange.getAttribute('min')),
+          max       = Number(thisRange.getAttribute('max'));
+
+
+      try {
+
+        const rangeSlider = noUiSlider.create(rangeElem, {
+          tooltips: true,
+
+          start: [(start) ? start : 0],
+          connect: 'lower',
+
+          step: step,
+          range: {
+            'min': min,
+            'max': max,
+          },
+
+          tooltips: false,
+
+          format: {
+            to: function (value) {
+              rangeValue.textContent = Number(value).toFixed(0);
+              /* let valueString = Math.round(value).toString(),
+                rangeMin = document.querySelector('.range-value-min');
+
+                thisRange.setAttribute('value', valueString);
+
+                if(rangeMin) rangeMin.textContent = `${valueString} ${currency}`; */
+                return Number(value).toFixed(0);
+
+            },
+            from: function (value) {
+              /* rangeElem.insertAdjacentHTML('beforeend',
+
+                `<span class="range-value range-value-min">${Number(thisRange.value)} ${currency}</span>
+                 <span class="range-value range-value-max">${Number(thisRange.getAttribute('max'))} ${currency}</span>`) */
+
+              return Number(value).toFixed(0);
+            }
+          }
+
+        });
+
+        thisRange.classList.add('_hidden');
+
+      } catch { }
+
+
+    })
+  }
+
+}
+
+customeRange();
 
 new ClipboardJS('.copy-btn');
 
