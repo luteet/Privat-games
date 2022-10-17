@@ -274,7 +274,7 @@
             width: 100%; height: 100%;
 
             display: grid;
-            grid-template-columns: repeat(8, 1fr);
+            grid-template-columns: repeat(8, 12.5%);
         }
 
         // .checkers__grid--cell
@@ -288,6 +288,15 @@
 
             &._transparent > * {
                 opacity: 0.3;
+                cursor: default;
+
+                &._active {
+                    opacity: 1;
+                }
+            }
+
+            &._transparent > *._active {
+                opacity: 1;
             }
         }
 
@@ -297,6 +306,25 @@
             width: 100%; height: 100%;
 
             cursor: pointer;
+            &._active {
+                z-index: 2;
+            }
+
+            &._moving {
+                position: absolute;
+                left: var(--x); top: var(--y);
+                z-index: 2;
+                transition: left .2s ease-in-out, top .2s ease-in-out;
+            }
+
+            &._removing {
+                transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                opacity: 0; visibility: hidden;
+            }
+
+            &._king &-body {
+                transform: rotateY(180deg);
+            }
         }
 
         // .checkers__grid--checker-body
@@ -305,14 +333,27 @@
             position: relative;
             width: 100%; height: 100%;
 
+            transform-style: preserve-3d;
+            transition: transform .5s ease-in-out;
+
+            //transform: rotateY(180deg);
+
             & > img {
                 position: absolute;
                 left: 50%; top: 50%;
                 transform: translate(-50%,-50%);
-                width: 85%; height: 85%;
+                width: 75%; height: 75%;
                 object-fit: contain;
                 z-index: -1;
                 user-select: none;
+                border-radius: 50%;
+
+                filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.35));
+
+                backface-visibility: hidden;
+                &:nth-child(2) {
+                    transform: translate(-50%,-50%) rotateY(180deg);
+                }
             }
         }
     }
@@ -333,7 +374,7 @@
         &--list {
             display: grid;
             grid-template-columns: 100%;
-            grid-template-rows: auto;
+            grid-template-rows: repeat(12, 1fr);
             width: 30px;
             height: 100%;
         }
@@ -341,12 +382,13 @@
         // .checkers__lost--item
 
         &--item {
-            flex: 0 1 5%;
+            //flex: 0 1 5%;
             width: 100%; //padding-top: 100%;
 
             //background: #000;
 
             position: relative;
+            transition: opacity .2s ease-in-out;
         }
 
         // .checkers__lost--img
@@ -354,11 +396,6 @@
         &--img {
             position: absolute;
             left: 0; top: 0;
-            /* max-width: 4.5vw;
-            @include _992 {
-                max-width: 36px;
-            } */
-            //display: none;
             width: 100%; height: 100%;
             object-fit: contain;
 

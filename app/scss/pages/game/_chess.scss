@@ -288,6 +288,10 @@
 
             &._transparent > * {
                 opacity: 0.3;
+                cursor: default;
+                &._active {
+                    opacity: 1;
+                }
             }
 
             &._accent {
@@ -306,6 +310,18 @@
             width: 100%; height: 100%;
 
             cursor: pointer;
+            transition: opacity .2s ease-in-out;
+
+            &._moving {
+                position: absolute;
+                left: var(--x); top: var(--y);
+                transition: left .2s ease-in-out, top .2s ease-in-out, opacity .2s ease-in-out;
+            }
+
+            &._removing {
+                transition: opacity .2s ease-in-out, visibility .2s ease-in-out;
+                opacity: 0; visibility: hidden;
+            }
         }
 
         // .chess__grid--checker-body
