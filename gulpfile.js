@@ -46,6 +46,7 @@ function scriptsLib() {
         //'node_modules/magnific-popup/dist/jquery.magnific-popup.min.js', // Попап (jQuery)
         //'node_modules/wowjs/dist/wow.min.js', // Анимация
         'node_modules/nouislider/dist/nouislider.min.js', // Кастомный input[range]
+        'node_modules/parallax-js/dist/parallax.min.js',
         //'node_modules/fslightbox/index.js', // Галерея
         //'node_modules/smoothscroll-polyfill/dist/smoothscroll.min.js', // Полифил для window.scroll()
         //'node_modules/chart.js/dist/chart.min.js', // График

@@ -1047,3 +1047,9 @@ resize();
 window.onresize = resize;
 
 // =-=-=-=-=-=-=-=-=-=-=-=- </resize> -=-=-=-=-=-=-=-=-=-=-=-=
+
+
+var scene = document.querySelectorAll('.parallax-scene');
+scene.forEach(scene => {
+  new Parallax(scene)
+})

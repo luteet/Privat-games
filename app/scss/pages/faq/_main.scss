@@ -135,25 +135,43 @@
         // .faq__intro--image
 
         &--image {
-            flex: 0 1 auto;
+            flex: 1 1 auto;
 
             position: relative;
-            width: calc(100% - 19px); padding-top: 92.197%;
-            padding-right: 19px;
+            width: calc(100% - 19px);
+            padding-right: 39px;
 
             margin-top: 38px;
+
+            &-body {
+                width: 100%; padding-top: 92.197%; padding-right: 19px;
+                position: relative;
+
+                @media(min-width: 600px) {
+                    padding-top: 100%; padding-right: 0;
+                }
+            }
             
             @media(min-width: 600px) {
-                width: auto; padding-top: 0;
+                width: auto;
                 margin-top: 0px; padding-right: 0;
             }
+        }
+
+        &--image-item {
+            position: absolute;
+            left: 0; top: 0;
+
         }
 
         // .faq__intro--image-img
 
         &--image-img {
+            width: 100%; height: auto;
+            /* position: absolute;
+            left: 0; top: 0; */
 
-            position: absolute;
+            /* position: absolute;
             left: 50%; top: 0;
             transform: translate(-50%,0);
 
@@ -164,7 +182,7 @@
             }
             width: 100%; height: 100%;
             object-fit: contain;
-            max-width: 423px;
+            max-width: 423px; */
 
         }
     }

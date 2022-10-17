@@ -1,3 +1,20 @@
+@keyframes levitation {
+    0% {
+        transform: translateY(-7%);
+    }
+    50% {
+        transform: translateY(7%);
+    }
+    100% {
+        transform: translateY(-7%);
+    }
+}
+
+._levitation {
+    animation: levitation 5s ease-in-out 0s infinite normal forwards;
+    transition: transform 5s ease-in-out;
+}
+
 html, body {
     font-size: 16px;
     min-height: 100%;
