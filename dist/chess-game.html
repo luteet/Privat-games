@@ -724,8 +724,8 @@
                                                 <div class="chess__grid--cell"></div>
                                                 <div class="chess__grid--cell"></div>
                                                 <div class="chess__grid--cell"></div>
-                                                <div class="chess__grid--cell">
-                                                    <div class="chess__grid--checker _active">
+                                                <div class="chess__grid--cell _possible-move">
+                                                    <div class="chess__grid--checker _must-remove">
                                                         <div class="chess__grid--checker-body">
                                                             <img src="img/chess/figures/black-6.svg" alt="">
                                                         </div>
@@ -739,8 +739,8 @@
                                                 <div class="chess__grid--cell"></div>
                                                 <div class="chess__grid--cell"></div>
                                                 <div class="chess__grid--cell"></div>
-                                                <div class="chess__grid--cell _possible-move">
-                                                    <div class="chess__grid--checker _must-remove">
+                                                <div class="chess__grid--cell">
+                                                    <div class="chess__grid--checker _active">
                                                         <div class="chess__grid--checker-body">
                                                             <img src="img/chess/figures/white-6.svg" alt="">
                                                         </div>
@@ -882,75 +882,83 @@
                                             };
                                         }
 
-                                        const table = document.querySelector('.chess__grid--table'),
-                                              activeChecker = document.querySelector('.chess__grid--checker._active'),
-                                              activeCheckerCell = activeChecker.parentElement,
-                                              mustRemove = document.querySelector('.chess__grid--checker._must-remove'),
-                                              cell = document.querySelector('.chess__grid--cell._possible-move');
+                                        function chessGame() {
 
-                                              cell.style.zIndex = 1;
-                                              activeCheckerCell.style.zIndex = 2;
-                                              //lostList = document.querySelector('.checkers__lost--list');
+                                            const body = document.querySelector('body');
 
-                                        const tableCoords = [getCoords(table).left, getCoords(table).top];
-                                        let coords = {
-                                            //table: tableCoords,
-                                            checker: [getCoords(activeChecker).left - tableCoords[0], getCoords(activeChecker).top - tableCoords[1]],
-                                            cell: [getCoords(cell).left - tableCoords[0], getCoords(cell).top - tableCoords[1]],
-                                        }
-                                        
-                                        setTimeout(() => {
-                                            activeChecker.style.setProperty('--x', coords['checker'][0] + 'px')
-                                            activeChecker.style.setProperty('--y', coords['checker'][1] + 'px')
+                                            body.addEventListener('click', function (event) {
+                                                if(event.target.closest('.chess__grid--cell._possible-move')) {
+                                                    const table = document.querySelector('.chess__grid--table'),
+                                                        activeChecker = document.querySelector('.chess__grid--checker._active'),
+                                                        activeCheckerCell = activeChecker.parentElement,
+                                                        mustRemove = document.querySelector('.chess__grid--checker._must-remove'),
+                                                        cell = document.querySelector('.chess__grid--cell._possible-move');
 
-                                            activeChecker.style.setProperty('max-width', activeChecker.offsetWidth + 'px');
-                                            activeChecker.style.setProperty('max-height', activeChecker.offsetHeight + -1 + 'px');
+                                                        cell.style.zIndex = 1;
+                                                        activeCheckerCell.style.zIndex = 2;
 
-                                            activeChecker.classList.add('_moving');
-
-                                            activeCheckerCell.classList.add('_transparent')
-                                            //activeCheckerCell.insertAdjacentHTML("afterbegin")
-                                            activeCheckerCell.insertAdjacentHTML("beforeend", `
-                                            <div class="chess__grid--checker" style="z-index: -2; position: relative;">
-                                                <div class="chess__grid--checker-body">
-                                                    <img src="img/chess/figures/white-6.svg" alt="">
-                                                </div>
-                                            </div>
-                                            `)
-
-                                            setTimeout(() => {
-                                                activeChecker.style.setProperty('--x', coords['cell'][0] + 1 + 'px')
-                                                activeChecker.style.setProperty('--y', coords['cell'][1] + 1 + 'px')
-
-                                                mustRemove.classList.add('_removing');
-
-                                                setTimeout(() => {
+                                                    const tableCoords = [getCoords(table).left, getCoords(table).top];
+                                                    let coords = {
+                                                        checker: [getCoords(activeChecker).left - tableCoords[0], getCoords(activeChecker).top - tableCoords[1]],
+                                                        cell: [getCoords(cell).left - tableCoords[0], getCoords(cell).top - tableCoords[1]],
+                                                    }
                                                     
-                                                    mustRemove.remove();
-                                                    cell.append(activeChecker)
-                                                    activeCheckerCell.querySelector('.chess__grid--checker').classList.add('_removing');
-
                                                     setTimeout(() => {
-                                                        
-                                                        activeChecker.classList.remove('_moving')
+                                                        cell.classList.remove('_possible-move')
 
-                                                        cell.style.zIndex = "auto";
-                                                        activeCheckerCell.style.zIndex = "auto";
-                                                        activeCheckerCell.querySelector('.chess__grid--checker').remove();
-                                                        //lostList.insertAdjacentHTML("beforeend", `<div class="checkers__lost--item" style="opacity: 0;"><img src="img/checkers/checker-white.svg" alt="" class="checkers__lost--img"></div>`)
-                                                        /* setTimeout(() => {
-                                                            lostList.querySelectorAll('.checkers__lost--item')[1].style.opacity = 1;
-                                                            activeChecker.classList.add('_king')
-                                                        },500) */
-                                                    },500)
-                                                    
-                                                },500)
+                                                        activeChecker.style.setProperty('--x', coords['checker'][0] + 'px')
+                                                        activeChecker.style.setProperty('--y', coords['checker'][1] + 'px')
 
-                                            },1000)
+                                                        activeChecker.style.setProperty('max-width', activeChecker.offsetWidth + 'px');
+                                                        activeChecker.style.setProperty('max-height', activeChecker.offsetHeight + -1 + 'px');
 
-                                        },1000)
-                                        
-                                        
+                                                        activeChecker.classList.add('_moving');
+
+                                                        activeCheckerCell.classList.add('_transparent')
+                                                        activeCheckerCell.insertAdjacentHTML("beforeend", `
+                                                        <div class="chess__grid--checker" style="z-index: -2; position: relative;">
+                                                            <div class="chess__grid--checker-body">
+                                                                <img src="img/chess/figures/white-6.svg" alt="">
+                                                            </div>
+                                                        </div>
+                                                        `)
+
+                                                        setTimeout(() => {
+                                                            activeChecker.style.setProperty('--x', coords['cell'][0] + 1 + 'px')
+                                                            activeChecker.style.setProperty('--y', coords['cell'][1] + 1 + 'px')
+
+                                                            mustRemove.classList.add('_removing');
+
+                                                            setTimeout(() => {
+                                                                
+                                                                mustRemove.remove();
+                                                                cell.append(activeChecker)
+                                                                activeCheckerCell.querySelector('.chess__grid--checker').classList.add('_removing');
+
+                                                                setTimeout(() => {
+                                                                    
+                                                                    activeChecker.classList.remove('_moving')
+
+                                                                    cell.style.zIndex = "auto";
+                                                                    activeCheckerCell.style.zIndex = "auto";
+                                                                    activeCheckerCell.querySelector('.chess__grid--checker').remove();
+                                                                    
+                                                                },500)
+                                                                
+                                                            },500)
+
+                                                        },200)
+
+                                                    },0)
+                                                }
+                                            })
+
+                                            
+                                            
+                                        }
+                                    
+                                        chessGame()
+
                                     </script>
                                 </div>
                                 <div class="chess__user">

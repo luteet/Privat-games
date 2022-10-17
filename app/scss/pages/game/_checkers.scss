@@ -284,6 +284,7 @@
             border: 1px solid transparent;
             &._possible-move {
                 border: 1px solid #000;
+                cursor: pointer;
             }
 
             &._transparent > * {
